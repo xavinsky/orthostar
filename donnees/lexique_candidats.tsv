@@ -1,0 +1,2001 @@
+mot	cat	freq	niveau	priorite	piege1	regle1	piege2	regle2	piege3	regle3
+dans	PRE	6477.34	1	0.5	dens	nasale	dant	finale
+tout	ADJ	3060.05	1	0.5	toud	finale	tou	finale
+sans	PRE	1613.78	1	0.5	san	finale	sant	finale
+aussi	ADV	1381.09	1	1	ossi	o	auci	s
+encore	ADV	1377.99	2	1	ancore	nasale	encorre	simple_double
+très	ADV	1355.37	1	2	trés	reel	trè	finale	tres	accent
+petit	ADJ	1324.38	1	0.5	peti	finale	petid	finale
+jamais	ADV	1241.6	1	1	jammais	simple_double	jamait	finale	jamai	finale
+temps	NOM	1160.22	1	0.5	tamps	nasale	tempt	finale	tenps	m_bp
+grand	ADJ	941.69	1	0.5	grend	nasale	gran	finale	grant	finale
+heure	NOM	816.92	2	1	eure	h	heurre	simple_double
+peut-être	ADV	802.83	1	0.5	peut-ètre	accent	peut-etre	accent
+maintenant	ADV	762.81	1	0.5	maintenent	nasale	maintenand	finale	mintenant	nasale
+comprendre	VER	754.15	1	0.5	comprandre	nasale	conprendre	m_bp
+enfant	NOM	730.63	1	0.5	enfent	nasale	enfand	finale	anfant	nasale
+arrêter	VER	728.14	1	2	arréter	reel	arêter	double_simple	arrèter	accent
+déjà	ADV	692.06	1	2	déja	reel	dejà	accent	dèjà	reel
+vraiment	ADV	621.45	1	0.5	vraimant	nasale	vraimen	finale	vraimend	finale
+même	ADJ	603.87	1	2	mème	reel	meme	accent	mêm	reel
+moins	ADV	598.46	1	2	moin	reel	moint	finale
+moment	NOM	560.91	1	1	momant	nasale	momment	simple_double	momen	finale
+comment	ADV	543.93	2	1	coment	double_simple	commant	nasale	commen	finale
+mieux	ADV	525.06	1	0.5	mieu	finale	mieus	finale
+gens	NOM	501.84	1	0.5	gans	nasale	gen	finale
+comme	ADV	471.66	2	2	come	reel	commes	reel
+commencer	VER	429.36	3	1	comencer	double_simple	commancer	nasale	commenser	s
+tant	ADV	408.38	1	0.5	tent	nasale	tand	finale
+sembler	VER	401.05	1	1	sambler	nasale	senbler	m_bp	cembler	s
+vieux	ADJ	397.55	1	0.5	vieus	finale	vieu	finale
+écouter	VER	392.49	1	1	écoutter	simple_double	ecouter	accent
+plaire	VER	373.5	1	1	plère	e_ouvert	plairre	simple_double
+histoire	NOM	359.73	2	2	histoir	reel	istoire	h	histoirre	simple_double
+voiture	NOM	356.25	1	1	voiturre	simple_double	voitture	simple_double
+chambre	NOM	350.98	1	0.5	chembre	nasale	chanbre	m_bp
+année	NOM	345.89	1	2	anée	reel	anné	te_tee	annee	accent
+maman	NOM	342.3	2	1	mamen	nasale	mamman	simple_double
+seulement	ADV	338.61	1	1	seulemant	nasale	seullement	simple_double	seulemen	finale
+ainsi	ADV	338.57	1	0.5	einsi	nasale	insi	nasale
+matin	NOM	335.88	2	1	mattin	simple_double	matain	nasale
+famille	NOM	329.65	2	2	famile	reel	fammille	reel
+écrire	VER	323.87	1	1	écrirre	simple_double	ecrire	accent
+bras	NOM	318.62	1	0.5	brat	finale	bra	finale
+apprendre	VER	317.58	2	1	aprendre	double_simple	apprandre	nasale
+gros	ADJ	310.2	1	0.5	grot	finale	gro	finale
+problème	NOM	307.54	1	2	probléme	reel	problaime	e_ouvert	probleme	accent
+frère	NOM	303.37	1	2	frêre	reel	fraire	e_ouvert	frere	accent
+occuper	VER	297.47	2	2	occupper	reel	ocuper	double_simple
+ouais	ADV	286.03	1	0.5	ouait	finale	ouai	finale
+train	NOM	271.96	1	0.5	trein	nasale	trin	nasale
+minute	NOM	271.85	1	1	minutte	simple_double	minnute	simple_double
+descendre	VER	268.8	2	1	decendre	sc	descandre	nasale	desendre	sc
+bout	NOM	263.22	1	0.5	boud	finale	bou	finale
+aujourd'hui	ADV	259.21	1	1	ojourd'hui	o	aujourdhui	apostrophe
+garçon	NOM	257.0	2	2	garcon	reel	garsson	s
+façon	NOM	253.89	2	2	facon	reel	fasson	s
+chance	NOM	248.48	2	1	chence	nasale	chanse	s
+plutôt	ADV	245.57	1	2	plutot	reel	plutaut	o	plutôd	finale
+rappeler	VER	241.99	2	2	rappeller	reel	rapeler	double_simple	rapeller	reel
+ailleurs	ADV	237.55	2	2	ailleur	reel	aileurs	reel
+pourtant	ADV	235.74	1	0.5	pourtent	nasale	pourtand	finale	pourtan	finale
+mauvais	ADJ	226.65	1	1	movais	o	mauvait	finale	mauvai	finale
+autour	ADV	224.28	1	1	otour	o	auttour	simple_double
+pays	NOM	222.06	1	0.5	pay	finale	payt	finale
+parfois	ADV	220.11	1	2	parfoit	reel	parfoi	finale
+surtout	ADV	220.07	1	0.5	surtoud	finale	surtou	finale
+prêt	ADJ	217.96	1	2	pret	reel	prê	finale	prèt	accent
+imaginer	VER	217.72	1	1	immaginer	simple_double	imaginner	simple_double
+silence	NOM	215.99	2	1	silance	nasale	silense	s	sillence	simple_double
+pièce	NOM	213.73	2	2	piéce	reel	pièsse	s	piaice	e_ouvert
+décider	VER	210.97	1	1	déssider	s	decider	accent
+lumière	NOM	204.55	1	2	lumiére	reel	lumiaire	e_ouvert	lummière	simple_double
+puis	ADV	200.94	1	0.5	puit	finale	pui	finale
+ensemble	ADV	199.27	1	2	emsemble	reel	ensamble	nasale	ensenble	m_bp
+face	NOM	198.1	2	2	fâce	reel	façe	reel
+nouveau	ADJ	197.53	1	1	nouvo	o	nouvau	o
+autant	ADV	196.28	2	1	autent	nasale	otant	o	auttant	simple_double
+suffire	VER	195.74	2	1	sufire	double_simple	suffirre	simple_double
+là-bas	ADV	190.42	1	0.5	là-ba	finale	là-bat	finale
+bruit	NOM	187.81	1	0.5	bruid	finale	brui	finale
+esprit	NOM	186.05	1	0.5	espri	finale	esprid	finale
+fenêtre	NOM	185.38	1	0.5	fenètre	accent	fenetre	accent
+état	NOM	181.95	1	0.5	étad	finale	etat	accent	éta	finale
+police	NOM	179.96	2	1	polisse	s	pollice	simple_double
+endroit	NOM	177.91	1	0.5	androit	nasale	endroid	finale	endroi	finale
+bientôt	ADV	177.28	1	2	bientot	reel	bientaut	o	bientôd	finale
+journée	NOM	177.14	1	1	journé	te_tee	journee	accent
+tellement	ADV	176.1	2	1	telement	double_simple	tellemant	nasale	tellemend	finale
+école	NOM	175.44	1	1	écolle	simple_double	ecole	accent
+gars	NOM	174.44	1	0.5	gar	finale	gart	finale
+putain	NOM	173.57	2	1	putin	nasale	puttain	simple_double	putein	nasale
+français	ADJ	170.96	3	2	francais	reel	frençais	nasale	franssais	s
+doigt	NOM	170.92	1	0.5	doig	finale	doigd	finale
+salut	NOM	169.62	1	1	sallut	simple_double	salu	finale	salud	finale
+jambe	NOM	167.38	1	0.5	jembe	nasale	janbe	m_bp
+vérité	NOM	167.06	1	1	véritée	te_tee	véritté	simple_double	verité	accent
+après	ADV	165.45	3	2	aprés	reel	apprès	simple_double	aprais	e_ouvert
+préparer	VER	164.23	1	1	préparrer	simple_double	preparer	accent
+papier	NOM	161.81	1	1	pappier	simple_double	papié	e_final
+partout	ADV	160.66	1	0.5	partou	finale	partoud	finale
+épaule	NOM	160.56	1	1	épole	o	épaulle	simple_double	epaule	accent
+bureau	NOM	158.6	1	1	burau	o	burreau	simple_double	buro	o
+important	ADJ	158.06	1	0.5	importan	finale	inportant	m_bp	importand	finale
+désoler	VER	155.86	1	1	désoller	simple_double	desoler	accent
+effet	NOM	154.56	1	2	efet	reel	effe	finale	effait	e_final
+ressembler	VER	153.06	1	1	ressambler	nasale	recembler	s	ressenbler	m_bp
+photo	NOM	151.84	2	1	foto	ph	photto	simple_double
+réveiller	VER	150.68	1	1	réveiler	double_simple	reveiller	accent
+présenter	VER	150.51	1	0.5	présanter	nasale	presenter	accent
+vent	NOM	148.81	1	0.5	vant	nasale	ven	finale
+ensuite	ADV	148.56	2	2	ensuites	reel	ansuite	nasale	ensuitte	simple_double
+taire	VER	147.13	1	1	tairre	simple_double	tère	e_ouvert
+empêcher	VER	146.56	2	2	empécher	reel	ampêcher	nasale	enpêcher	m_bp
+avancer	VER	145.31	2	1	avencer	nasale	avanser	s
+désolé	ADJ	144.55	1	1	désollé	simple_double	desolé	accent
+froid	ADJ	144.45	1	0.5	froit	finale	froi	finale
+rêve	NOM	143.67	1	2	rève	reel	reve	accent
+promettre	VER	143.34	2	1	prometre	double_simple	prommettre	simple_double
+certain	ADJ	143.1	2	1	certin	nasale	sertain	s	certein	nasale
+amener	VER	142.12	2	2	ammener	reel	amèner	reel
+attention	NOM	141.53	2	1	atention	double_simple	attencion	tion	attantion	nasale
+parole	NOM	140.9	1	1	parolle	simple_double	parrole	simple_double
+couleur	NOM	140.49	2	2	couleure	reel	coulleur	simple_double
+embrasser	VER	138.24	1	1	ambrasser	nasale	embracer	s	enbrasser	m_bp
+peau	NOM	137.62	1	1	pau	o	po	o
+hôtel	NOM	136.79	2	2	hotel	reel	ôtel	h	hautel	o
+difficile	ADJ	134.34	2	2	difficil	reel	diffissile	s	difficille	reel
+oreille	NOM	133.83	2	1	oreile	double_simple	orreille	simple_double
+content	ADJ	132.72	1	0.5	contend	finale	conten	finale
+haut	ADJ	132.41	1	1	aut	h	hau	finale	haud	finale
+faute	NOM	132.23	1	1	fote	o	fautte	simple_double
+copain	NOM	131.0	2	1	copein	nasale	coppain	simple_double	copin	nasale
+depuis	ADV	130.62	1	0.5	depui	finale	depuit	finale
+lèvre	NOM	129.97	1	1	laivre	e_ouvert	levre	accent
+espèce	NOM	129.1	2	2	espéce	reel	espèsse	s	espaice	e_ouvert
+intéresser	VER	129.08	1	1	intérecer	s	interesser	accent
+facile	ADJ	129.0	2	2	façile	reel	fassile	s	facille	simple_double
+sauter	VER	128.81	1	1	soter	o	sautter	simple_double
+téléphone	NOM	128.81	1	1	téléfone	ph	téléphonne	simple_double	teléphone	accent
+début	NOM	127.9	1	2	dèbut	reel	débu	finale	debut	accent
+confiance	NOM	127.43	2	1	confience	nasale	confianse	s
+réussir	VER	127.02	1	1	réucir	s	reussir	accent
+habitude	NOM	126.34	2	1	abitude	h	habittude	simple_double
+sourire	NOM	125.71	1	1	sourrire	simple_double	sourirre	simple_double
+rêver	VER	125.56	1	0.5	rèver	accent	rever	accent
+debout	ADV	125.33	1	2	debouts	reel	deboud	finale	debou	finale
+fête	NOM	125.01	1	2	fète	reel	fete	accent
+paix	NOM	124.29	1	1	pèx	e_ouvert	pai	finale
+cesser	VER	122.94	1	1	cecer	s	sesser	s
+impression	NOM	122.73	1	1	impretion	tion	imprecion	s	inpression	m_bp
+capitaine	NOM	122.63	1	1	capittaine	simple_double	cappitaine	simple_double
+numéro	NOM	121.77	1	1	numméro	simple_double	numero	accent
+droit	ADJ	120.56	1	0.5	droi	finale	droid	finale
+drôle	ADJ	119.77	1	2	drole	reel	draule	o
+abandonner	VER	119.66	2	2	abondonner	reel	abandoner	double_simple	abendonner	nasale
+exactement	ADV	118.49	1	0.5	exactemant	nasale	exactemen	finale	exactemend	finale
+bébé	NOM	118.41	1	1	bébée	te_tee	bebé	accent
+près	ADV	118.25	1	1	prais	e_ouvert	prè	finale	pres	accent
+doux	ADJ	117.1	1	0.5	dous	finale	dou	finale
+sentiment	NOM	116.51	1	1	santiment	nasale	sentimment	simple_double	sentimen	finale
+doucement	ADV	116.09	1	1	doucemant	nasale	doussement	s	doucemend	finale
+manière	NOM	115.04	2	2	maniére	reel	maniaire	e_ouvert	mannière	simple_double
+ancien	ADJ	114.01	3	2	ancient	reel	encien	nasale	ansien	s
+différent	ADJ	113.92	2	2	diférent	reel	different	accent	différen	finale
+échapper	VER	113.85	1	1	échaper	double_simple	echapper	accent
+utiliser	VER	112.97	1	1	uttiliser	simple_double	utilliser	simple_double
+craindre	VER	112.88	1	0.5	crindre	nasale	creindre	nasale
+entier	ADJ	111.96	1	0.5	antier	nasale	entié	e_final
+chat	NOM	111.87	1	0.5	chad	finale	cha	finale
+mouvement	NOM	111.65	1	0.5	mouvemant	nasale	mouvemend	finale	mouvemen	finale
+être	NOM	111.63	3	2	étre	reel	etre	accent	ètre	reel
+président	NOM	111.52	1	2	précident	reel	présiden	finale	president	accent
+scène	NOM	111.44	2	2	scéne	reel	scaine	e_ouvert	scene	reel
+propos	NOM	110.75	1	1	proppos	simple_double	propo	finale	propot	finale
+impossible	ADJ	110.28	1	1	impocible	s	inpossible	m_bp
+au-dessus	ADV	110.15	1	1	o-dessus	o	au-dessut	finale	au-dessu	finale
+maintenir	VER	109.91	1	0.5	mintenir	nasale	meintenir	nasale
+exemple	NOM	109.91	2	2	example	reel	exenple	m_bp
+prochain	ADJ	109.8	1	0.5	prochein	nasale	prochin	nasale
+simplement	ADV	109.54	1	0.5	simplemant	nasale	simplemend	finale	sinplement	m_bp
+humain	ADJ	109.32	3	1	umain	h	humin	nasale	hummain	simple_double
+vivant	ADJ	108.6	1	0.5	vivand	finale	vivan	finale
+médecin	NOM	107.9	1	1	médessin	s	médecain	nasale	medecin	accent
+accompagner	VER	107.51	1	1	acompagner	double_simple	acconpagner	m_bp
+situation	NOM	106.92	2	1	situassion	tion	sittuation	simple_double	cituation	s
+camp	NOM	106.08	1	0.5	cemp	nasale	canp	m_bp	camt	finale
+tranquille	ADJ	105.82	2	1	tranquile	double_simple	trenquille	nasale
+sûrement	ADV	103.89	1	0.5	sûremant	nasale	sûremen	finale	sûremend	finale
+bateau	NOM	103.59	2	2	bâteau	reel	batau	o	batteau	simple_double
+avis	NOM	102.18	1	0.5	avi	finale	avit	finale
+aussitôt	ADV	101.73	2	2	aussitot	reel	ossitôt	o	aucitôt	s
+apparaître	VER	101.52	2	2	aparaître	reel	apparraître	simple_double
+protéger	VER	101.47	2	2	protèger	reel	prottéger	simple_double	proteger	accent
+front	NOM	100.08	1	0.5	fron	finale	frond	finale
+prince	NOM	100.06	2	1	praince	nasale	prinse	s
+dent	NOM	99.94	1	0.5	dant	nasale	den	finale	dend	finale
+goût	NOM	99.88	1	2	gôut	reel	goûd	finale	goû	finale
+éviter	VER	98.97	1	1	évitter	simple_double	eviter	accent
+chaud	ADJ	98.73	1	1	chod	o	chau	finale
+gouvernement	NOM	97.34	1	0.5	gouvernemant	nasale	gouvernemen	finale	gouvernemend	finale
+client	NOM	96.84	1	0.5	cliant	nasale	clien	finale	cliend	finale
+arranger	VER	95.97	2	1	aranger	double_simple	arrenger	nasale
+départ	NOM	95.77	1	2	dépard	reel	depart	accent
+oiseau	NOM	95.39	1	1	oisau	o	oiso	o
+emporter	VER	95.15	1	0.5	amporter	nasale	enporter	m_bp
+annoncer	VER	94.79	2	1	anoncer	double_simple	annonser	s
+étrange	ADJ	94.59	1	0.5	étrenge	nasale	etrange	accent
+léger	ADJ	94.39	1	0.5	leger	accent	légé	e_final
+atteindre	VER	94.3	3	2	ateindre	reel	attaindre	nasale
+hôpital	NOM	94.04	3	2	hopital	reel	ôpital	h	hôpittal	simple_double
+complètement	ADV	93.41	2	2	complêtement	reel	complètemant	nasale	complaitement	e_ouvert
+lentement	ADV	91.52	1	0.5	lantement	nasale	lentemen	finale	lentemend	finale
+escalier	NOM	90.57	1	1	escallier	simple_double	escalié	e_final
+présence	NOM	90.28	2	1	présance	nasale	présense	s	presence	accent
+cigarette	NOM	90.25	2	2	sigarette	reel	cigarete	double_simple	cigarrette	simple_double
+soirée	NOM	89.53	2	1	soiré	te_tee	soirrée	simple_double	soiree	accent
+siècle	NOM	89.34	2	2	siécle	reel	siaicle	e_ouvert	siecle	accent
+lendemain	NOM	89.27	1	0.5	landemain	nasale	lendemein	nasale	lendemin	nasale
+intérêt	NOM	89.22	2	2	intéret	reel	interêt	accent	intérêd	finale
+détruire	VER	89.22	1	1	détruirre	simple_double	detruire	accent
+quartier	NOM	88.93	1	0.5	quartié	e_final	cartier	k
+liberté	NOM	88.75	1	1	libertée	te_tee	liberte	accent
+camarade	NOM	88.4	1	1	camarrade	simple_double	cammarade	simple_double
+cadeau	NOM	88.3	1	1	cado	o	cadau	o
+sérieux	ADJ	88.25	1	0.5	sérieus	finale	serieux	accent	sérieu	finale
+erreur	NOM	88.12	2	2	erreure	reel	ereur	double_simple
+séparer	VER	88.01	1	1	séparrer	simple_double	separer	accent
+appartement	NOM	87.8	2	1	apartement	double_simple	appartemant	nasale	appartemend	finale
+gris	ADJ	87.25	1	0.5	grit	finale	gri	finale
+traiter	VER	86.99	2	2	traîter	reel	trèter	e_ouvert	traitter	simple_double
+mètre	NOM	86.78	1	1	maitre	e_ouvert	metre	accent
+hasard	NOM	86.13	2	2	hazard	reel	asard	h
+grand-père	NOM	86.06	1	1	grend-père	nasale	grand-paire	e_ouvert	grand-pere	accent
+mémoire	NOM	85.88	1	1	mémoirre	simple_double	memoire	accent
+allumer	VER	85.54	2	1	alumer	double_simple	allummer	simple_double
+déranger	VER	85.47	1	0.5	dérenger	nasale	deranger	accent
+objet	NOM	85.13	1	0.5	objed	finale	objait	e_final	obje	finale
+étonner	VER	85.09	1	1	étoner	double_simple	etonner	accent
+défendre	VER	84.81	1	0.5	défandre	nasale	defendre	accent
+colère	NOM	84.48	1	1	collère	simple_double	colaire	e_ouvert	colere	accent
+dessus	ADV	84.38	1	2	dessu	reel	dessut	finale
+recommencer	VER	84.0	3	1	recomencer	double_simple	recommancer	nasale	recommenser	s
+attraper	VER	83.93	2	2	attrapper	reel	atraper	double_simple
+grand-mère	NOM	83.91	1	1	grend-mère	nasale	grand-maire	e_ouvert	grand-mere	accent
+souhaiter	VER	83.88	2	1	souaiter	h	souhaitter	simple_double	souhèter	e_ouvert
+entrée	NOM	83.43	1	0.5	antrée	nasale	entree	accent
+mêler	VER	83.24	1	2	méler	reel	mèler	accent	meler	accent
+rôle	NOM	83.17	2	2	role	reel	raule	o
+amoureux	ADJ	83.12	1	1	ammoureux	simple_double	amoureu	finale	amourreux	simple_double
+dimanche	NOM	82.56	2	1	dimenche	nasale	dimmanche	simple_double
+équipe	NOM	82.14	1	1	équippe	simple_double	equipe	accent
+morceau	NOM	82.05	1	1	morco	o	morseau	s	morcau	o
+champ	NOM	81.85	1	0.5	chemp	nasale	chamt	finale	chanp	m_bp
+professeur	NOM	81.23	2	1	profeceur	s	proffesseur	simple_double
+bouteille	NOM	80.64	2	1	bouteile	double_simple	boutteille	simple_double
+cependant	ADV	79.9	2	2	cepandant	reel	sependant	s	cependand	finale
+profiter	VER	79.21	1	1	proffiter	simple_double	profitter	simple_double
+campagne	NOM	79.17	1	0.5	cempagne	nasale	canpagne	m_bp
+derrière	ADV	78.85	2	2	dérrière	reel	derière	double_simple	derriaire	e_ouvert
+bain	NOM	78.76	1	0.5	bein	nasale	bin	nasale
+conversation	NOM	78.75	1	1	conversassion	tion	conversattion	simple_double	conversacion	tion
+agent	NOM	78.58	1	0.5	agant	nasale	agend	finale	agen	finale
+action	NOM	78.35	1	1	acssion	tion	acction	simple_double	accion	tion
+chaleur	NOM	77.67	2	2	châleur	reel	challeur	simple_double
+absolument	ADV	76.62	1	1	absolumant	nasale	absollument	simple_double	absolumend	finale
+direction	NOM	76.55	1	1	direccion	tion	dirrection	simple_double	direcssion	tion
+accident	NOM	76.5	1	0.5	accidant	nasale	accidend	finale	acciden	finale
+hésiter	VER	76.25	1	1	ésiter	h	hésitter	simple_double	hesiter	accent
+sécurité	NOM	76.14	1	2	sécuritée	reel	sécuritté	simple_double	securité	accent
+vêtement	NOM	75.81	2	2	vétement	reel	vêtemant	nasale	vetement	accent
+mériter	VER	75.8	1	1	méritter	simple_double	meriter	accent
+avance	NOM	75.78	2	1	avence	nasale	avanse	s
+vérifier	VER	75.57	1	1	vériffier	simple_double	verifier	accent
+dollar	NOM	75.53	2	2	dollard	reel	dolar	double_simple
+colonel	NOM	75.37	1	1	collonel	simple_double	colonnel	simple_double
+vacance	NOM	75.23	2	1	vacence	nasale	vacanse	s
+avocat	NOM	75.16	1	0.5	avoca	finale	avocad	finale
+dangereux	ADJ	74.7	2	2	dangereus	reel	dengereux	nasale	dangereu	finale
+prêter	VER	74.55	2	2	préter	reel	preter	accent	prèter	accent
+ressentir	VER	74.46	2	1	ressantir	nasale	recentir	s
+forêt	NOM	74.12	1	2	fôret	reel	forêd	finale	forèt	accent
+profond	ADJ	74.07	1	1	proffond	simple_double	profon	finale	profont	finale
+billet	NOM	73.72	1	1	bilet	double_simple	billait	e_final	billed	finale
+secret	ADJ	72.89	1	1	secre	finale	secrait	e_final	cecret	s
+rendez-vous	NOM	72.84	1	0.5	randez-vous	nasale	rendez-vou	finale	rendez-vout	finale
+commander	VER	71.92	3	1	comander	double_simple	commender	nasale
+inutile	ADJ	71.53	1	1	inuttile	simple_double	innutile	simple_double	inutille	simple_double
+chapeau	NOM	71.47	1	1	chapo	o	chappeau	simple_double	chapau	o
+remplir	VER	71.31	1	0.5	ramplir	nasale	renplir	m_bp
+cinéma	NOM	71.0	1	1	cinnéma	simple_double	sinéma	s	cinema	accent
+éclater	VER	70.9	1	1	éclatter	simple_double	eclater	accent
+santé	NOM	70.69	2	1	santée	te_tee	senté	nasale	sante	accent
+second	ADJ	70.54	1	1	secon	finale	cecond	s	secont	finale
+toit	NOM	70.39	1	2	toît	reel	toid	finale
+devant	ADV	70.14	1	0.5	devent	nasale	devand	finale	devan	finale
+justement	ADV	70.13	1	0.5	justemant	nasale	justemen	finale	justemend	finale
+tableau	NOM	70.06	1	1	tablo	o	tablau	o
+régler	VER	70.0	2	2	règler	reel	regler	accent
+militaire	ADJ	69.97	1	1	milittaire	simple_double	militère	e_ouvert	millitaire	simple_double
+projet	NOM	69.8	1	2	proget	reel	proje	finale	projait	e_final
+métier	NOM	69.78	1	0.5	métié	e_final	metier	accent
+américain	ADJ	69.33	3	2	amméricain	reel	américin	nasale	americain	accent
+condition	NOM	69.17	1	1	condission	tion	condittion	simple_double	condicion	tion
+société	NOM	68.84	3	2	socièté	reel	sociétée	te_tee	sossiété	s
+combat	NOM	68.7	1	0.5	conbat	m_bp	comba	finale	combad	finale
+enfance	NOM	68.5	2	1	anfance	nasale	enfanse	s	enfence	nasale
+réalité	NOM	68.27	1	2	réalitée	reel	réalitté	simple_double	realité	accent
+étoile	NOM	68.22	1	1	étoille	simple_double	etoile	accent
+entourer	VER	68.04	2	1	antourer	nasale	entourrer	simple_double
+lieutenant	NOM	67.96	1	1	lieutenent	nasale	lieuttenant	simple_double	lieutenan	finale
+danger	NOM	67.94	1	0.5	denger	nasale	dangé	e_final
+pitié	NOM	67.25	2	1	pitiée	te_tee	pittié	simple_double	pitie	accent
+présent	ADJ	67.22	1	0.5	présant	nasale	present	accent	présen	finale
+officier	NOM	67.2	3	1	oficier	double_simple	offissier	s
+représenter	VER	67.16	1	0.5	représanter	nasale	representer	accent
+dépêcher	VER	67.14	1	0.5	dépecher	accent	depêcher	accent	dépècher	accent
+paquet	NOM	67.08	1	0.5	paquait	e_final	paque	finale	paqued	finale
+éteindre	VER	67.07	1	0.5	étaindre	nasale	eteindre	accent
+étendre	VER	66.89	1	0.5	étandre	nasale	etendre	accent
+mission	NOM	66.84	1	1	micion	s	mition	tion
+importance	NOM	66.56	2	1	importence	nasale	importanse	s	inportance	m_bp
+national	ADJ	66.33	2	2	nationnal	reel	nacional	tion	nattional	simple_double
+opération	NOM	66.07	1	1	opéracion	tion	opérattion	simple_double	operation	accent
+expérience	NOM	65.38	3	2	expèrience	reel	expériance	nasale	expériense	s
+attirer	VER	65.09	2	1	atirer	double_simple	attirrer	simple_double
+chaussure	NOM	65.03	1	1	chossure	o	chaussurre	simple_double
+règle	NOM	64.72	2	2	régle	reel	raigle	e_ouvert	regle	accent
+héros	NOM	64.67	1	0.5	heros	accent	hérot	finale
+plaindre	VER	64.55	1	0.5	plindre	nasale	pleindre	nasale
+gêner	VER	64.39	1	2	géner	reel	gèner	accent	gener	accent
+immense	ADJ	64.22	3	1	imense	double_simple	immanse	nasale
+trembler	VER	64.09	1	2	trambler	reel	trenbler	m_bp
+enfoncer	VER	64.05	2	1	anfoncer	nasale	enfonser	s
+dossier	NOM	64.02	1	1	docier	s	dossié	e_final
+allemand	ADJ	63.94	2	2	allemend	reel	alemand	double_simple	allemant	finale
+guère	ADV	63.85	1	2	guères	reel	guaire	e_ouvert	guere	accent
+désormais	ADV	63.79	1	2	désormait	reel	désormai	finale	desormais	accent
+téléphoner	VER	63.76	1	1	téléfoner	ph	téléphonner	simple_double	teléphoner	accent
+désirer	VER	63.76	1	1	désirrer	simple_double	desirer	accent
+davantage	ADV	63.7	2	2	davantages	reel	daventage	nasale
+relation	NOM	63.66	1	1	relassion	tion	relattion	simple_double	relacion	tion
+conscience	NOM	63.54	3	1	consience	sc	consciance	nasale	consciense	s
+maladie	NOM	63.36	2	2	maladi	reel	malladie	simple_double
+décision	NOM	63.24	1	1	déssision	s	decision	accent
+habiller	VER	62.81	3	1	abiller	h	habiler	double_simple
+repas	NOM	62.58	1	0.5	repa	finale	repat	finale
+position	NOM	62.56	1	1	posission	tion	posittion	simple_double	posicion	tion
+posséder	VER	62.5	3	2	possèder	reel	posseder	accent
+libérer	VER	62.14	2	2	libèrer	reel	liberer	accent
+système	NOM	61.94	3	2	systéme	reel	sistème	y_i	systaime	e_ouvert
+autrefois	ADV	61.92	1	1	otrefois	o	autrefoi	finale	autrefoit	finale
+adresse	NOM	61.86	2	2	addresse	reel	adrece	s
+poids	NOM	61.73	2	2	poid	reel	poidt	finale
+arrivée	NOM	61.33	1	1	arivée	double_simple	arrivee	accent
+existence	NOM	61.17	3	2	existance	reel	existense	s
+volonté	NOM	61.01	1	2	volontée	reel	vollonté	simple_double	volonte	accent
+passion	NOM	60.71	1	1	pacion	s	pation	tion
+dépasser	VER	60.7	1	1	dépacer	s	depasser	accent
+apprécier	VER	60.66	2	1	aprécier	double_simple	appréssier	s	apprecier	accent
+fauteuil	NOM	60.65	1	1	foteuil	o	fautteuil	simple_double
+membre	NOM	60.46	3	2	menbre	reel	mambre	nasale
+nécessaire	ADJ	60.05	3	2	néssessaire	reel	nécessairre	simple_double	nécessère	e_ouvert
+bière	NOM	59.89	1	2	bierre	reel	biaire	e_ouvert	biere	accent
+intention	NOM	59.88	1	1	intantion	nasale	intencion	tion	intenssion	tion
+merveilleux	ADJ	59.8	1	1	merveileux	double_simple	merveilleus	finale	merveilleu	finale
+lampe	NOM	59.48	1	0.5	lempe	nasale	lanpe	m_bp
+ramasser	VER	59.28	2	1	rammasser	simple_double	ramacer	s
+château	NOM	58.9	3	2	chateau	reel	châto	o	châtau	o
+rencontre	NOM	58.72	2	2	rencontr	reel	rancontre	nasale
+parfaitement	ADV	58.28	2	1	parfaitemant	nasale	parfètement	e_ouvert	parfaittement	simple_double
+évidemment	ADV	58.17	2	1	évidamment	emment	évidemmant	nasale	evidemment	accent
+brusquement	ADV	58.15	1	0.5	brusquemant	nasale	brusquemend	finale	brusquemen	finale
+dedans	ADV	58.0	1	0.5	dedens	nasale	dedant	finale	dedan	finale
+horreur	NOM	57.82	3	1	horeur	double_simple	orreur	h
+naturel	ADJ	57.73	1	1	natturel	simple_double	naturrel	simple_double
+certainement	ADV	57.55	2	1	certainemant	nasale	sertainement	s	certainemend	finale
+spécial	ADJ	57.48	1	1	spéssial	s	special	accent
+déclarer	VER	57.39	1	1	déclarrer	simple_double	declarer	accent
+aventure	NOM	57.26	2	1	avanture	nasale	aventurre	simple_double
+jeunesse	NOM	56.92	2	2	jeunnesse	reel	jeunece	s
+remplacer	VER	56.73	2	1	ramplacer	nasale	remplasser	s	renplacer	m_bp
+époux	NOM	55.98	1	0.5	épous	finale	epoux	accent	épou	finale
+prononcer	VER	55.53	2	1	prononser	s	pronnoncer	simple_double
+couteau	NOM	55.39	1	1	coutau	o	coutteau	simple_double	couto	o
+débarrasser	VER	55.34	3	2	débarasser	reel	débarracer	s	debarrasser	accent
+connaissance	NOM	55.29	3	2	conaissance	reel	connaissence	nasale	connaissanse	s
+là-haut	ADV	55.24	1	1	là-hot	o	là-hau	finale	là-haud	finale
+excellent	ADJ	55.18	1	1	excelent	double_simple	excellen	finale	excellend	finale
+autorité	NOM	54.99	3	2	authorité	reel	autoritée	te_tee	otorité	o
+bataille	NOM	54.89	2	2	battaille	reel	bataile	reel
+dessiner	VER	54.81	2	1	deciner	s	dessinner	simple_double
+pantalon	NOM	54.66	2	1	pentalon	nasale	pantallon	simple_double
+point	ADV	54.59	1	0.5	poin	finale	poind	finale
+politique	ADJ	54.45	1	1	polittique	simple_double	pollitique	simple_double
+lunette	NOM	54.3	3	1	lunete	double_simple	lunnette	simple_double
+toilette	NOM	54.26	3	1	toilete	double_simple	toillette	simple_double
+manteau	NOM	54.04	2	1	mantau	o	menteau	nasale	manto	o
+balancer	VER	53.91	3	1	balencer	nasale	balanser	s	ballancer	simple_double
+récupérer	VER	53.87	1	1	récuppérer	simple_double	recupérer	accent
+idiot	ADJ	53.65	1	0.5	idiod	finale	idio	finale
+réaliser	VER	53.61	3	2	realiser	reel	réalliser	simple_double
+probablement	ADV	53.52	2	2	probabblement	reel	probablemant	nasale	probablemen	finale
+étranger	ADJ	53.2	1	0.5	étrenger	nasale	étrangé	e_final	etranger	accent
+solution	NOM	52.73	1	1	solussion	tion	soluttion	simple_double	solucion	tion
+nombreux	ADJ	52.45	2	2	nombreeux	reel	nonbreux	m_bp	nombreu	finale
+finalement	ADV	52.41	2	2	finallement	reel	finalemant	nasale	finnalement	simple_double
+arrêt	NOM	52.4	2	2	arret	reel	arêt	double_simple	arrèt	accent
+amant	NOM	52.31	2	1	ament	nasale	ammant	simple_double	amand	finale
+éclairer	VER	51.99	1	1	éclairrer	simple_double	éclèrer	e_ouvert	eclairer	accent
+rideau	NOM	51.82	1	1	rido	o	ridau	o
+fruit	NOM	51.75	1	0.5	frui	finale	fruid	finale
+défense	NOM	51.62	2	2	défence	reel	défanse	nasale	defense	accent
+également	ADV	51.6	3	2	égalemment	reel	égalemant	nasale	égalemen	finale
+convaincre	VER	51.53	2	0.5	convincre	nasale	conveincre	nasale
+prétendre	VER	51.53	1	0.5	prétandre	nasale	pretendre	accent
+deuxième	ADJ	51.51	2	2	deuxiéme	reel	deuxiaime	e_ouvert	deuxieme	accent
+autrement	ADV	51.47	1	1	autremant	nasale	otrement	o	autremen	finale
+poussière	NOM	51.42	1	1	poussiaire	e_ouvert	poucière	s	poussiere	accent
+enfuir	VER	51.35	2	2	enfuire	reel	anfuir	nasale
+parfait	ADJ	51.11	1	1	parfèt	e_ouvert	parfai	finale	parfaid	finale
+lointain	ADJ	51.04	2	0.5	lointein	nasale	lointin	nasale
+commun	ADJ	50.52	3	2	commum	reel	comun	double_simple
+cesse	NOM	50.42	2	1	sesse	s	cece	s
+épais	ADJ	50.4	1	0.5	epais	accent	épait	finale	épai	finale
+curieux	ADJ	50.29	1	1	currieux	simple_double	curieu	finale	curieus	finale
+différence	NOM	50.17	3	2	diférence	reel	différance	nasale	différense	s
+information	NOM	49.88	1	1	informassion	tion	informattion	simple_double	informacion	tion
+caresser	VER	49.7	2	1	carecer	s	carresser	simple_double
+effacer	VER	49.68	3	1	efacer	double_simple	effasser	s
+absence	NOM	49.57	3	2	abscence	reel	absance	nasale	absense	reel
+refaire	VER	49.54	1	1	refère	e_ouvert	refairre	simple_double
+restaurant	NOM	49.52	1	1	restorant	o	restaurrant	simple_double	restaurand	finale
+immédiatement	ADV	49.5	3	2	immédiatemment	reel	immédiatemant	nasale	immédiattement	simple_double
+respect	NOM	49.31	1	0.5	respec	finale	respecd	finale
+réunir	VER	49.31	1	1	réunnir	simple_double	reunir	accent
+bête	ADJ	49.22	1	0.5	bète	accent	bete	accent
+blond	ADJ	49.11	1	0.5	blont	finale	blon	finale
+vitesse	NOM	48.98	2	1	vitece	s	vittesse	simple_double
+violence	NOM	48.97	3	1	violance	nasale	violense	s	viollence	simple_double
+résultat	NOM	48.92	1	0.5	resultat	accent	résultad	finale
+intéressant	ADJ	48.91	2	2	interressant	reel	intéressand	finale	interessant	accent
+valeur	NOM	48.85	2	2	valeure	reel	valleur	simple_double
+hauteur	NOM	48.84	1	1	hoteur	o	hautteur	simple_double
+là-dedans	ADV	48.79	1	0.5	là-dedens	nasale	là-dedant	finale	là-dedan	finale
+peinture	NOM	48.59	2	1	painture	nasale	peinturre	simple_double
+éclat	NOM	48.52	1	0.5	écla	finale	eclat	accent	éclad	finale
+prêtre	NOM	48.48	1	2	prètre	reel	pretre	accent
+dépendre	VER	48.41	1	0.5	dépandre	nasale	dependre	accent
+malheureux	ADJ	48.41	1	1	malheurreux	simple_double	malheureus	finale	malheureu	finale
+chaîne	NOM	48.28	3	2	châine	reel	chaïne	reel
+zone	NOM	48.22	2	2	zône	reel	zonne	simple_double
+appareil	NOM	48.09	2	2	apareil	reel	apparreil	simple_double
+expression	NOM	48.05	1	1	exprecion	s	expretion	tion
+vaisseau	NOM	47.91	2	1	vaisso	o	vaiceau	s	vaissau	o
+charmant	ADJ	47.83	1	0.5	charmand	finale	charman	finale
+mince	ADJ	47.39	2	1	maince	nasale	minse	s
+élève	NOM	47.31	2	2	éléve	reel	élaive	e_ouvert	éleve	accent
+abattre	VER	47.04	3	2	abatre	reel	abbatre	reel
+distance	NOM	46.99	2	1	distence	nasale	distanse	s
+anglais	ADJ	46.95	2	2	englais	reel	anglait	finale	anglai	finale
+compris	ADJ	46.93	1	0.5	compri	finale	conpris	m_bp
+précis	ADJ	46.7	1	1	préssis	s	préci	finale	precis	accent
+drap	NOM	46.67	1	0.5	drat	finale	dra	finale
+succès	NOM	46.65	3	2	succés	reel	succais	e_ouvert	succes	accent
+intelligent	ADJ	46.59	2	1	inteligent	double_simple	intelligant	nasale	intelligen	finale
+révéler	VER	46.52	2	2	révèler	reel	revéler	accent
+naturellement	ADV	46.5	3	1	naturelement	double_simple	naturellemant	nasale	natturellement	simple_double
+réparer	VER	46.42	1	1	réparrer	simple_double	reparer	accent
+horrible	ADJ	46.34	3	1	horible	double_simple	orrible	h
+univers	NOM	46.33	2	2	univer	reel	unnivers	simple_double
+naissance	NOM	46.31	2	1	naissence	nasale	naissanse	s
+cerveau	NOM	46.23	2	1	cervo	o	serveau	s	cervau	o
+grâce	NOM	46.15	4	2	grace	reel	gràce	reel	graçe	reel
+enterrer	VER	46.13	3	1	enterer	double_simple	anterrer	nasale
+interrompre	VER	45.89	1	1	interompre	double_simple	interronpre	m_bp
+heureusement	ADV	45.56	3	1	heureusemant	nasale	eureusement	h	heurreusement	simple_double
+attitude	NOM	45.47	2	2	atitude	reel	attittude	simple_double
+chauffeur	NOM	45.23	2	1	chaufeur	double_simple	choffeur	o
+solitude	NOM	44.69	2	2	sollitude	reel	solittude	simple_double
+humeur	NOM	44.65	2	1	umeur	h	hummeur	simple_double
+cellule	NOM	44.63	3	1	celule	double_simple	sellule	s	cellulle	simple_double
+môme	NOM	44.61	1	1	maume	o	mome	accent
+rapidement	ADV	44.56	3	2	rapidemment	reel	rapidemant	nasale	rappidement	simple_double
+attente	NOM	44.46	3	1	atente	double_simple	attante	nasale
+puissance	NOM	44.45	2	1	puissence	nasale	puissanse	s
+printemps	NOM	44.37	2	2	printemp	reel	printamps	nasale	printempt	finale
+palais	NOM	44.13	1	1	pallais	simple_double	palait	finale	palai	finale
+qualité	NOM	44.12	2	1	qualitée	te_tee	quallité	simple_double	calité	k
+étouffer	VER	43.98	2	1	étoufer	double_simple	etouffer	accent
+troisième	ADJ	43.97	3	2	troisiéme	reel	troisiaime	e_ouvert	troisieme	accent
+puissant	ADJ	43.84	1	0.5	puissand	finale	puissan	finale
+fumée	NOM	43.8	1	1	fummée	simple_double	fumee	accent
+salope	NOM	43.75	1	1	saloppe	simple_double	sallope	simple_double
+méchant	ADJ	43.71	1	0.5	méchent	nasale	mechant	accent	méchan	finale
+gâteau	NOM	43.67	2	2	gateau	reel	gâto	o	gâtau	o
+siège	NOM	43.67	2	2	siége	reel	siaige	e_ouvert	siege	accent
+élément	NOM	43.53	1	0.5	élémant	nasale	élémen	finale	elément	accent
+examiner	VER	43.52	1	1	examminer	simple_double	examinner	simple_double
+kilomètre	NOM	43.52	1	1	kilomaitre	e_ouvert	kilommètre	simple_double	kilometre	accent
+angoisse	NOM	43.41	2	1	engoisse	nasale	angoice	s
+accueillir	VER	43.35	4	2	acueillir	reel	accueilir	double_simple
+étroit	ADJ	43.3	1	0.5	étroi	finale	etroit	accent	étroid	finale
+nerveux	ADJ	43.11	1	0.5	nerveu	finale	nerveus	finale
+silencieux	ADJ	43.03	3	1	silancieux	nasale	silensieux	s	sillencieux	simple_double
+contrôle	NOM	42.97	4	2	controle	reel	contraule	o	contrôlle	reel
+émotion	NOM	42.96	1	1	émocion	tion	émottion	simple_double	emotion	accent
+dessin	NOM	42.94	2	1	dessain	nasale	decin	s
+repos	NOM	42.94	1	0.5	repot	finale	repo	finale
+échanger	VER	42.78	1	0.5	échenger	nasale	echanger	accent
+joyeux	ADJ	42.75	1	0.5	joyeu	finale	joyeus	finale
+déplacer	VER	42.73	1	1	déplasser	s	deplacer	accent
+véritable	ADJ	42.72	1	1	vérittable	simple_double	veritable	accent
+dire	NOM	42.65	3	2	dir	reel	dirre	simple_double
+par-dessus	PRE	42.64	1	0.5	par-dessut	finale	par-dessu	finale
+réunion	NOM	42.5	1	1	réunnion	simple_double	reunion	accent
+terrasse	NOM	42.31	3	1	terasse	double_simple	terrace	s
+commettre	VER	42.3	2	1	comettre	double_simple	commetre	double_simple
+certes	ADV	42.27	2	2	certe	reel	sertes	s
+fait	ADJ	42.27	1	2	faît	reel	fèt	e_ouvert	fai	finale
+fantôme	NOM	42.05	2	2	fantome	reel	fentôme	nasale	fantaume	o
+planète	NOM	42.01	2	2	planête	reel	plannète	simple_double	planaite	e_ouvert
+unité	NOM	41.94	2	2	unitée	reel	unnité	simple_double	unite	accent
+franchir	VER	41.86	2	2	franchire	reel	frenchir	nasale
+niveau	NOM	41.8	2	2	nivau	reel	nivo	o
+brillant	ADJ	41.6	1	1	brilant	double_simple	brilland	finale	brillan	finale
+empire	NOM	41.49	2	1	ampire	nasale	empirre	simple_double	enpire	m_bp
+environ	ADV	41.49	2	1	anviron	nasale	envirron	simple_double
+comité	NOM	41.19	2	2	commité	reel	comitté	simple_double
+talent	NOM	41.14	2	1	talant	nasale	tallent	simple_double	talen	finale
+contrôler	VER	41.07	4	2	controler	reel	contrauler	o	controller	reel
+honnête	ADJ	41.06	2	1	onnête	h	honête	double_simple	honnete	accent
+colline	NOM	41.0	3	2	coline	reel	collinne	simple_double	colinne	reel
+inquiet	ADJ	40.75	1	0.5	inquiait	e_final	inquied	finale	inquie	finale
+lycée	NOM	40.67	2	2	lycé	reel	licée	y_i	lyssée	s
+caractère	NOM	40.51	2	2	carractère	reel	caractaire	e_ouvert	caractere	accent
+lent	ADJ	40.27	1	0.5	lant	nasale	lend	finale	len	finale
+millier	NOM	40.19	2	2	milier	reel	millié	e_final
+portrait	NOM	40.16	1	1	portrèt	e_ouvert	portrai	finale	portraid	finale
+accomplir	VER	40.1	2	1	acomplir	double_simple	acconplir	m_bp
+commissaire	NOM	40.04	2	2	comissaire	reel	commissère	e_ouvert	commissairre	simple_double
+circonstance	NOM	40.02	3	1	circonstence	nasale	circonstanse	s	sirconstance	s
+limite	NOM	40.0	1	1	limitte	simple_double	limmite	simple_double
+parfaire	VER	39.96	1	1	parfairre	simple_double	parfère	e_ouvert
+suivant	ADJ	39.95	1	0.5	suivand	finale	suivan	finale
+retraite	NOM	39.8	1	1	retraitte	simple_double	retrète	e_ouvert
+déchirer	VER	39.78	1	1	déchirrer	simple_double	dechirer	accent
+enquête	NOM	39.63	2	2	enquète	reel	anquête	nasale	enquete	accent
+combattre	VER	39.62	2	2	combatre	reel	conbattre	m_bp
+mystère	NOM	39.52	1	1	mistère	y_i	mystaire	e_ouvert	mystere	accent
+style	NOM	39.48	2	2	stile	reel	stylle	simple_double
+particulier	ADJ	39.45	1	1	particullier	simple_double	particulié	e_final
+soudain	ADJ	39.45	2	0.5	soudein	nasale	soudin	nasale
+précipiter	VER	39.42	2	1	préssipiter	s	précippiter	simple_double	precipiter	accent
+rassembler	VER	39.34	2	1	rassambler	nasale	racembler	s	rassenbler	m_bp
+prière	NOM	39.34	1	1	priaire	e_ouvert	priere	accent
+opinion	NOM	39.27	1	1	opinnion	simple_double	oppinion	simple_double
+réduire	VER	39.24	1	1	réduirre	simple_double	reduire	accent
+habituer	VER	39.16	2	1	abituer	h	habittuer	simple_double
+explication	NOM	39.01	1	1	explicassion	tion	explicattion	simple_double	explicacion	tion
+résoudre	VER	38.95	3	2	résoudres	reel	resoudre	accent
+assiette	NOM	38.93	3	1	assiete	double_simple	aciette	s
+rattraper	VER	38.86	3	2	rattrapper	reel	ratraper	double_simple
+utile	ADJ	38.84	1	1	uttile	simple_double	utille	simple_double
+tendresse	NOM	38.78	3	1	tandresse	nasale	tendrece	s
+territoire	NOM	38.66	3	2	térritoire	reel	teritoire	double_simple	territtoire	simple_double
+souffrance	NOM	38.59	2	2	soufrance	reel	souffrence	nasale	souffranse	s
+britannique	ADJ	38.48	4	2	britanique	reel	brittanique	reel	brittannique	reel
+rivière	NOM	38.22	2	2	riviére	reel	riviaire	e_ouvert	riviere	accent
+allure	NOM	38.22	3	1	alure	double_simple	allurre	simple_double
+plat	ADJ	38.21	1	0.5	pla	finale	plad	finale
+imagination	NOM	38.11	1	1	imaginacion	tion	imaginattion	simple_double	imaginassion	tion
+urgence	NOM	38.07	3	1	urgance	nasale	urgense	s
+nourriture	NOM	37.94	2	2	nouriture	reel	nourritture	simple_double	nourriturre	simple_double
+principal	ADJ	37.8	3	1	praincipal	nasale	prinsipal	s	princippal	simple_double
+cimetière	NOM	37.77	2	2	cimetierre	reel	simetière	s	cimmetière	simple_double
+matière	NOM	37.72	2	2	matiére	reel	mattière	simple_double	matiaire	e_ouvert
+soupirer	VER	37.64	1	1	soupirrer	simple_double	souppirer	simple_double
+horizon	NOM	37.59	2	1	orizon	h	horrizon	simple_double
+envahir	VER	37.54	3	1	anvahir	nasale	envair	h
+frontière	NOM	37.5	2	2	frontiére	reel	frontiaire	e_ouvert	frontiere	accent
+secrétaire	NOM	37.5	1	1	secrétère	e_ouvert	secrétairre	simple_double	secretaire	accent
+origine	NOM	37.45	3	2	orrigine	reel	originne	simple_double
+loup	NOM	37.41	1	0.5	lou	finale	lout	finale
+fiancé	NOM	37.31	3	1	fiencé	nasale	fiansé	s
+allée	NOM	37.27	2	1	alée	double_simple	allee	accent
+affreux	ADJ	37.21	1	1	afreux	double_simple	affreus	finale	affreu	finale
+changement	NOM	37.06	2	0.5	changemant	nasale	changemen	finale	chengement	nasale
+principe	NOM	36.97	3	1	prinsipe	s	praincipe	nasale	princippe	simple_double
+hausser	VER	36.86	3	1	ausser	h	hosser	o	haucer	s
+participer	VER	36.81	2	1	partissiper	s	participper	simple_double
+écrivain	NOM	36.78	2	0.5	écrivein	nasale	ecrivain	accent	écrivin	nasale
+complet	ADJ	36.66	2	2	complèt	reel	comple	finale	complait	e_final
+mystérieux	ADJ	36.63	1	1	mistérieux	y_i	mystérieu	finale	mysterieux	accent
+contempler	VER	36.52	1	0.5	contampler	nasale	contenpler	m_bp
+carrière	NOM	36.34	2	2	carière	reel	carriaire	e_ouvert	carriere	accent
+apparemment	ADV	36.3	4	2	apparement	reel	apparemmant	nasale	aparemment	double_simple
+éveiller	VER	36.28	2	1	éveiler	double_simple	eveiller	accent
+supérieur	ADJ	36.2	2	2	suppérieur	reel	superieur	accent
+promesse	NOM	36.2	2	1	promece	s	prommesse	simple_double
+tantôt	ADV	36.19	2	1	tentôt	nasale	tantaut	o	tantôd	finale
+quelquefois	ADV	36.17	1	0.5	quelquefoit	finale	quelquefoi	finale
+nation	NOM	36.02	1	1	nassion	tion	nattion	simple_double	nacion	tion
+fameux	ADJ	35.89	1	1	fammeux	simple_double	fameus	finale	fameu	finale
+lapin	NOM	35.86	2	1	lapain	nasale	lappin	simple_double
+plateau	NOM	35.85	2	1	platau	o	platteau	simple_double	plato	o
+légèrement	ADV	35.77	3	2	légérement	reel	légèremant	nasale	légairement	e_ouvert
+vêtir	VER	35.76	1	0.5	vètir	accent	vetir	accent
+péché	NOM	35.74	2	1	péchée	te_tee	peché	accent
+révolution	NOM	35.54	1	1	révolussion	tion	révoluttion	simple_double	revolution	accent
+centaine	NOM	35.52	3	1	cantaine	nasale	sentaine	s
+collègue	NOM	35.51	2	1	colègue	double_simple	collaigue	e_ouvert	collegue	accent
+censé	ADJ	35.31	1	0.5	cansé	nasale	cense	accent
+réclamer	VER	35.13	1	1	réclammer	simple_double	reclamer	accent
+extraordinaire	ADJ	35.1	1	1	extraordinnaire	simple_double	extraordinère	e_ouvert	extraordinairre	simple_double
+régner	VER	35.09	3	2	règner	reel	regner	accent	reigner	reel
+propriétaire	NOM	35.02	2	2	propriètaire	reel	propriétairre	simple_double	propriétère	e_ouvert
+furieux	ADJ	34.95	1	1	furrieux	simple_double	furieu	finale	furieus	finale
+procès	NOM	34.86	2	2	procés	reel	procais	e_ouvert	procè	finale
+résistance	NOM	34.86	2	1	résistence	nasale	résistanse	s	resistance	accent
+étaler	VER	34.73	1	1	étaller	simple_double	etaler	accent
+minuscule	ADJ	34.68	1	1	minusculle	simple_double	minnuscule	simple_double
+jaloux	ADJ	34.43	1	1	jalloux	simple_double	jalous	finale	jalou	finale
+décrire	VER	34.26	1	1	décrirre	simple_double	decrire	accent
+curiosité	NOM	34.2	2	1	curiositée	te_tee	curiositté	simple_double	curiosite	accent
+minuit	NOM	34.19	1	1	minnuit	simple_double	minui	finale	minuid	finale
+paupière	NOM	34.1	2	1	popière	o	paupiaire	e_ouvert	pauppière	simple_double
+détendre	VER	33.98	1	0.5	détandre	nasale	detendre	accent
+chant	NOM	33.97	1	0.5	chent	nasale	chan	finale
+domaine	NOM	33.89	3	2	dommaine	reel	domain	reel
+commandement	NOM	33.85	2	2	comandement	reel	commandemant	nasale	commandemen	finale
+bêtise	NOM	33.84	1	0.5	bètise	accent	betise	accent
+fièvre	NOM	33.82	1	2	fiévre	reel	fiaivre	e_ouvert	fievre	accent
+période	NOM	33.77	3	2	pèriode	reel	periode	accent
+débrouiller	VER	33.77	2	1	débrouiler	double_simple	debrouiller	accent
+crainte	NOM	33.59	2	0.5	creinte	nasale	crinte	nasale
+fonctionner	VER	33.45	2	1	fonctioner	double_simple	fonccionner	tion	foncssionner	tion
+poulet	NOM	33.3	1	1	poullet	simple_double	poulait	e_final	pouled	finale
+chute	NOM	33.22	3	2	chûte	reel	chutte	reel
+dominer	VER	33.13	1	1	domminer	simple_double	dominner	simple_double
+responsabilité	NOM	33.09	2	1	responsabilitée	te_tee	responsabilitté	simple_double	responsabilite	accent
+évident	ADJ	33.09	1	0.5	évidant	nasale	éviden	finale	evident	accent
+apparence	NOM	33.08	3	2	apparance	reel	aparence	double_simple	apparense	s
+récit	NOM	33.02	1	1	réssit	s	recit	accent	réci	finale
+misère	NOM	33.0	1	2	misére	reel	misaire	e_ouvert	misere	accent
+majesté	NOM	33.0	2	1	majestée	te_tee	majeste	accent
+saint	ADJ	33.0	2	0.5	seint	nasale	saind	finale	sint	nasale
+directement	ADV	32.92	2	1	directemant	nasale	dirrectement	simple_double	directemen	finale
+employer	VER	32.84	1	0.5	amployer	nasale	enployer	m_bp
+difficulté	NOM	32.77	3	2	dificulté	reel	difficultée	te_tee	difficulte	accent
+auteur	NOM	32.7	2	1	oteur	o	autteur	simple_double
+célèbre	ADJ	32.62	3	2	célébre	reel	célaibre	e_ouvert	célebre	accent
+échange	NOM	32.6	1	0.5	échenge	nasale	echange	accent
+félicitation	NOM	32.58	2	1	félicitassion	tion	félissitation	s	félicitattion	simple_double
+démarrer	VER	32.5	2	1	démarer	double_simple	demarrer	accent
+sommet	NOM	32.47	2	1	somet	double_simple	sommed	finale
+répandre	VER	32.36	3	2	répendre	reel	repandre	accent
+humide	ADJ	32.27	2	1	umide	h	hummide	simple_double
+bâtiment	NOM	32.2	4	2	batiment	reel	bâtimant	nasale	bâtimment	simple_double
+patience	NOM	32.13	3	1	patiance	nasale	patiense	s	pattience	simple_double
+sensation	NOM	32.08	2	1	sensacion	tion	sansation	nasale	sensattion	simple_double
+science	NOM	32.02	3	1	cience	sc	sciance	nasale	sciense	s
+hâte	NOM	32.02	2	2	hate	reel	âte	h
+empereur	NOM	32.0	1	0.5	ampereur	nasale	enpereur	m_bp
+facilement	ADV	31.94	3	1	facilemant	nasale	fassilement	s	facillement	simple_double
+précieux	ADJ	31.92	1	1	préssieux	s	précieus	finale	precieux	accent
+intérieur	ADJ	31.89	3	2	intèrieur	reel	interieur	accent
+obscurité	NOM	31.86	2	1	obscuritée	te_tee	obscurrité	simple_double	obscurite	accent
+là-dessus	ADV	31.7	1	0.5	là-dessut	finale	là-dessu	finale
+franchement	ADV	31.66	2	0.5	frenchement	nasale	franchemen	finale	franchemant	nasale
+piège	NOM	31.66	1	2	piége	reel	piaige	e_ouvert	piege	accent
+gras	ADJ	31.62	1	0.5	grat	finale	gra	finale
+satisfaire	VER	31.61	1	1	satisfairre	simple_double	satisfère	e_ouvert	sattisfaire	simple_double
+assurance	NOM	31.52	3	1	assurence	nasale	assuranse	s	assurrance	simple_double
+enchanté	ADJ	31.48	2	0.5	enchenté	nasale	anchanté	nasale
+exécuter	VER	31.4	1	1	exécutter	simple_double	executer	accent
+essence	NOM	31.35	3	1	essance	nasale	ecence	s	essense	s
+emprunter	VER	31.29	1	0.5	amprunter	nasale	enprunter	m_bp
+créature	NOM	31.23	1	1	créaturre	simple_double	creature	accent	créatture	simple_double
+innocent	ADJ	31.21	4	1	inocent	double_simple	innocant	nasale	innossent	s
+italien	ADJ	31.2	1	1	ittalien	simple_double	itallien	simple_double
+activité	NOM	31.2	3	2	activitée	reel	acctivité	simple_double	activite	accent
+août	NOM	31.15	4	2	aôut	reel	aoüt	reel	aoû	reel
+longuement	ADV	31.08	1	0.5	longuemant	nasale	longuemend	finale	longuemen	finale
+colonne	NOM	31.01	3	1	colone	double_simple	collonne	simple_double
+semblable	ADJ	30.92	2	1	samblable	nasale	senblable	m_bp	cemblable	s
+malin	ADJ	30.84	2	1	malain	nasale	mallin	simple_double
+paradis	NOM	30.63	1	1	parradis	simple_double	paradit	finale	paradi	finale
+sérieusement	ADV	30.55	1	0.5	sérieusemant	nasale	sérieusemend	finale	serieusement	accent
+enceinte	ADJ	30.52	3	1	anceinte	nasale	enseinte	s	encainte	nasale
+auto	NOM	30.51	2	1	oto	o	autto	simple_double
+huile	NOM	30.43	2	1	uile	h	huille	simple_double
+plafond	NOM	30.34	1	1	plaffond	simple_double	plafont	finale	plafon	finale
+bibliothèque	NOM	30.3	1	1	bibliotèque	th	bibliothaique	e_ouvert	bibliotheque	accent
+automne	NOM	30.28	2	1	otomne	o	auttomne	simple_double
+efforcer	VER	30.16	3	1	eforcer	double_simple	efforser	s
+fidèle	ADJ	30.11	1	1	fidaile	e_ouvert	fidele	accent
+emploi	NOM	30.07	1	0.5	amploi	nasale	enploi	m_bp
+accent	NOM	30.05	1	0.5	accant	nasale	accend	finale	accen	finale
+organisation	NOM	30.04	3	2	organization	reel	organisacion	tion	organisattion	simple_double
+disposition	NOM	30.03	1	1	disposicion	tion	disposittion	simple_double	disposission	tion
+volontiers	ADV	30.01	2	2	volontier	reel	vollontiers	simple_double	volontiert	finale
+fonction	NOM	29.93	1	1	foncssion	tion	fonccion	tion
+poignée	NOM	29.84	2	2	poigné	reel	poignee	accent
+dissimuler	VER	29.84	2	1	dicimuler	s	dissimuller	simple_double	dissimmuler	simple_double
+septembre	NOM	29.8	2	1	septambre	nasale	septenbre	m_bp	ceptembre	s
+délicat	ADJ	29.77	1	0.5	délicad	finale	delicat	accent	délica	finale
+juillet	NOM	29.77	2	2	juilet	reel	juilled	finale	juillait	e_final
+embarquer	VER	29.63	1	0.5	ambarquer	nasale	enbarquer	m_bp
+familier	ADJ	29.6	1	1	fammilier	simple_double	familié	e_final	famillier	simple_double
+régime	NOM	29.58	1	1	régimme	simple_double	regime	accent
+pression	NOM	29.52	2	1	precion	s	pretion	tion
+identité	NOM	29.48	3	1	identitée	te_tee	idantité	nasale	identitté	simple_double
+ôter	VER	29.42	1	1	auter	o	oter	accent
+instrument	NOM	29.38	2	1	instrumant	nasale	instrumment	simple_double	instrumend	finale
+envoler	VER	29.34	3	1	anvoler	nasale	envoller	simple_double
+poète	NOM	29.3	3	2	poête	reel	poaite	e_ouvert	poete	accent
+concentrer	VER	29.25	3	1	concantrer	nasale	consentrer	s
+cabinet	NOM	29.23	1	1	cabinnet	simple_double	cabinait	e_final	cabined	finale
+génération	NOM	29.14	1	1	généracion	tion	générattion	simple_double	genération	accent
+poème	NOM	29.12	3	2	poême	reel	poaime	e_ouvert	poeme	accent
+prudent	ADJ	29.01	1	0.5	prudant	nasale	pruden	finale	prudend	finale
+épée	NOM	29.01	2	1	épé	te_tee	epée	accent
+délicieux	ADJ	28.93	1	1	délissieux	s	délicieus	finale	delicieux	accent
+ceinture	NOM	28.89	3	1	cainture	nasale	seinture	s	ceinturre	simple_double
+semblant	NOM	28.86	1	0.5	samblant	nasale	sembland	finale	senblant	m_bp
+empreinte	NOM	28.84	2	0.5	ampreinte	nasale	enpreinte	m_bp	emprainte	nasale
+extrême	ADJ	28.81	4	2	extrème	reel	extreme	accent
+préciser	VER	28.8	2	1	préssiser	s	preciser	accent
+identifier	VER	28.72	3	1	idantifier	nasale	identiffier	simple_double
+dévorer	VER	28.67	1	1	dévorrer	simple_double	devorer	accent
+drapeau	NOM	28.66	2	1	drapo	o	drappeau	simple_double	drapau	o
+reflet	NOM	28.58	1	0.5	refle	finale	reflait	e_final	refled	finale
+entièrement	ADV	28.55	3	2	entiérement	reel	antièrement	nasale	entiairement	e_ouvert
+réaction	NOM	28.55	2	2	reaction	reel	réaccion	tion	réacssion	tion
+discussion	NOM	28.54	2	1	discucion	s	discution	tion
+filet	NOM	28.46	1	1	fillet	simple_double	filed	finale
+défaut	NOM	28.41	1	1	défot	o	défaud	finale	defaut	accent
+vaguement	ADV	28.24	1	0.5	vaguemant	nasale	vaguemen	finale	vaguemend	finale
+malheureusement	ADV	28.21	2	1	malheureusemant	nasale	malheurreusement	simple_double	malheureusemen	finale
+possibilité	NOM	28.2	4	2	possibiliter	reel	pocibilité	s	possibilitté	simple_double
+monnaie	NOM	28.15	2	1	monaie	double_simple	monnèe	e_ouvert
+enfiler	VER	28.14	3	1	anfiler	nasale	enfiller	simple_double
+flot	NOM	28.12	1	0.5	flod	finale	flo	finale
+emplir	VER	28.06	2	0.5	amplir	nasale	enplir	m_bp
+imiter	VER	28.02	2	1	immiter	simple_double	imitter	simple_double
+auparavant	ADV	27.86	3	2	auparavent	reel	oparavant	o	auparravant	simple_double
+université	NOM	27.82	3	2	universitée	reel	universitté	simple_double	universite	accent
+habituel	ADJ	27.8	3	1	abituel	h	habittuel	simple_double
+intelligence	NOM	27.78	4	1	inteligence	double_simple	intelligance	nasale	intelligense	s
+culotte	NOM	27.72	3	1	culote	double_simple	cullotte	simple_double
+cheminée	NOM	27.69	1	1	cheminnée	simple_double	cheminee	accent
+central	ADJ	27.68	3	1	cantral	nasale	sentral	s
+séance	NOM	27.63	3	2	scéance	reel	séence	nasale	séanse	s
+poupée	NOM	27.58	2	1	poupé	te_tee	pouppée	simple_double	poupee	accent
+habit	NOM	27.57	1	1	abit	h	habid	finale	habi	finale
+décevoir	VER	27.46	2	1	déssevoir	s	decevoir	accent
+cérémonie	NOM	27.38	1	1	cérémonnie	simple_double	cerémonie	accent
+maudit	ADJ	27.34	1	1	modit	o	maudi	finale	maudid	finale
+douloureux	ADJ	27.33	1	1	doulourreux	simple_double	douloureu	finale	doulloureux	simple_double
+tradition	NOM	27.24	2	1	tradission	tion	tradittion	simple_double	tradicion	tion
+soupçonner	VER	27.23	3	1	soupçoner	double_simple	soupssonner	s
+médicament	NOM	27.2	2	1	médicamant	nasale	médicamment	simple_double	médicamend	finale
+officiel	ADJ	27.1	3	2	oficiel	reel	offissiel	s
+conséquence	NOM	27.06	2	1	conséquance	nasale	conséquense	s	consequence	accent
+opérer	VER	27.06	1	1	oppérer	simple_double	operer	accent
+aspect	NOM	27.03	1	0.5	aspecd	finale	aspec	finale
+langage	NOM	27.02	4	2	language	reel	lengage	nasale
+station	NOM	26.98	2	2	stattion	reel	stacion	tion	stassion	tion
+regret	NOM	26.88	1	0.5	regrait	e_final	regred	finale	regre	finale
+pistolet	NOM	26.85	2	2	pistoler	reel	pistollet	simple_double	pistolait	e_final
+océan	NOM	26.84	3	2	ocean	reel	océen	nasale	osséan	s
+profondément	ADV	26.8	3	2	profondémment	reel	profondémant	nasale	proffondément	simple_double
+vaincre	VER	26.76	2	0.5	veincre	nasale	vincre	nasale
+libération	NOM	26.71	1	1	libéracion	tion	libérattion	simple_double	liberation	accent
+forcément	ADV	26.68	2	2	forçément	reel	forcémant	nasale	forsément	s
+accès	NOM	26.66	3	2	accés	reel	accais	e_ouvert	accè	finale
+serpent	NOM	26.64	2	1	serpant	nasale	serpend	finale	cerpent	s
+fêter	VER	26.49	1	0.5	fèter	accent	feter	accent
+instruction	NOM	26.32	1	1	instrucssion	tion	instruccion	tion
+physique	ADJ	26.3	3	1	fysique	ph	phisique	y_i
+écho	NOM	26.3	1	1	éko	ch_k	echo	accent	éco	ch_k
+instinct	NOM	26.11	1	0.5	instainct	nasale	instincd	finale	instinc	finale
+certitude	NOM	26.04	3	1	sertitude	s	certittude	simple_double
+chevalier	NOM	26.03	1	1	chevallier	simple_double	chevalié	e_final
+emparer	VER	26.03	2	1	amparer	nasale	emparrer	simple_double	enparer	m_bp
+c'est-à-dire	ADV	25.98	2	1	c'est à dire	trait_union	cest-à-dire	apostrophe	c'est-à-dirre	simple_double
+comparer	VER	25.93	1	1	comparrer	simple_double	conparer	m_bp
+comédie	NOM	25.92	1	1	commédie	simple_double	comedie	accent
+envelopper	VER	25.85	3	1	enveloper	double_simple	anvelopper	nasale
+chapitre	NOM	25.82	3	2	chapître	reel	chappitre	simple_double
+chauffer	VER	25.77	3	1	chaufer	double_simple	choffer	o
+particulièrement	ADV	25.7	4	2	particuliérement	reel	particulièremant	nasale	particullièrement	simple_double
+évidence	NOM	25.7	2	1	évidance	nasale	évidense	s	evidence	accent
+façade	NOM	25.68	4	2	facade	reel	fassade	s
+ascenseur	NOM	25.61	3	2	ascenceur	reel	asenseur	sc	ascanseur	nasale
+assis	ADJ	25.58	2	1	acis	s	assi	finale
+autoriser	VER	25.58	2	1	otoriser	o	autorriser	simple_double	auttoriser	simple_double
+tempête	NOM	25.51	1	0.5	tampête	nasale	tempète	accent	tenpête	m_bp
+sergent	NOM	25.5	2	1	sergant	nasale	sergend	finale	cergent	s
+dérouler	VER	25.41	1	1	dérouller	simple_double	derouler	accent
+augmenter	VER	25.41	2	1	augmanter	nasale	ogmenter	o
+déconner	VER	25.41	2	1	déconer	double_simple	deconner	accent
+totalement	ADV	25.39	3	2	totallement	reel	totalemant	nasale	tottalement	simple_double
+jugement	NOM	25.34	1	0.5	jugemant	nasale	jugemend	finale	jugemen	finale
+populaire	ADJ	25.31	2	1	poppulaire	simple_double	populère	e_ouvert	populairre	simple_double
+conviction	NOM	25.27	1	1	convicssion	tion	conviccion	tion
+atmosphère	NOM	25.27	3	2	athmosphère	reel	attmosphère	simple_double	atmosfère	ph
+élan	NOM	25.2	2	2	éland	reel	élen	nasale	elan	accent
+équilibre	NOM	25.2	2	2	équillibre	reel	equilibre	accent
+permission	NOM	25.15	2	1	permicion	s	permition	tion
+exprès	ADJ	25.14	1	1	exprais	e_ouvert	exprè	finale	expres	accent
+grain	NOM	25.14	2	0.5	grein	nasale	grin	nasale
+télégramme	NOM	25.11	2	1	télégrame	double_simple	telégramme	accent
+champion	NOM	25.05	3	2	chanpion	reel	chempion	nasale
+commande	NOM	25.04	3	1	comande	double_simple	commende	nasale
+écrouler	VER	25.03	1	1	écrouller	simple_double	ecrouler	accent
+exercice	NOM	25.01	2	1	exercisse	s	exersice	s
+écriture	NOM	25.0	1	1	écriturre	simple_double	ecriture	accent	écritture	simple_double
+dépit	NOM	24.97	1	2	dépis	reel	dépi	finale	depit	accent
+étonnant	ADJ	24.93	2	1	étonant	double_simple	etonnant	accent	étonnand	finale
+éternité	NOM	24.91	3	1	éternitée	te_tee	éternitté	simple_double	eternité	accent
+carreau	NOM	24.89	3	1	carrau	o	careau	double_simple	carro	o
+féminin	ADJ	24.89	3	2	féminim	reel	féminain	nasale	féminnin	simple_double
+fréquenter	VER	24.89	2	0.5	fréquanter	nasale	frequenter	accent
+méthode	NOM	24.87	2	1	métode	th	methode	accent
+régulier	ADJ	24.82	1	1	régullier	simple_double	régulié	e_final	regulier	accent
+embêter	VER	24.76	1	0.5	ambêter	nasale	enbêter	m_bp	embeter	accent
+commerce	NOM	24.75	2	2	comerce	reel	commerse	s
+transmettre	VER	24.74	3	1	transmetre	double_simple	trensmettre	nasale
+photographie	NOM	24.72	3	1	fotographie	ph	phottographie	simple_double
+population	NOM	24.66	2	1	populacion	tion	popullation	simple_double	populassion	tion
+degré	NOM	24.63	2	1	degrée	te_tee	degre	accent
+impressionner	VER	24.62	4	2	impressioner	reel	imprecionner	s	impretionner	tion
+écart	NOM	24.62	2	2	écard	reel	ecart	accent
+vallée	NOM	24.61	3	2	vallé	reel	vallee	accent	valée	reel
+déshabiller	VER	24.6	2	1	déshabiler	double_simple	deshabiller	accent
+sacrifice	NOM	24.59	3	1	sacrifisse	s	sacriffice	simple_double
+prisonnier	ADJ	24.55	3	2	prisonier	reel	prisonnié	e_final
+panier	NOM	24.45	1	1	pannier	simple_double	panié	e_final
+danseur	NOM	24.37	3	2	danceur	reel	denseur	nasale
+discret	ADJ	24.32	1	0.5	discrait	e_final	discre	finale	discred	finale
+dénoncer	VER	24.31	2	1	dénonser	s	denoncer	accent
+satisfaction	NOM	24.29	2	1	satisfacssion	tion	sattisfaction	simple_double	satisfaccion	tion
+tiède	ADJ	24.29	1	1	tiaide	e_ouvert	tiede	accent
+enterrement	NOM	24.27	3	1	enterement	double_simple	anterrement	nasale	enterremend	finale
+aiguille	NOM	24.27	2	1	aiguile	double_simple	èguille	e_ouvert
+ordinaire	ADJ	24.26	2	2	ordinnaire	reel	ordinairre	simple_double	ordinère	e_ouvert
+urgent	ADJ	24.26	1	0.5	urgant	nasale	urgen	finale	urgend	finale
+familial	ADJ	24.25	4	2	famillial	reel	fammilial	simple_double
+crédit	NOM	24.24	1	0.5	crédi	finale	credit	accent	crédid	finale
+courrier	NOM	24.22	2	2	courier	reel	courrié	e_final
+bâton	NOM	24.19	3	2	baton	reel	batôn	reel
+ralentir	VER	24.19	3	1	ralantir	nasale	rallentir	simple_double
+acier	NOM	24.17	2	1	accier	simple_double	assier	s	acié	e_final
+manifester	VER	24.16	2	1	mannifester	simple_double	maniffester	simple_double
+avant	ADJ	24.13	1	0.5	avan	finale	avand	finale
+progrès	NOM	24.12	2	2	progrés	reel	prograis	e_ouvert	progrèt	finale
+confus	ADJ	24.12	1	0.5	confu	finale	confut	finale
+amusant	ADJ	24.11	1	1	ammusant	simple_double	amusan	finale	amusand	finale
+assistant	NOM	24.07	1	1	acistant	s	assistand	finale	assistan	finale
+marrant	ADJ	24.03	2	1	marant	double_simple	marran	finale	marrand	finale
+tremper	VER	24.02	2	0.5	tramper	nasale	trenper	m_bp
+légende	NOM	23.92	2	0.5	légande	nasale	legende	accent
+appétit	NOM	23.87	2	1	apétit	double_simple	appetit	accent	appéti	finale
+éducation	NOM	23.86	1	1	éducacion	tion	éducattion	simple_double	education	accent
+théorie	NOM	23.83	3	2	théoris	reel	téorie	th	théorrie	simple_double
+humanité	NOM	23.81	3	2	humanitée	reel	umanité	h	humannité	simple_double
+précisément	ADV	23.8	4	2	précisémment	reel	précisémant	nasale	préssisément	s
+annuler	VER	23.79	3	1	anuler	double_simple	annuller	simple_double
+quotidien	ADJ	23.79	1	1	quottidien	simple_double	cotidien	k
+ambassadeur	NOM	23.79	2	0.5	embassadeur	nasale	anbassadeur	m_bp
+volet	NOM	23.74	1	1	vollet	simple_double	voled	finale
+dignité	NOM	23.69	3	1	dignitée	te_tee	dignitté	simple_double	dignite	accent
+précéder	VER	23.66	2	1	présséder	s	precéder	accent
+généreux	ADJ	23.52	1	0.5	genéreux	accent	généreus	finale	généreu	finale
+écran	NOM	23.49	2	0.5	écren	nasale	ecran	accent
+lumineux	ADJ	23.41	1	1	luminneux	simple_double	lumineus	finale	lummineux	simple_double
+brûlant	ADJ	23.38	1	0.5	brûlan	finale	brûland	finale
+catastrophe	NOM	23.3	3	1	catastrofe	ph	cattastrophe	simple_double
+concevoir	VER	23.3	4	2	conçevoir	reel	consevoir	s
+uniquement	ADV	23.26	2	1	uniquemant	nasale	unniquement	simple_double	uniquemen	finale
+dépenser	VER	23.26	2	0.5	dépanser	nasale	depenser	accent
+chinois	ADJ	23.24	1	1	chinnois	simple_double	chinoit	finale	chinoi	finale
+bouquet	NOM	23.22	1	0.5	bouquait	e_final	bouqued	finale	bouque	finale
+faiblesse	NOM	23.16	2	1	faiblece	s	fèblesse	e_ouvert
+précaution	NOM	23.13	2	1	précotion	o	précaussion	tion	précauttion	simple_double
+assassiner	VER	23.07	3	1	assaciner	s	assassinner	simple_double
+habitant	NOM	23.07	2	1	abitant	h	habittant	simple_double	habitand	finale
+enveloppe	NOM	23.04	3	2	envellope	reel	envelope	double_simple	anveloppe	nasale
+cendre	NOM	23.02	3	1	candre	nasale	sendre	s
+hippo	NOM	23.01	3	1	ippo	h	hipo	double_simple
+roux	ADJ	22.96	1	0.5	rous	finale	rou	finale
+échelle	NOM	22.93	2	1	échele	double_simple	echelle	accent
+rarement	ADV	22.84	2	1	raremant	nasale	rarrement	simple_double	raremen	finale
+communiquer	VER	22.79	3	2	comuniquer	reel	communniquer	simple_double
+soulier	NOM	22.72	2	1	soulié	e_final	soullier	simple_double
+découper	VER	22.71	1	1	découpper	simple_double	decouper	accent
+littérature	NOM	22.69	3	2	litérature	reel	littératture	simple_double	litterature	accent
+vengeance	NOM	22.65	3	1	vengeence	nasale	vengeanse	s	venjance	j
+arrière	ADJ	22.54	3	2	arriére	reel	arière	double_simple	arriaire	e_ouvert
+carnet	NOM	22.52	1	0.5	carnait	e_final	carned	finale
+communication	NOM	22.5	3	1	comunication	double_simple	communicassion	tion	communnication	simple_double
+scandale	NOM	22.48	3	2	scandal	reel	scendale	nasale	scandalle	simple_double
+réellement	ADV	22.45	3	2	réelement	reel	réellemant	nasale	reellement	accent
+saloperie	NOM	22.37	2	1	salloperie	simple_double	salopperie	simple_double
+absent	ADJ	22.36	1	0.5	absant	nasale	absend	finale	absen	finale
+citer	VER	22.3	3	2	sité	reel	siter	s	citter	simple_double
+défaire	VER	22.27	1	1	défère	e_ouvert	défairre	simple_double	defaire	accent
+maréchal	NOM	22.27	1	1	marréchal	simple_double	marechal	accent
+racine	NOM	22.25	3	1	racinne	simple_double	rassine	s
+citoyen	NOM	22.16	3	1	sitoyen	s	cittoyen	simple_double
+affection	NOM	22.14	2	1	afection	double_simple	affeccion	tion	affecssion	tion
+assaut	NOM	22.14	1	1	assot	o	assau	finale	assaud	finale
+véhicule	NOM	22.09	2	1	véicule	h	véhiculle	simple_double	vehicule	accent
+mépris	NOM	21.97	1	0.5	mépri	finale	mepris	accent
+réputation	NOM	21.95	1	1	réputacion	tion	réputtation	simple_double	reputation	accent
+traitement	NOM	21.95	3	2	traîtement	reel	traitemant	nasale	traittement	simple_double
+évanouir	VER	21.93	1	1	évannouir	simple_double	evanouir	accent
+distraire	VER	21.88	2	1	distrère	e_ouvert	distrairre	simple_double
+couronne	NOM	21.88	3	2	courrone	reel	courone	double_simple	courronne	reel
+professionnel	ADJ	21.85	4	2	professionel	reel	profecionnel	s	proffessionnel	simple_double
+alliance	NOM	21.79	4	1	allience	nasale	aliance	double_simple	allianse	s
+étirer	VER	21.78	1	1	étirrer	simple_double	etirer	accent
+partenaire	NOM	21.77	2	1	partenère	e_ouvert	partenairre	simple_double
+fierté	NOM	21.75	2	1	fiertée	te_tee	fierte	accent
+diamant	NOM	21.73	3	2	diamand	reel	diament	nasale	diammant	simple_double
+défiler	VER	21.73	1	1	défiller	simple_double	defiler	accent
+propriété	NOM	21.66	4	2	propriétée	reel	proprieté	accent	proprièté	reel
+chapelle	NOM	21.65	3	2	chappelle	reel	chapele	double_simple
+émission	NOM	21.63	2	1	émicion	s	émition	tion	emission	accent
+oreiller	NOM	21.53	3	1	oreiler	double_simple	oreillé	e_final	orreiller	simple_double
+couvent	NOM	21.49	1	0.5	couven	finale	couvend	finale
+encourager	VER	21.41	3	1	ancourager	nasale	encourrager	simple_double
+enthousiasme	NOM	21.35	3	1	entousiasme	th	anthousiasme	nasale
+province	NOM	21.34	3	1	provinse	s	provaince	nasale
+collection	NOM	21.3	2	1	colection	double_simple	collecssion	tion	colleccion	tion
+proposition	NOM	21.29	2	1	proposicion	tion	proposittion	simple_double	proposission	tion
+section	NOM	21.29	2	1	secssion	tion	cection	s	seccion	tion
+ténèbres	NOM	21.25	1	1	ténaibres	e_ouvert	tenèbres	accent	ténebres	accent
+assemblée	NOM	21.24	3	1	assamblée	nasale	acemblée	s	assemblee	accent
+grève	NOM	21.21	2	2	grêve	reel	graive	e_ouvert	greve	accent
+protection	NOM	21.21	2	1	protecssion	tion	prottection	simple_double	proteccion	tion
+attentif	ADJ	21.2	3	1	atentif	double_simple	attantif	nasale
+congé	NOM	21.18	2	1	congée	te_tee	conge	accent
+sentier	NOM	21.17	3	1	santier	nasale	sentié	e_final	centier	s
+cuisinier	NOM	21.16	2	1	cuisinnier	simple_double	cuisinié	e_final
+incendie	NOM	21.13	3	1	incandie	nasale	insendie	s
+aéroport	NOM	21.06	1	1	aéropport	simple_double	aeroport	accent
+cigare	NOM	21.04	3	1	sigare	s	cigarre	simple_double
+sincère	ADJ	21.01	2	1	saincère	nasale	sincaire	e_ouvert	sincere	accent
+commission	NOM	20.96	3	2	comission	reel	commicion	s	commition	tion
+indifférence	NOM	20.96	4	1	indiférence	double_simple	indifférance	nasale	indifférense	s
+chèque	NOM	20.95	1	1	chaique	e_ouvert	cheque	accent
+conférence	NOM	20.95	3	1	conférance	nasale	conférense	s	conference	accent
+renseignement	NOM	20.95	1	0.5	ranseignement	nasale	renseignemend	finale	renseignemen	finale
+développer	VER	20.91	4	2	dévellopper	reel	déveloper	double_simple	developper	accent
+novembre	NOM	20.91	2	0.5	novambre	nasale	novenbre	m_bp
+plainte	NOM	20.88	2	0.5	pleinte	nasale	plinte	nasale
+taule	NOM	20.87	2	1	tole	o	taulle	simple_double
+déclaration	NOM	20.78	1	1	déclarassion	tion	déclarattion	simple_double	declaration	accent
+international	ADJ	20.75	4	2	internationnal	reel	internassional	tion	internattional	simple_double
+ambition	NOM	20.75	3	1	embition	nasale	ambission	tion	ambittion	simple_double
+ordinateur	NOM	20.7	2	1	ordinnateur	simple_double	ordinatteur	simple_double
+respiration	NOM	20.69	2	1	respiracion	tion	respirration	simple_double	respirassion	tion
+impatience	NOM	20.69	3	1	impatiance	nasale	impatiense	s	impattience	simple_double
+pédé	NOM	20.65	2	1	pédée	te_tee	pedé	accent
+puits	NOM	20.61	3	2	puit	reel	puitt	finale
+circuler	VER	20.5	3	1	sirculer	s	circuller	simple_double
+exécution	NOM	20.5	1	1	exécussion	tion	exécuttion	simple_double	execution	accent
+poésie	NOM	20.48	2	2	poèsie	reel	poesie	accent
+agence	NOM	20.46	3	1	agance	nasale	agense	s
+mélange	NOM	20.46	2	0.5	mélenge	nasale	melange	accent
+mèche	NOM	20.44	1	1	maiche	e_ouvert	meche	accent
+décoller	VER	20.44	2	1	décoler	double_simple	decoller	accent
+document	NOM	20.44	2	1	documant	nasale	documment	simple_double	documend	finale
+extérieur	ADJ	20.43	3	2	extèrieur	reel	exterieur	accent
+toutefois	ADV	20.42	1	1	touttefois	simple_double	toutefoit	finale	toutefoi	finale
+exception	NOM	20.39	1	1	excepssion	tion	excepcion	tion
+économie	NOM	20.38	2	1	économmie	simple_double	economie	accent	éconnomie	simple_double
+excellence	NOM	20.36	4	1	excelence	double_simple	excellance	nasale	excellense	s
+piscine	NOM	20.36	3	1	pisine	sc	piscinne	simple_double	picine	sc
+apparition	NOM	20.33	3	2	aparition	reel	apparission	tion	apparittion	simple_double
+courageux	ADJ	20.32	1	1	courrageux	simple_double	courageu	finale	courageus	finale
+étrangler	VER	20.31	2	0.5	étrengler	nasale	etrangler	accent
+réciter	VER	20.2	2	1	réssiter	s	récitter	simple_double	reciter	accent
+possession	NOM	20.2	2	1	pocession	s	possetion	tion
+annonce	NOM	20.19	3	2	anonce	reel	annonse	s
+féliciter	VER	20.19	2	1	félissiter	s	félicitter	simple_double	feliciter	accent
+catholique	ADJ	20.14	3	1	catolique	th	cathollique	simple_double
+raccompagner	VER	20.14	2	1	racompagner	double_simple	racconpagner	m_bp
+quant	NOM	20.12	2	0.5	quent	nasale	cant	k	quan	finale
+solitaire	ADJ	20.07	2	1	sollitaire	simple_double	solitère	e_ouvert	solitairre	simple_double
+tranquillement	ADV	20.04	3	1	tranquilement	double_simple	tranquillemant	nasale	tranquillemen	finale
+animer	VER	20.03	2	1	annimer	simple_double	animmer	simple_double
+ticket	NOM	20.03	1	0.5	tickait	e_final	ticked	finale	ticke	finale
+vilain	ADJ	20.0	3	1	vilin	nasale	villain	simple_double	vilein	nasale
+redescendre	VER	19.99	3	1	redesendre	sc	redescandre	nasale	redecendre	sc
+capitale	NOM	19.98	3	2	capîtale	reel	cappitale	simple_double	capittale	simple_double
+tranchée	NOM	19.97	2	0.5	trenchée	nasale	tranchee	accent
+collier	NOM	19.95	2	1	colier	double_simple	collié	e_final
+administration	NOM	19.91	2	1	administrassion	tion	administrattion	simple_double	administracion	tion
+religieux	ADJ	19.89	3	2	religieu	reel	religieus	reel
+définitif	ADJ	19.89	2	1	définnitif	simple_double	definitif	accent	définittif	simple_double
+décembre	NOM	19.88	4	2	décenbre	reel	décambre	nasale	déssembre	s
+nécessité	NOM	19.86	2	1	néssessité	s	nécessitté	simple_double	necessité	accent
+disparition	NOM	19.85	2	1	disparicion	tion	disparrition	simple_double	disparission	tion
+opéra	NOM	19.84	1	1	oppéra	simple_double	opera	accent
+appui	NOM	19.81	3	2	appuit	reel	apui	double_simple
+mandat	NOM	19.79	2	0.5	mendat	nasale	manda	finale	mandad	finale
+étape	NOM	19.71	1	1	étappe	simple_double	etape	accent
+panneau	NOM	19.68	3	1	paneau	double_simple	panno	o	pannau	o
+chaussette	NOM	19.64	3	1	chaussete	double_simple	chossette	o	chaucette	s
+profit	NOM	19.64	1	1	proffit	simple_double	profi	finale	profid	finale
+ambulance	NOM	19.62	4	1	ambulence	nasale	ambulanse	s	ambullance	simple_double
+sévère	ADJ	19.6	1	1	sévaire	e_ouvert	sévere	accent	sevère	accent
+anneau	NOM	19.55	3	1	annau	o	aneau	double_simple	anno	o
+élégant	ADJ	19.49	2	0.5	élégent	nasale	élégan	finale	elégant	accent
+janvier	NOM	19.48	2	0.5	jenvier	nasale	janvié	e_final
+salaire	NOM	19.46	2	1	salère	e_ouvert	salairre	simple_double	sallaire	simple_double
+canapé	NOM	19.42	3	1	canapée	te_tee	canappé	simple_double	canape	accent
+adjudant	NOM	19.41	2	0.5	adjudent	nasale	adjudan	finale	adjudand	finale
+cassette	NOM	19.41	3	1	cassete	double_simple	cacette	s
+procéder	VER	19.39	2	1	prosséder	s	proceder	accent
+séduire	VER	19.36	1	1	séduirre	simple_double	seduire	accent
+triomphe	NOM	19.32	2	1	triomfe	ph	trionphe	m_bp
+légume	NOM	19.3	1	1	légumme	simple_double	legume	accent
+apprêter	VER	19.3	2	1	aprêter	double_simple	apprèter	accent	appreter	accent
+tentative	NOM	19.29	3	1	tantative	nasale	tentattive	simple_double
+cahier	NOM	19.27	2	1	caier	h	cahié	e_final
+règlement	NOM	19.21	4	2	réglement	reel	règlemant	nasale	raiglement	e_ouvert
+réchauffer	VER	19.21	2	1	réchaufer	double_simple	réchoffer	o	rechauffer	accent
+collège	NOM	19.2	3	2	collége	reel	colège	double_simple	collaige	e_ouvert
+suffisamment	ADV	19.19	4	2	suffisament	reel	suffisammant	nasale	suffisammend	finale
+caresse	NOM	19.18	3	1	carece	s	carresse	simple_double
+éliminer	VER	19.16	2	1	élimminer	simple_double	eliminer	accent	éliminner	simple_double
+suprême	ADJ	19.11	3	2	suprème	reel	supreme	accent
+recommander	VER	19.11	3	1	recomander	double_simple	recommender	nasale
+fasciner	VER	19.06	3	1	faciner	sc	fascinner	simple_double	fasiner	sc
+vaisselle	NOM	19.03	3	1	vaissele	double_simple	vaicelle	s
+reconnaissance	NOM	19.02	3	2	reconaissance	reel	reconnaissence	nasale	reconnaissanse	s
+succéder	VER	19.02	4	2	succèder	reel	succeder	accent
+enchanter	VER	19.0	3	0.5	anchanter	nasale	enchenter	nasale
+abbé	NOM	18.98	2	2	abbée	reel	abbe	accent
+comportement	NOM	18.98	2	0.5	comportemant	nasale	comportemen	finale	conportement	m_bp
+acquérir	VER	18.98	4	2	aquérir	reel	accquérir	simple_double	acquerir	accent
+soigneusement	ADV	18.96	2	0.5	soigneusemant	nasale	soigneusemend	finale	soigneusemen	finale
+régiment	NOM	18.92	3	1	régimant	nasale	régimment	simple_double	regiment	accent
+pêcheur	NOM	18.88	1	0.5	pècheur	accent	pecheur	accent
+flèche	NOM	18.88	2	2	flêche	reel	flaiche	e_ouvert	fleche	accent
+bonté	NOM	18.84	2	1	bontée	te_tee	bonte	accent
+bataillon	NOM	18.83	3	1	batailon	double_simple	battaillon	simple_double
+influence	NOM	18.73	4	2	influance	reel	influense	s
+gratuit	ADJ	18.7	1	1	grattuit	simple_double	gratuid	finale	gratui	finale
+occupation	NOM	18.66	3	2	ocupation	reel	occupacion	tion	occuppation	simple_double
+dégueulasse	ADJ	18.64	3	1	dégueulace	s	dégueullasse	simple_double	degueulasse	accent
+admiration	NOM	18.62	2	1	admirassion	tion	admirattion	simple_double	admiracion	tion
+construction	NOM	18.62	1	1	construcssion	tion	construccion	tion
+mélanger	VER	18.6	2	0.5	mélenger	nasale	melanger	accent
+aigu	ADJ	18.59	4	2	aigü	reel	ègu	e_ouvert
+équipage	NOM	18.54	1	1	équippage	simple_double	equipage	accent
+résonner	VER	18.52	2	1	résoner	double_simple	resonner	accent
+troupeau	NOM	18.51	2	1	troupau	o	trouppeau	simple_double	troupo	o
+rembourser	VER	18.48	2	0.5	rambourser	nasale	renbourser	m_bp
+obus	NOM	18.48	1	0.5	obu	finale	obut	finale
+clairement	ADV	18.46	3	1	clairemant	nasale	clairrement	simple_double	clèrement	e_ouvert
+imprimer	VER	18.45	1	1	imprimmer	simple_double	inprimer	m_bp
+personnalité	NOM	18.38	4	2	personalité	reel	personnalitée	te_tee	personnalitté	simple_double
+exceptionnel	ADJ	18.38	3	2	exceptionel	reel	excepssionnel	tion	excepcionnel	tion
+représentant	NOM	18.34	2	0.5	représantant	nasale	représentan	finale	representant	accent
+hall	NOM	18.33	3	1	all	h	hal	double_simple
+bicyclette	NOM	18.29	4	1	bicyclete	double_simple	biciclette	y_i	bissyclette	s
+garantir	VER	18.28	3	1	garentir	nasale	garrantir	simple_double
+suffisant	ADJ	18.27	2	1	sufisant	double_simple	suffisand	finale	suffisan	finale
+allumette	NOM	18.27	3	1	alumette	double_simple	allummette	simple_double	allumete	double_simple
+invitation	NOM	18.25	2	1	invitassion	tion	invittation	simple_double	invitacion	tion
+enculé	ADJ	18.25	3	1	anculé	nasale	encullé	simple_double
+préoccuper	VER	18.18	3	1	préocuper	double_simple	préoccupper	simple_double	preoccuper	accent
+transparent	ADJ	18.14	3	1	trensparent	nasale	transparrent	simple_double	transparen	finale
+fillette	NOM	18.11	3	1	filette	double_simple	fillete	double_simple
+communiste	ADJ	18.09	3	2	comuniste	reel	communniste	simple_double
+dégoût	NOM	18.08	1	0.5	dégoû	finale	degoût	accent	dégoûd	finale
+récemment	ADV	18.07	4	2	récement	reel	récemmant	nasale	réssemment	s
+adversaire	NOM	18.05	2	1	adversairre	simple_double	adversère	e_ouvert
+refus	NOM	18.02	1	0.5	refu	finale	refut	finale
+araignée	NOM	18.02	3	1	araigné	te_tee	arègnée	e_ouvert	arraignée	simple_double
+damoiseau	NOM	18.02	2	1	damoiso	o	dammoiseau	simple_double	damoisau	o
+communauté	NOM	18.0	4	2	comunauté	reel	communoté	o	communnauté	simple_double
+médecine	NOM	17.97	3	1	médessine	s	médecinne	simple_double	medecine	accent
+temple	NOM	17.95	2	0.5	tample	nasale	tenple	m_bp
+récent	ADJ	17.93	3	1	récant	nasale	réssent	s	recent	accent
+vivement	ADV	17.86	2	0.5	vivemant	nasale	vivemen	finale	vivemend	finale
+analyse	NOM	17.84	3	2	analyze	reel	analise	y_i	anallyse	simple_double
+drôlement	ADV	17.82	2	1	drôlemant	nasale	draulement	o	drolement	accent
+écouler	VER	17.82	1	1	écouller	simple_double	ecouler	accent
+coutume	NOM	17.8	2	2	coutûme	reel	coutumme	simple_double	couttume	simple_double
+pilule	NOM	17.77	3	2	pillule	reel	pilulle	simple_double
+chantier	NOM	17.73	2	0.5	chentier	nasale	chantié	e_final
+fumier	NOM	17.71	2	1	fummier	simple_double	fumié	e_final
+noeud	NOM	17.69	1	0.5	noeu	finale	noeut	finale
+géant	ADJ	17.66	2	0.5	géent	nasale	géand	finale	geant	accent
+clarté	NOM	17.65	2	1	clartée	te_tee	clarte	accent
+soviétique	ADJ	17.63	3	2	soviètique	reel	sovietique	accent
+entamer	VER	17.61	3	1	antamer	nasale	entammer	simple_double
+instituteur	NOM	17.55	2	1	instittuteur	simple_double	institutteur	simple_double
+imbécile	ADJ	17.54	3	1	imbéssile	s	imbécille	simple_double	inbécile	m_bp
+débattre	VER	17.53	2	1	débatre	double_simple	debattre	accent
+philosophie	NOM	17.52	3	1	filosophie	ph	phillosophie	simple_double
+fonctionnaire	NOM	17.51	3	1	fonctionaire	double_simple	foncssionnaire	tion	fonctionnère	e_ouvert
+marquis	NOM	17.5	1	0.5	marqui	finale	marquit	finale
+ancêtre	NOM	17.49	4	2	ancètre	reel	encêtre	nasale	ancetre	accent
+ministère	NOM	17.48	3	2	ministére	reel	ministaire	e_ouvert	minnistère	simple_double
+matelas	NOM	17.46	1	1	mattelas	simple_double	matela	finale	matelat	finale
+intimité	NOM	17.46	3	1	intimitée	te_tee	intimitté	simple_double	intimite	accent
+paroi	NOM	17.44	3	2	paroie	reel	parroi	simple_double
+descente	NOM	17.41	4	1	desente	sc	descante	nasale	decente	sc
+écoute	NOM	17.4	2	1	écoutte	simple_double	ecoute	accent
+commentaire	NOM	17.38	3	1	comentaire	double_simple	commantaire	nasale	commentère	e_ouvert
+chèvre	NOM	17.34	2	2	chêvre	reel	chaivre	e_ouvert	chevre	accent
+décidément	ADV	17.34	3	1	décidémant	nasale	déssidément	s	décidémen	finale
+centimètre	NOM	17.32	3	1	cantimètre	nasale	centimmètre	simple_double	centimaitre	e_ouvert
+empoisonner	VER	17.31	3	1	empoisoner	double_simple	ampoisonner	nasale	enpoisonner	m_bp
+indifférent	ADJ	17.31	3	1	indiférent	double_simple	indifférant	nasale	indifferent	accent
+morale	NOM	17.31	2	1	moralle	simple_double	morrale	simple_double
+enfantin	ADJ	17.27	3	0.5	enfentin	nasale	anfantin	nasale	enfantain	nasale
+pincer	VER	17.24	3	1	paincer	nasale	pinser	s
+immédiat	ADJ	17.18	2	1	imédiat	double_simple	immédiad	finale	immediat	accent
+volume	NOM	17.16	2	1	volumme	simple_double	vollume	simple_double
+réception	NOM	17.14	2	1	récepssion	tion	résseption	s	reception	accent
+grossier	ADJ	17.11	2	1	grocier	s	grossié	e_final
+emballer	VER	17.06	3	1	embaler	double_simple	amballer	nasale	enballer	m_bp
+tomate	NOM	17.04	2	1	tommate	simple_double	tomatte	simple_double
+discipline	NOM	17.02	3	1	disipline	sc	disciplinne	simple_double	dicipline	sc
+humour	NOM	16.99	3	1	umour	h	hummour	simple_double
+banquette	NOM	16.95	4	1	banquete	double_simple	benquette	nasale
+chrétien	ADJ	16.94	1	1	krétien	ch_k	chretien	accent	crétien	ch_k
+effrayant	ADJ	16.94	2	1	efrayant	double_simple	effrayand	finale	effrayan	finale
+symbole	NOM	16.94	4	2	symbôle	reel	symbolle	simple_double	cymbole	s
+tendance	NOM	16.93	3	2	tendence	reel	tandance	nasale	tendanse	s
+sympathie	NOM	16.91	4	1	simpathie	y_i	sympatie	th	cympathie	s
+applaudir	VER	16.89	3	1	aplaudir	double_simple	applodir	o
+espérance	NOM	16.89	3	2	espérence	reel	espéranse	s	esperance	accent
+accélérer	VER	16.88	3	2	accélèrer	reel	accelérer	accent
+indépendance	NOM	16.88	4	2	indépendence	reel	indépandance	nasale	indépendanse	s
+ennuyeux	ADJ	16.87	2	1	enuyeux	double_simple	ennuyeus	finale	ennuyeu	finale
+crépuscule	NOM	16.85	2	1	crépusculle	simple_double	crepuscule	accent
+signature	NOM	16.84	3	1	signatture	simple_double	cignature	s	signaturre	simple_double
+spécialiste	NOM	16.83	3	1	spécialliste	simple_double	spéssialiste	s	specialiste	accent
+manivelle	NOM	16.75	3	1	manivele	double_simple	mannivelle	simple_double
+immobiliser	VER	16.75	3	1	imobiliser	double_simple	immobilliser	simple_double
+régulièrement	ADV	16.75	4	2	réguliérement	reel	régulièremant	nasale	régullièrement	simple_double
+rempli	ADJ	16.74	2	0.5	rampli	nasale	renpli	m_bp
+cent	NOM	16.73	2	0.5	cant	nasale	cen	finale	cend	finale
+photographe	NOM	16.73	3	1	fotographe	ph	phottographe	simple_double
+serment	NOM	16.71	3	1	sermant	nasale	sermend	finale	cerment	s
+ordonnance	NOM	16.68	4	2	ordonance	reel	ordonnence	nasale	ordonnanse	s
+réseau	NOM	16.66	3	2	résau	reel	réso	o	reseau	accent
+personnellement	ADV	16.66	3	2	personellement	reel	personnellemant	nasale	personnellemen	finale
+production	NOM	16.66	1	1	produccion	tion	producssion	tion
+égarer	VER	16.66	2	1	égarrer	simple_double	egarer	accent
+étonnement	NOM	16.62	3	1	étonement	double_simple	étonnemant	nasale	étonnemen	finale
+marée	NOM	16.6	2	1	maré	te_tee	maree	accent
+sapin	NOM	16.59	3	1	sapain	nasale	sappin	simple_double
+hommage	NOM	16.57	3	2	homage	reel	ommage	h
+seau	NOM	16.53	3	1	so	o	ceau	s	sau	o
+délire	NOM	16.5	2	1	délirre	simple_double	delire	accent
+sauce	NOM	16.48	3	1	soce	o	sausse	s
+entasser	VER	16.48	3	1	antasser	nasale	entacer	s
+sanglot	NOM	16.46	2	0.5	senglot	nasale	sanglo	finale	sanglod	finale
+essentiel	ADJ	16.45	3	1	essantiel	nasale	ecentiel	s
+définitivement	ADV	16.43	3	1	définitivemant	nasale	définnitivement	simple_double	definitivement	accent
+déplaire	VER	16.42	2	1	déplère	e_ouvert	déplairre	simple_double	deplaire	accent
+fabuleux	ADJ	16.42	1	1	fabulleux	simple_double	fabuleu	finale	fabuleus	finale
+tempe	NOM	16.42	2	0.5	tampe	nasale	tenpe	m_bp
+normalement	ADV	16.4	3	2	normallement	reel	normalemant	nasale	normalemend	finale
+romantique	ADJ	16.38	3	1	romentique	nasale	rommantique	simple_double
+largement	ADV	16.37	2	0.5	largemant	nasale	largemend	finale	largemen	finale
+dimension	NOM	16.36	3	1	dimansion	nasale	dimmension	simple_double
+innombrable	ADJ	16.34	3	1	inombrable	double_simple	innonbrable	m_bp
+abandonné	ADJ	16.33	4	2	abondonné	reel	abandoné	double_simple	abendonné	nasale
+encombrer	VER	16.32	2	0.5	ancombrer	nasale	enconbrer	m_bp
+cancer	NOM	16.3	3	1	cencer	nasale	canser	s
+patient	ADJ	16.3	3	1	patiant	nasale	pattient	simple_double	patien	finale
+romain	ADJ	16.29	3	1	romein	nasale	rommain	simple_double	romin	nasale
+médaille	NOM	16.2	3	2	médaile	reel	medaille	accent
+papillon	NOM	16.18	3	1	papilon	double_simple	pappillon	simple_double
+saurer	VER	16.16	3	1	sorer	o	saurrer	simple_double
+abandon	NOM	16.1	3	2	abondon	reel	abendon	nasale
+compliment	NOM	16.09	3	1	complimant	nasale	complimment	simple_double	conpliment	m_bp
+vocation	NOM	16.05	2	1	vocassion	tion	vocattion	simple_double	vocacion	tion
+ruisseau	NOM	16.05	3	1	ruissau	o	ruiceau	s	ruisso	o
+occupé	ADJ	16.02	3	2	occuppé	reel	ocupé	double_simple
+barrière	NOM	16.02	2	1	barière	double_simple	barriaire	e_ouvert	barriere	accent
+combinaison	NOM	16.0	2	1	combinnaison	simple_double	conbinaison	m_bp
+entrevoir	VER	15.99	3	2	entrevoire	reel	antrevoir	nasale
+honteux	ADJ	15.91	2	1	onteux	h	honteu	finale	honteus	finale
+saut	NOM	15.9	1	0.5	sau	finale	saud	finale
+banlieue	NOM	15.89	4	2	banlieu	reel	benlieue	nasale	banlieus	reel
+sympathique	ADJ	15.88	3	2	sympatique	reel	simpathique	y_i	cympathique	s
+civilisation	NOM	15.88	3	1	civilisassion	tion	civillisation	simple_double	sivilisation	s
+précédent	ADJ	15.88	2	1	préssédent	s	précéden	finale	precédent	accent
+pratiquement	ADV	15.86	3	1	pratiquemant	nasale	prattiquement	simple_double	pratiquemen	finale
+capacité	NOM	15.84	4	2	capacitée	reel	capassité	s	cappacité	simple_double
+extrêmement	ADV	15.82	4	2	extrèmement	reel	extrêmemant	nasale	extremement	accent
+irriter	VER	15.81	3	1	iriter	double_simple	irritter	simple_double
+thème	NOM	15.79	4	2	théme	reel	tème	th	thaime	e_ouvert
+mâchoire	NOM	15.74	4	2	machoire	reel	mâchoirre	simple_double
+sonore	ADJ	15.73	3	2	sonnore	reel	sonorre	simple_double
+contraindre	VER	15.7	3	0.5	contreindre	nasale	contrindre	nasale
+surveillance	NOM	15.7	4	1	surveillence	nasale	surveilance	double_simple	surveillanse	s
+office	NOM	15.69	4	1	ofice	double_simple	offisse	s
+moitié	ADV	15.68	3	2	moitiée	reel	moittié	simple_double	moitie	accent
+étoffe	NOM	15.67	3	1	étofe	double_simple	etoffe	accent
+élection	NOM	15.64	1	1	éleccion	tion	election	accent	élecssion	tion
+inattendu	ADJ	15.62	3	2	inatendu	reel	inattandu	nasale	innattendu	simple_double
+valet	NOM	15.6	1	1	vallet	simple_double	valed	finale	vale	finale
+autorisation	NOM	15.59	2	1	otorisation	o	autorisassion	tion	autorrisation	simple_double
+précision	NOM	15.56	2	1	préssision	s	precision	accent
+creux	ADJ	15.52	1	0.5	creus	finale	creu	finale
+haleine	NOM	15.52	3	1	aleine	h	halleine	simple_double
+arrestation	NOM	15.5	3	1	arestation	double_simple	arrestacion	tion	arrestattion	simple_double
+améliorer	VER	15.5	2	1	amméliorer	simple_double	ameliorer	accent	améliorrer	simple_double
+indispensable	ADJ	15.49	3	2	indispenssable	reel	indispansable	nasale
+autobus	NOM	15.48	3	1	otobus	o	auttobus	simple_double
+ramper	VER	15.47	2	0.5	remper	nasale	ranper	m_bp
+visiblement	ADV	15.46	2	0.5	visiblemant	nasale	visiblemend	finale	visiblemen	finale
+tonnerre	NOM	15.39	3	1	tonerre	double_simple	tonnere	double_simple
+violet	ADJ	15.33	2	1	viollet	simple_double	violed	finale
+thomas	NOM	15.32	3	1	tomas	th	thommas	simple_double	thomat	finale
+innocence	NOM	15.32	4	1	inocence	double_simple	innocance	nasale	innocense	s
+néant	NOM	15.3	2	0.5	néent	nasale	néand	finale	neant	accent
+beau-père	NOM	15.29	2	1	bo-père	o	beau-paire	e_ouvert	beau-pere	accent
+engagement	NOM	15.29	2	0.5	angagement	nasale	engagemen	finale	engagemend	finale
+éléphant	NOM	15.28	3	1	éléfant	ph	éléphent	nasale	eléphant	accent
+février	NOM	15.27	1	0.5	févrié	e_final	fevrier	accent
+vampire	NOM	15.25	3	1	vempire	nasale	vampirre	simple_double	vanpire	m_bp
+stylo	NOM	15.25	3	1	stilo	y_i	styllo	simple_double
+saleté	NOM	15.23	3	1	saletée	te_tee	salleté	simple_double	salete	accent
+limiter	VER	15.23	3	2	limitter	reel	limmiter	simple_double
+crête	NOM	15.22	1	0.5	crète	accent	crete	accent
+hisser	VER	15.22	3	1	isser	h	hicer	s
+cervelle	NOM	15.19	4	1	cervele	double_simple	servelle	s
+café	ADJ	15.18	2	1	caffé	simple_double	cafe	accent
+ardent	ADJ	15.16	1	0.5	ardend	finale	arden	finale
+légitime	ADJ	15.15	2	1	légittime	simple_double	legitime	accent	légitimme	simple_double
+courant	ADJ	15.14	3	2	courrant	reel	courand	finale	couran	finale
+humilier	VER	15.14	3	1	umilier	h	hummilier	simple_double	humillier	simple_double
+ironie	NOM	15.12	2	1	irronie	simple_double	ironnie	simple_double
+assistance	NOM	15.12	3	1	assistence	nasale	acistance	s	assistanse	s
+bassin	NOM	15.12	3	1	bassain	nasale	bacin	s
+défaite	NOM	15.1	3	2	défaîte	reel	défaitte	simple_double	défète	e_ouvert
+réussite	NOM	15.1	3	1	réucite	s	réussitte	simple_double	reussite	accent
+gaieté	NOM	15.08	2	1	gaietée	te_tee	gèeté	e_ouvert	gaiete	accent
+complicité	NOM	15.04	4	1	complicitée	te_tee	complissité	s	complicitté	simple_double
+extrémité	NOM	15.02	4	2	extrêmité	reel	extrémitée	te_tee	extrémitté	simple_double
+démolir	VER	15.02	2	1	démollir	simple_double	demolir	accent
+excès	NOM	14.95	3	2	excés	reel	excais	e_ouvert	excèt	finale
+création	NOM	14.93	4	2	creation	reel	créassion	tion	créattion	simple_double
+frôler	VER	14.93	2	1	frauler	o	froler	accent
+effectivement	ADV	14.93	3	1	efectivement	double_simple	effectivemant	nasale	effectivemend	finale
+établissement	NOM	14.91	3	1	établissemant	nasale	établicement	s	établissemen	finale
+bourgeois	ADJ	14.9	1	1	bourjois	j	bourgeoi	finale	bourgeoit	finale
+efficace	ADJ	14.9	4	1	eficace	double_simple	efficasse	s
+monstrueux	ADJ	14.9	1	0.5	monstrueus	finale	monstrueu	finale
+reconnaissant	ADJ	14.89	2	1	reconaissant	double_simple	reconnaissand	finale	reconnaissan	finale
+sursauter	VER	14.88	3	1	sursoter	o	sursautter	simple_double
+suspect	ADJ	14.88	1	0.5	suspec	finale	suspecd	finale
+autoroute	NOM	14.88	3	1	otoroute	o	autoroutte	simple_double	auttoroute	simple_double
+conscient	ADJ	14.87	3	1	consient	sc	consciant	nasale	consciend	finale
+hostile	ADJ	14.86	3	1	ostile	h	hostille	simple_double
+hâter	VER	14.84	2	1	âter	h	hater	accent
+destruction	NOM	14.82	3	2	desctruction	reel	destruccion	tion	destrucssion	tion
+négocier	VER	14.82	2	1	négossier	s	negocier	accent
+sabot	NOM	14.8	1	0.5	sabo	finale	sabod	finale
+remède	NOM	14.79	1	1	remaide	e_ouvert	remede	accent
+historique	ADJ	14.77	3	1	istorique	h	historrique	simple_double
+mairie	NOM	14.75	2	1	mairrie	simple_double	mèrie	e_ouvert
+pénombre	NOM	14.73	1	0.5	penombre	accent	pénonbre	m_bp
+impatient	ADJ	14.7	3	1	impatiant	nasale	impattient	simple_double	inpatient	m_bp
+récompense	NOM	14.7	2	0.5	récompanse	nasale	recompense	accent	réconpense	m_bp
+ravissant	ADJ	14.68	1	0.5	ravissand	finale	ravissan	finale
+ressusciter	VER	14.68	4	2	ressuciter	reel	ressusiter	sc	ressuscitter	simple_double
+intervention	NOM	14.67	3	1	intervantion	nasale	intervenssion	tion	intervencion	tion
+serrure	NOM	14.67	4	1	serure	double_simple	serrurre	simple_double	cerrure	s
+luisant	ADJ	14.66	1	0.5	luisan	finale	luisand	finale
+quantité	NOM	14.64	4	1	quantitée	te_tee	quentité	nasale	quantitté	simple_double
+pétrole	NOM	14.62	3	2	pétrôle	reel	pétrolle	simple_double	petrole	accent
+bouffée	NOM	14.62	3	1	boufée	double_simple	bouffee	accent
+narine	NOM	14.61	2	1	narrine	simple_double	narinne	simple_double
+caporal	NOM	14.61	2	1	caporral	simple_double	capporal	simple_double
+économique	ADJ	14.54	2	1	éconnomique	simple_double	economique	accent	économmique	simple_double
+accumuler	VER	14.5	3	1	acumuler	double_simple	accumuller	simple_double	accummuler	simple_double
+fourrure	NOM	14.48	4	1	fourure	double_simple	fourrurre	simple_double
+effleurer	VER	14.46	4	1	efleurer	double_simple	effleurrer	simple_double
+maillot	NOM	14.43	2	1	mailot	double_simple	maillo	finale	maillod	finale
+dentelle	NOM	14.43	4	1	dentele	double_simple	dantelle	nasale
+sirène	NOM	14.43	2	1	sirrène	simple_double	siraine	e_ouvert	sirene	accent
+beau-frère	NOM	14.41	2	1	bau-frère	o	beau-fraire	e_ouvert	beau-frere	accent
+démocratie	NOM	14.41	2	1	démocrattie	simple_double	democratie	accent
+revêtir	VER	14.38	1	0.5	revètir	accent	revetir	accent
+camionnette	NOM	14.37	3	2	camionette	reel	camionnete	double_simple	cammionnette	simple_double
+décorer	VER	14.37	2	1	décorrer	simple_double	decorer	accent
+électricité	NOM	14.37	4	2	électricitée	reel	électricitté	simple_double	électrissité	s
+laboratoire	NOM	14.37	2	1	laborratoire	simple_double	laborattoire	simple_double	laboratoirre	simple_double
+chêne	NOM	14.34	2	2	chène	reel	chene	accent
+guitare	NOM	14.33	3	2	guitarre	reel	guittare	simple_double
+tremblement	NOM	14.32	2	0.5	tremblemant	nasale	tremblemen	finale	trenblement	m_bp
+fidélité	NOM	14.29	3	2	fidèlité	reel	fidélitée	te_tee	fidélitté	simple_double
+accusation	NOM	14.29	3	1	acusation	double_simple	accusacion	tion	accusattion	simple_double
+bandit	NOM	14.27	2	0.5	bendit	nasale	bandid	finale	bandi	finale
+supprimer	VER	14.26	4	1	suprimer	double_simple	supprimmer	simple_double
+dessous	ADV	14.25	1	0.5	dessou	finale	dessout	finale
+entraînement	NOM	14.24	2	0.5	antraînement	nasale	entraînemend	finale	entraînemen	finale
+volontaire	ADJ	14.23	2	1	volontairre	simple_double	volontère	e_ouvert	vollontaire	simple_double
+étendue	NOM	14.21	2	2	étandue	reel	etendue	accent
+scénario	NOM	14.2	2	1	scénarrio	simple_double	scenario	accent
+atroce	ADJ	14.18	3	1	attroce	simple_double	atrosse	s
+cingler	VER	14.16	3	1	singler	s	caingler	nasale
+buffet	NOM	14.14	3	1	bufet	double_simple	buffait	e_final	buffe	finale
+charité	NOM	14.14	3	1	charitée	te_tee	charrité	simple_double	charite	accent
+marteau	NOM	14.12	2	1	martau	o	marto	o
+gamin	ADJ	14.11	3	1	gamain	nasale	gammin	simple_double
+renforcer	VER	14.09	3	1	ranforcer	nasale	renforser	s
+tentation	NOM	14.08	3	1	tantation	nasale	tentassion	tion	tentattion	simple_double
+privilège	NOM	14.05	2	1	privilaige	e_ouvert	privillège	simple_double	privilege	accent
+actuellement	ADV	14.04	4	2	actuelement	reel	acctuellement	simple_double	actuellemant	nasale
+hésitation	NOM	14.02	3	1	ésitation	h	hésitassion	tion	hésittation	simple_double
+répétition	NOM	14.02	2	1	répétission	tion	répétittion	simple_double	repétition	accent
+publicité	NOM	13.98	4	1	publicitée	te_tee	publissité	s	publicitté	simple_double
+révélation	NOM	13.97	2	1	révélassion	tion	révélattion	simple_double	revélation	accent
+technique	ADJ	13.97	2	1	tecnique	ch_k	teknique	ch_k
+conflit	NOM	13.95	1	0.5	confli	finale	conflid	finale
+département	NOM	13.95	2	0.5	départemant	nasale	départemen	finale	departement	accent
+empoigner	VER	13.93	2	0.5	ampoigner	nasale	enpoigner	m_bp
+confidence	NOM	13.91	4	1	confidance	nasale	confidense	s
+donnée	NOM	13.91	3	1	donée	double_simple	donnee	accent
+frangin	NOM	13.91	3	0.5	frengin	nasale	frangain	nasale
+colonie	NOM	13.9	4	2	colonnie	reel	collonie	simple_double
+casserole	NOM	13.89	3	2	casserolle	reel	cacerole	s
+argument	NOM	13.88	3	1	argumant	nasale	argumment	simple_double	argumend	finale
+surprenant	ADJ	13.88	2	0.5	surprenent	nasale	surprenand	finale	surprenan	finale
+commissariat	NOM	13.88	3	1	comissariat	double_simple	commissarriat	simple_double	commissaria	finale
+détresse	NOM	13.88	2	1	détrece	s	detresse	accent
+infiniment	ADV	13.86	3	1	infinimant	nasale	infinniment	simple_double	infinimen	finale
+habillé	ADJ	13.84	4	1	habilé	double_simple	abillé	h
+élégance	NOM	13.84	3	1	élégence	nasale	éléganse	s	elégance	accent
+baignoire	NOM	13.83	2	1	baignoirre	simple_double	bègnoire	e_ouvert
+représentation	NOM	13.83	3	1	représantation	nasale	représentacion	tion	représentattion	simple_double
+marine	ADJ	13.8	2	1	marinne	simple_double	marrine	simple_double
+lance	NOM	13.79	3	2	lançe	reel	lence	nasale	lanse	s
+au-dessous	ADV	13.79	2	1	o-dessous	o	au-dessou	finale	au-dessout	finale
+vachement	ADV	13.78	2	0.5	vachemant	nasale	vachemen	finale	vachemend	finale
+ficelle	NOM	13.76	4	1	ficele	double_simple	fisselle	s
+criminel	ADJ	13.75	3	1	crimminel	simple_double	criminnel	simple_double
+épaisseur	NOM	13.75	3	1	épaiceur	s	epaisseur	accent
+mérite	NOM	13.74	2	1	méritte	simple_double	merite	accent
+souriant	ADJ	13.73	2	1	sourriant	simple_double	sourian	finale	souriand	finale
+piétiner	VER	13.7	2	1	piétinner	simple_double	pietiner	accent
+concernant	PRE	13.67	3	2	conçernant	reel	consernant	s	concernand	finale
+engin	NOM	13.63	3	0.5	angin	nasale	engain	nasale
+susciter	VER	13.62	4	1	suciter	sc	suscitter	simple_double	susiter	sc
+barreau	NOM	13.57	3	1	bareau	double_simple	barrau	o	barro	o
+métallique	ADJ	13.56	3	2	métalique	reel	metallique	accent
+vulgaire	ADJ	13.56	3	1	vulgairre	simple_double	vulgère	e_ouvert
+coussin	NOM	13.55	4	1	coucin	s	coussain	nasale
+obligation	NOM	13.54	3	1	obligassion	tion	obligattion	simple_double	obligacion	tion
+domicile	NOM	13.52	3	1	domissile	s	dommicile	simple_double	domicille	simple_double
+bonnet	NOM	13.47	3	1	bonet	double_simple	bonnait	e_final	bonned	finale
+accroupir	VER	13.46	4	1	acroupir	double_simple	accrouppir	simple_double
+compromettre	VER	13.46	3	1	comprometre	double_simple	comprommettre	simple_double	conpromettre	m_bp
+engueuler	VER	13.46	3	1	angueuler	nasale	engueuller	simple_double
+engloutir	VER	13.44	3	1	angloutir	nasale	englouttir	simple_double
+fouet	NOM	13.43	2	0.5	fouait	e_final	foued	finale	foue	finale
+triompher	VER	13.43	3	1	triomfer	ph	trionpher	m_bp
+ébranler	VER	13.41	3	0.5	ébrenler	nasale	ebranler	accent
+moulin	NOM	13.4	3	1	moulain	nasale	moullin	simple_double
+ampoule	NOM	13.39	3	1	empoule	nasale	ampoulle	simple_double	anpoule	m_bp
+achat	NOM	13.36	2	1	acchat	simple_double	acha	finale	achad	finale
+sanglant	ADJ	13.35	2	0.5	senglant	nasale	sanglan	finale	sangland	finale
+cirer	VER	13.34	3	1	sirer	s	cirrer	simple_double
+sincèrement	ADV	13.34	3	1	sincèremant	nasale	sincairement	e_ouvert	sincèremen	finale
+émettre	VER	13.34	3	1	émetre	double_simple	emettre	accent
+étonné	ADJ	13.34	3	1	étoné	double_simple	etonné	accent
+institution	NOM	13.32	3	1	institussion	tion	instittution	simple_double	institucion	tion
+spirituel	ADJ	13.31	3	1	spirittuel	simple_double	spirrituel	simple_double
+température	NOM	13.31	3	1	tampérature	nasale	températture	simple_double	temperature	accent
+salopard	NOM	13.3	3	1	sallopard	simple_double	saloppard	simple_double
+inquiétant	ADJ	13.3	2	0.5	inquiétent	nasale	inquiétan	finale	inquietant	accent
+hanter	VER	13.29	4	1	anter	h	henter	nasale
+rampe	NOM	13.29	3	0.5	rempe	nasale	ranpe	m_bp
+formation	NOM	13.28	3	1	formacion	tion	formattion	simple_double	formassion	tion
+japonais	ADJ	13.28	2	1	japponais	simple_double	japonai	finale	japonnais	simple_double
+carrément	ADV	13.27	3	1	carément	double_simple	carrémant	nasale	carrémen	finale
+débat	NOM	13.25	2	0.5	débad	finale	debat	accent	déba	finale
+tolérer	VER	13.25	2	1	tollérer	simple_double	tolerer	accent
+inscription	NOM	13.25	2	1	inscripcion	tion	inscripssion	tion
+déterminer	VER	13.23	2	1	déterminner	simple_double	determiner	accent
+affoler	VER	13.23	4	1	afoler	double_simple	affoller	simple_double
+anonyme	ADJ	13.23	3	1	anonime	y_i	anonnyme	simple_double	anonymme	simple_double
+illuminer	VER	13.21	4	1	iluminer	double_simple	illuminner	simple_double	illumminer	simple_double
+terriblement	ADV	13.21	3	1	teriblement	double_simple	terriblemant	nasale	terriblemend	finale
+trône	NOM	13.18	4	2	trone	reel	traune	o	tröne	reel
+exposition	NOM	13.18	3	1	exposicion	tion	exposittion	simple_double	exposission	tion
+coiffure	NOM	13.14	4	1	coifure	double_simple	coiffurre	simple_double
+durée	NOM	13.12	2	1	durrée	simple_double	duree	accent
+défoncer	VER	13.12	3	1	défonser	s	defoncer	accent
+édition	NOM	13.12	2	1	édicion	tion	édittion	simple_double	edition	accent
+climat	NOM	13.1	2	1	climmat	simple_double	clima	finale	climad	finale
+chaussée	NOM	13.1	2	1	chossée	o	chaussee	accent
+gravement	ADV	13.08	2	0.5	gravemant	nasale	gravemend	finale	gravemen	finale
+soulagement	NOM	13.08	3	1	soulagemant	nasale	soullagement	simple_double	soulagemen	finale
+maladroit	ADJ	13.05	2	1	malladroit	simple_double	maladroid	finale	maladroi	finale
+agitation	NOM	13.04	3	1	agitassion	tion	agitattion	simple_double	agitacion	tion
+robot	NOM	13.04	2	0.5	robod	finale	robo	finale
+manifestation	NOM	13.03	3	1	manifestassion	tion	maniffestation	simple_double	manifestacion	tion
+invention	NOM	13.02	3	1	invantion	nasale	invenssion	tion	invencion	tion
+faculté	NOM	13.02	3	1	facultée	te_tee	faculte	accent
+brutalement	ADV	13.0	3	1	brutalemant	nasale	bruttalement	simple_double	brutalemen	finale
+monument	NOM	13.0	3	1	monumant	nasale	monnument	simple_double	monumen	finale
+recette	NOM	12.97	4	1	recete	double_simple	ressette	s
+considération	NOM	12.97	2	1	considéracion	tion	considérattion	simple_double	consideration	accent
+délice	NOM	12.95	3	1	délisse	s	delice	accent
+impérial	ADJ	12.95	2	0.5	imperial	accent	inpérial	m_bp
+expédition	NOM	12.94	2	1	expédission	tion	expédittion	simple_double	expedition	accent
+anéantir	VER	12.94	3	1	enéantir	nasale	annéantir	simple_double	aneantir	accent
+sentimental	ADJ	12.93	4	1	santimental	nasale	sentimmental	simple_double	centimental	s
+discrétion	NOM	12.9	2	1	discrécion	tion	discretion	accent	discréssion	tion
+hypothèse	NOM	12.89	4	2	hypotèse	reel	hipothèse	y_i	ypothèse	h
+impressionnant	ADJ	12.88	4	2	impressionant	reel	imprecionnant	s	impretionnant	tion
+débile	ADJ	12.88	2	1	débille	simple_double	debile	accent
+profession	NOM	12.87	3	1	profecion	s	proffession	simple_double	profetion	tion
+candidat	NOM	12.87	3	0.5	cendidat	nasale	candidad	finale
+glorieux	ADJ	12.86	2	1	glorrieux	simple_double	glorieus	finale	glorieu	finale
+agressif	ADJ	12.86	4	2	aggressif	reel	agrecif	s
+sonnette	NOM	12.85	4	1	sonette	double_simple	sonnete	double_simple
+pyjama	NOM	12.84	3	1	pijama	y_i	pyjamma	simple_double
+interdit	ADJ	12.82	3	2	interdi	reel	interdid	finale
+capote	NOM	12.81	3	1	cappote	simple_double	capotte	simple_double
+initiative	NOM	12.79	3	1	inittiative	simple_double	initiattive	simple_double	innitiative	simple_double
+discrètement	ADV	12.78	3	1	discrètemant	nasale	discraitement	e_ouvert	discrètemend	finale
+hurlement	NOM	12.77	3	1	urlement	h	hurlemant	nasale	hurlemend	finale
+politesse	NOM	12.77	3	1	politece	s	polittesse	simple_double	pollitesse	simple_double
+inspiration	NOM	12.71	3	1	inspiracion	tion	inspirration	simple_double	inspirassion	tion
+européen	ADJ	12.66	2	1	eurropéen	simple_double	europeen	accent	europpéen	simple_double
+mécanique	ADJ	12.64	2	1	mécannique	simple_double	mecanique	accent
+circulation	NOM	12.62	3	1	circulassion	tion	sirculation	s	circullation	simple_double
+cicatrice	NOM	12.62	3	1	sicatrice	s	cicatrisse	s
+patate	NOM	12.61	3	1	patatte	simple_double	pattate	simple_double
+coïncidence	NOM	12.6	3	2	coincidence	reel	coïncidance	nasale	coïnsidence	s
+incertain	ADJ	12.59	4	1	incertin	nasale	insertain	s	incertein	nasale
+dépôt	NOM	12.58	4	2	dépot	reel	dépaut	o	dépô	finale
+rouleau	NOM	12.56	3	1	roulo	o	roulleau	simple_double	roulau	o
+prudence	NOM	12.55	4	1	prudance	nasale	prudense	s
+reçu	ADJ	12.54	4	2	recu	reel	ressu	s
+dépouiller	VER	12.54	3	1	dépouiler	double_simple	depouiller	accent
+noix	NOM	12.53	2	0.5	noi	finale	nois	finale
+gentillesse	NOM	12.53	4	1	gentilesse	double_simple	gantillesse	nasale	gentillece	s
+poêle	NOM	12.53	2	0.5	poele	accent	poèle	accent
+évêque	NOM	12.51	4	2	évèque	reel	éveque	accent	évéque	reel
+original	ADJ	12.49	3	1	orriginal	simple_double	originnal	simple_double
+cieux	NOM	12.49	2	1	sieux	s	cieus	finale	cieu	finale
+mentionner	VER	12.46	4	1	mentioner	double_simple	mencionner	tion	mantionner	nasale
+routine	NOM	12.46	3	1	routtine	simple_double	routinne	simple_double
+agneau	NOM	12.45	3	1	agnau	o	agno	o
+naguère	ADV	12.44	2	1	naguaire	e_ouvert	naguere	accent
+ambassade	NOM	12.41	3	2	embassade	reel	anbassade	m_bp
+logement	NOM	12.39	2	0.5	logemant	nasale	logemend	finale	logemen	finale
+quête	NOM	12.38	3	2	quète	reel	quete	accent
+hériter	VER	12.38	3	1	ériter	h	héritter	simple_double	heriter	accent
+élire	VER	12.37	4	2	élir	reel	élirre	simple_double	elire	accent
+gravité	NOM	12.37	4	1	gravitée	te_tee	gravitté	simple_double
+généralement	ADV	12.34	4	2	générallement	reel	généralemant	nasale	généralemen	finale
+saucisse	NOM	12.34	3	1	socisse	o	saucice	s	saussisse	s
+imaginaire	ADJ	12.33	3	1	imaginairre	simple_double	imaginère	e_ouvert	immaginaire	simple_double
+supplémentaire	ADJ	12.32	4	2	suplémentaire	reel	supplémantaire	nasale	supplémentère	e_ouvert
+diplôme	NOM	12.31	4	2	diplome	reel	diplaume	o
+ciment	NOM	12.3	4	1	cimant	nasale	siment	s	cimment	simple_double
+audace	NOM	12.29	3	1	odace	o	audasse	s
+perfection	NOM	12.29	2	1	perfecssion	tion	perfeccion	tion
+congrès	NOM	12.27	3	2	congrés	reel	congrais	e_ouvert	congrè	finale
+battement	NOM	12.27	4	1	batement	double_simple	battemant	nasale	battemen	finale
+séparation	NOM	12.27	2	1	séparassion	tion	séparration	simple_double	separation	accent
+écolier	NOM	12.27	2	1	écollier	simple_double	écolié	e_final	ecolier	accent
+hangar	NOM	12.25	4	1	angar	h	hengar	nasale
+phénomène	NOM	12.25	4	2	phénomene	reel	fénomène	ph	phénomaine	e_ouvert
+municipal	ADJ	12.22	3	1	munnicipal	simple_double	munissipal	s	municippal	simple_double
+simplicité	NOM	12.22	4	1	simplicitée	te_tee	simplissité	s	simplicitté	simple_double
+rancune	NOM	12.21	3	1	rencune	nasale	rancunne	simple_double
+trajet	NOM	12.21	2	0.5	trajait	e_final	trajed	finale	traje	finale
+clandestin	ADJ	12.21	3	0.5	clendestin	nasale	clandestain	nasale
+funèbre	ADJ	12.21	2	1	funaibre	e_ouvert	funnèbre	simple_double	funebre	accent
+spécialement	ADV	12.2	4	2	spéciallement	reel	spécialemant	nasale	spéssialement	s
+héritage	NOM	12.2	3	1	éritage	h	hérittage	simple_double	heritage	accent
+quatrième	ADJ	12.2	2	1	quatriaime	e_ouvert	catrième	k	quatrieme	accent
+dissiper	VER	12.18	3	1	diciper	s	dissipper	simple_double
+négatif	ADJ	12.16	2	1	négattif	simple_double	negatif	accent
+voire	ADV	12.16	3	2	voires	reel	voirre	simple_double
+biscuit	NOM	12.14	2	0.5	biscui	finale	biscuid	finale
+héritier	NOM	12.13	4	2	héritié	reel	éritier	h	hérittier	simple_double
+solennel	ADJ	12.12	4	1	solenel	double_simple	sollennel	simple_double
+diminuer	VER	12.11	3	1	dimminuer	simple_double	diminnuer	simple_double
+accourir	VER	12.11	4	1	acourir	double_simple	accourrir	simple_double
+taureau	NOM	12.1	3	1	tauro	o	taurreau	simple_double	taurau	o
+robinet	NOM	12.06	2	1	robinnet	simple_double	robine	finale	robinait	e_final
+clos	ADJ	12.04	2	0.5	clot	finale	clo	finale
+jury	NOM	12.04	3	1	juri	y_i	jurry	simple_double
+salaud	ADJ	12.03	3	1	salod	o	sallaud	simple_double	salau	finale
+amertume	NOM	12.02	3	1	ammertume	simple_double	amertumme	simple_double
+champignon	NOM	12.0	3	0.5	chempignon	nasale	chanpignon	m_bp
+majorité	NOM	12.0	3	1	majoritée	te_tee	majorrité	simple_double	majorite	accent
+photographier	VER	12.0	3	1	fotographier	ph	phottographier	simple_double
+tremblant	ADJ	11.99	2	0.5	tramblant	nasale	trenblant	m_bp	tremblan	finale
+dégât	NOM	11.98	4	2	dégat	reel	dégâ	finale	degât	accent
+inévitable	ADJ	11.96	2	1	inévittable	simple_double	inevitable	accent	innévitable	simple_double
+ambiance	NOM	11.96	3	2	ambience	reel	embiance	nasale	ambianse	s
+attendrir	VER	11.96	4	1	atendrir	double_simple	attandrir	nasale
+constamment	ADV	11.93	4	2	constament	reel	constammant	nasale	constammen	finale
+échantillon	NOM	11.92	4	1	échantilon	double_simple	échentillon	nasale	echantillon	accent
+épingle	NOM	11.9	3	0.5	épaingle	nasale	epingle	accent
+cuit	ADJ	11.9	2	0.5	cuid	finale	cui	finale
+éclatant	ADJ	11.88	2	1	éclattant	simple_double	éclatand	finale	eclatant	accent
+rangée	NOM	11.88	3	0.5	rengée	nasale	rangee	accent
+exquis	ADJ	11.87	2	0.5	exqui	finale	exquit	finale
+pince	NOM	11.87	4	1	pinse	s	paince	nasale
+singulier	ADJ	11.87	3	1	saingulier	nasale	singullier	simple_double	singulié	e_final
+complice	ADJ	11.86	3	1	complisse	s	conplice	m_bp
+vanité	NOM	11.86	3	1	vanitée	te_tee	vanitté	simple_double	vanite	accent
+violemment	ADV	11.84	4	2	violement	reel	violamment	emment	violemmant	nasale
+permanent	ADJ	11.83	3	1	permanant	nasale	permannent	simple_double	permanen	finale
+malédiction	NOM	11.82	2	1	malédicssion	tion	mallédiction	simple_double	malediction	accent
+scientifique	ADJ	11.81	4	1	sientifique	sc	sciantifique	nasale	scientiffique	simple_double
+mélancolie	NOM	11.81	3	1	mélencolie	nasale	mélancollie	simple_double	melancolie	accent
+autel	NOM	11.8	3	1	otel	o	auttel	simple_double
+bombardement	NOM	11.8	2	0.5	bombardemant	nasale	bombardemen	finale	bonbardement	m_bp
+audience	NOM	11.77	3	2	audiance	reel	odience	o	audiense	s
+agrandir	VER	11.7	4	2	aggrandir	reel	agrendir	nasale
+polonais	ADJ	11.57	3	2	polonnais	reel	pollonais	simple_double	polonai	finale
+commercial	ADJ	11.43	4	2	comercial	reel	commersial	s
+matériel	ADJ	11.21	3	2	matèriel	reel	mattériel	simple_double	materiel	accent
+notamment	ADV	11.2	4	2	notemment	reel	notammen	finale	notament	reel
+conquête	NOM	11.19	4	2	conquète	reel	conquete	accent	conquéte	reel
+interpréter	VER	11.07	4	2	interprêter	reel	interpreter	accent
+provisoire	ADJ	11.04	3	2	provisoir	reel	provisoirre	simple_double
+aura	NOM	11.03	3	2	aurra	reel	ora	o
+traditionnel	ADJ	11.02	4	2	traditionel	reel	tradissionnel	tion	tradittionnel	simple_double
+intervalle	NOM	10.97	4	2	intervale	reel	interval	reel
+impôt	NOM	10.85	3	2	impot	reel	impaut	o	inpôt	m_bp
+psychiatre	NOM	10.81	3	2	psychiâtre	reel	psyciatre	ch_k	psichiatre	y_i
+accéder	VER	10.78	4	2	accèder	reel	acceder	accent
+gêné	ADJ	10.75	3	2	géné	reel	gèné	accent	gené	accent
+abord	NOM	10.63	4	2	abbord	reel	abors	reel
+règne	NOM	10.45	4	2	reigne	reel	raigne	e_ouvert	regne	accent
+calendrier	NOM	10.36	4	2	calandrier	reel	callendrier	simple_double	calendrié	e_final
+éteint	ADJ	10.35	3	2	éteind	reel	étaint	nasale	étein	finale
+énormément	ADV	10.32	3	2	enormément	reel	énormémant	nasale	énormémen	finale
+gênant	ADJ	10.3	3	2	génant	reel	gênand	finale	gènant	accent
+gracieux	ADJ	10.18	3	2	grâcieux	reel	grassieux	s	gracieu	finale
+littéraire	ADJ	10.12	4	2	litéraire	reel	littérairre	simple_double	littérère	e_ouvert
+apprenti	NOM	10.08	3	2	apprentit	reel	aprenti	double_simple	appranti	nasale
+téléphonique	ADJ	10.05	3	2	téléphonnique	reel	téléfonique	ph	teléphonique	accent
+thèse	NOM	10.0	3	2	thése	reel	tèse	th	thaise	e_ouvert
+pilier	NOM	9.98	4	2	pillier	reel	pilié	e_final
+obsession	NOM	9.97	3	2	obssession	reel	obsecion	s	obsetion	tion
+fortement	ADV	9.96	3	2	fortemment	reel	fortemant	nasale	fortemend	finale
+démissionner	VER	9.8	4	2	démissioner	reel	démicionner	s	démitionner	tion
+catégorie	NOM	9.76	3	2	catègorie	reel	catégorrie	simple_double	categorie	accent
+académie	NOM	9.75	4	2	accadémie	reel	academie	accent
+révolutionnaire	ADJ	9.7	4	2	révolutionaire	reel	révolucionnaire	tion	révolutionnairre	simple_double
+installation	NOM	9.66	4	2	instalation	reel	installacion	tion	installattion	simple_double
+compléter	VER	9.64	4	2	complèter	reel	completer	accent	conpléter	m_bp
+correspondance	NOM	9.61	4	2	corespondance	reel	correspondence	nasale	correspondanse	s
+agression	NOM	9.53	4	2	aggression	reel	agrecion	s	agretion	tion
+humidité	NOM	9.47	3	2	humiditée	reel	umidité	h	humiditté	simple_double
+passionné	ADJ	9.47	4	2	passioné	reel	pacionné	s	pationné	tion
+conséquent	ADJ	9.44	2	2	conséquant	reel	conséquen	finale	consequent	accent
+application	NOM	9.35	4	2	aplication	reel	applicacion	tion	applicattion	simple_double
+anniversaire	ADJ	9.31	4	2	aniversaire	reel	anniversairre	simple_double	anniversère	e_ouvert
+permanence	NOM	9.26	4	2	permanance	reel	permanense	s	permannence	simple_double
+inouï	ADJ	9.21	3	2	inoui	reel	innouï	simple_double
+oxygène	NOM	9.21	3	2	oxygéne	reel	oxigène	y_i	oxygaine	e_ouvert
+développement	NOM	9.12	4	2	dévelopement	reel	développemant	nasale	développemend	finale
+pâtisserie	NOM	9.11	4	2	patisserie	reel	pâticerie	s
+addition	NOM	9.07	3	2	adition	reel	addicion	tion	addittion	simple_double
+trêve	NOM	9.05	4	2	trève	reel	treve	accent
+parrain	NOM	9.0	3	2	parain	reel	parrein	nasale	parrin	nasale
+enflammer	VER	8.96	3	2	enflamer	reel	anflammer	nasale
+chômage	NOM	8.96	4	2	chomage	reel	chaumage	o	chomâge	reel
+avancé	ADJ	8.93	4	2	avançé	reel	avencé	nasale	avansé	s
+budget	NOM	8.92	3	2	budjet	reel	budgait	e_final	budge	finale
+officiellement	ADV	8.88	4	2	officielement	reel	oficiellement	double_simple	officiellemant	nasale
+référence	NOM	8.84	4	2	réfèrence	reel	référance	nasale	référense	s
+collaboration	NOM	8.81	4	2	colaboration	reel	collaboracion	tion	collaborattion	simple_double
+décès	NOM	8.74	4	2	décés	reel	décais	e_ouvert	decès	accent
+combattant	ADJ	8.71	3	2	combatant	reel	combattan	finale	conbattant	m_bp
+nucléaire	ADJ	8.65	4	2	nucleaire	reel	nucléairre	simple_double	nucléère	e_ouvert
+susceptible	ADJ	8.54	4	2	suceptible	reel	suseptible	sc
+éventail	NOM	8.47	3	2	évantail	reel	eventail	accent
+promis	ADJ	8.42	3	2	promi	reel	prommis	simple_double
+opposition	NOM	8.38	4	2	oposition	reel	opposicion	tion	opposittion	simple_double
+difficilement	ADV	8.38	4	2	dificilement	reel	difficilemant	nasale	difficillement	simple_double
+pèlerin	NOM	8.37	4	2	pélerin	reel	pailerin	e_ouvert	pèlerain	nasale
+clôture	NOM	8.34	4	2	cloture	reel	clauture	o	clôturre	simple_double
+béret	NOM	8.29	2	2	bérêt	reel	bérait	e_final	béred	finale
+correctement	ADV	8.25	3	2	corectement	reel	correctemant	nasale	correctemend	finale
+accommoder	VER	8.22	4	2	accomoder	reel	acommoder	double_simple
+modèle	ADJ	8.19	4	2	modéle	reel	modaile	e_ouvert	modele	accent
+discerner	VER	8.12	3	2	dicerner	reel	diserner	sc
+secrètement	ADV	8.12	4	2	secrétement	reel	secrètemant	nasale	secraitement	e_ouvert
+littéralement	ADV	8.11	4	2	litéralement	reel	littéralemant	nasale	littéralemend	finale
+licence	NOM	8.05	4	2	license	reel	licance	nasale	lissence	s
+emménager	VER	8.03	4	2	emmenager	reel	eménager	double_simple
+symptôme	NOM	8.02	4	2	symptome	reel	symptaume	o	cymptôme	s
+héroïque	ADJ	8.0	4	2	héroique	reel	éroïque	h	heroïque	accent
+passionnant	ADJ	7.98	3	2	passionant	reel	pacionnant	s	pationnant	tion
+mallette	NOM	7.96	4	2	malette	reel	mallete	double_simple
+parallèle	ADJ	7.95	4	2	parrallèle	reel	paralèle	double_simple	parallaile	e_ouvert
+tranquillité	NOM	7.84	4	2	tranquilité	reel	trenquillité	nasale	tranquillitée	te_tee
+restaurer	VER	7.79	4	2	restorer	reel	restaurrer	simple_double
+idole	NOM	7.75	4	2	idôle	reel	idolle	simple_double
+égout	NOM	7.73	3	2	égoût	reel	égoud	finale	egout	accent
+arrêté	ADJ	7.71	4	2	arrété	reel	arêté	double_simple	arreté	accent
+satellite	NOM	7.69	4	2	sattelite	reel	satellitte	simple_double	satelite	reel
+mourant	ADJ	7.65	4	2	mourrant	reel	mourent	nasale	mourand	finale
+prêcher	VER	7.62	3	2	précher	reel	precher	accent	prècher	accent
+baptême	NOM	7.59	4	2	baptème	reel	bapteme	accent	baptéme	reel
+égalité	NOM	7.58	3	2	égalitée	reel	égalitté	simple_double	egalité	accent
+préoccupation	NOM	7.53	4	2	préocupation	reel	préoccupassion	tion	préoccuppation	simple_double
+intégrer	VER	7.44	4	2	intègrer	reel	integrer	accent
+quasiment	ADV	7.14	4	2	casiment	reel	quasimant	nasale	quasimment	simple_double
+dorénavant	ADV	7.04	3	2	dorénavent	reel	dorrénavant	simple_double	dorenavant	accent
+contrôleur	NOM	7.04	4	2	controleur	reel	contrauleur	o
+recommandation	NOM	7.03	4	2	recommendation	reel	recomandation	double_simple	recommandacion	tion
+légèreté	NOM	7.02	4	2	légéreté	reel	légèretée	te_tee	légaireté	e_ouvert
+pionnier	NOM	6.97	4	2	pionier	reel	pionnié	e_final
+gouttière	NOM	6.97	3	2	goutière	reel	gouttiaire	e_ouvert	gouttiere	accent
+artisan	NOM	6.92	4	2	artisant	reel	artisen	nasale
+dictionnaire	NOM	6.91	4	2	dictionaire	reel	diccionnaire	tion	dictionnairre	simple_double
+noyau	NOM	6.91	4	2	noyeau	reel	noyo	o
+réussi	ADJ	6.91	4	2	reussi	reel	réuci	s
+précédemment	ADV	6.82	4	2	précédement	reel	précédemmant	nasale	préssédemment	s
+dépêche	NOM	6.74	3	2	dépèche	reel	dépeche	accent	depêche	accent
+commune	NOM	6.73	4	2	comune	reel	communne	reel
+brèche	NOM	6.71	3	2	brêche	reel	braiche	e_ouvert	breche	accent
+interprète	NOM	6.7	4	2	interpréte	reel	interpraite	e_ouvert	interprete	accent
+renaissance	NOM	6.69	4	2	rennaissance	reel	renaissence	nasale	renaissanse	s
+consommation	NOM	6.68	4	2	consomation	reel	consommacion	tion	consommattion	simple_double
+purement	ADV	6.66	3	2	pûrement	reel	puremant	nasale	purrement	simple_double
+interprétation	NOM	6.63	4	2	interprêtation	reel	interprétassion	tion	interprétattion	simple_double
+frêle	ADJ	6.61	3	2	frèle	reel	frele	accent
+décret	NOM	6.59	3	2	décrêt	reel	décrait	e_final	decret	accent
+sphère	NOM	6.54	4	2	sphére	reel	sfère	ph	sphaire	e_ouvert
+distinction	NOM	6.5	4	2	disctinction	reel	distinccion	tion	distainction	nasale
+environnement	NOM	6.48	4	2	environement	reel	anvironnement	nasale	environnemend	finale
+monastère	NOM	6.42	3	2	monastére	reel	monnastère	simple_double	monastaire	e_ouvert
+différemment	ADV	6.33	4	2	différement	reel	différamment	emment	différemmant	nasale
+gourmand	ADJ	6.32	3	2	gourmant	reel	gourmend	nasale	gourman	finale
+fiançailles	NOM	6.29	4	2	fiancailles	reel	fiençailles	nasale	fiançailes	double_simple
+chalet	NOM	6.24	3	2	châlet	reel	challet	simple_double	chalait	e_final
+hémorragie	NOM	6.23	3	2	hémoragie	reel	émorragie	h	hemorragie	accent
+hiérarchie	NOM	6.22	4	2	hyérarchie	reel	iérarchie	h	hierarchie	accent
+ovale	ADJ	6.21	3	2	oval	reel	ovalle	simple_double
+résurrection	NOM	6.2	4	2	résurection	reel	résurrecssion	tion	resurrection	accent
+préférable	ADJ	6.13	3	2	préfèrable	reel	preférable	accent
+surplus	NOM	6.1	3	2	surplu	reel	surplut	finale
+suspension	NOM	5.98	4	2	suspenssion	reel	suspansion	nasale
+trophée	NOM	5.97	4	2	trophé	reel	trofée	ph	trophee	accent
+ascension	NOM	5.96	4	2	ascencion	reel	asension	sc	ascansion	nasale
+relève	NOM	5.96	3	2	reléve	reel	relaive	e_ouvert	releve	accent
+fasciste	ADJ	5.93	4	2	faciste	reel	fasiste	sc
+égoïsme	NOM	5.84	3	2	égoisme	reel	egoïsme	accent
+inclure	VER	5.81	4	2	inclures	reel	inclurre	simple_double
+protocole	NOM	5.81	4	2	protocol	reel	prottocole	simple_double	protocolle	simple_double
+privilégié	ADJ	5.81	4	2	privilègié	reel	privillégié	simple_double	privilegié	accent
+ambigu	ADJ	5.79	4	2	ambigü	reel	embigu	nasale	anbigu	m_bp
+cime	NOM	5.75	4	2	cîme	reel	sime	s	cimme	simple_double
+offrande	NOM	5.71	4	2	ofrende	reel	ofrande	double_simple	offrende	nasale
+atterrissage	NOM	5.65	4	2	aterrissage	reel	atterissage	double_simple	attérissage	reel
+championnat	NOM	5.61	4	2	championat	reel	chempionnat	nasale	chanpionnat	m_bp
+traite	NOM	5.61	3	2	traîte	reel	traitte	simple_double	trète	e_ouvert
+précipitamment	ADV	5.57	4	2	précipitament	reel	précipitemment	emment	précipitammant	nasale
+marionnette	NOM	5.53	4	2	marionette	reel	marionnete	double_simple	marrionnette	simple_double
+concurrence	NOM	5.5	4	2	concurence	reel	concurrance	nasale	concurrense	s
+cinquante	NOM	5.5	4	2	cinquantes	reel	cinquente	nasale	sinquante	s
+pianiste	NOM	5.47	4	2	pîaniste	reel	pianniste	simple_double
+éphémère	ADJ	5.46	4	2	éphèmère	reel	éfémère	ph	éphémaire	e_ouvert
+vainqueur	ADJ	5.46	4	2	vainqueure	reel	veinqueur	nasale	vinqueur	nasale
+pèlerinage	NOM	5.45	4	2	pélerinage	reel	pèlerinnage	simple_double	pailerinage	e_ouvert
+augmentation	NOM	5.42	4	2	augmantation	reel	ogmentation	o	augmentacion	tion
+passionnément	ADV	5.38	3	2	passionément	reel	passionnémant	nasale	pacionnément	s
+poétique	ADJ	5.35	3	2	poètique	reel	poetique	accent
+appât	NOM	5.33	3	2	appat	reel	apât	double_simple	appâd	finale
+alimentaire	ADJ	5.32	4	2	allimentaire	reel	alimantaire	nasale	alimentairre	simple_double
+suédois	ADJ	5.28	4	2	suèdois	reel	suedois	accent	suédoi	finale
+sujet	ADJ	5.26	3	2	suget	reel	sujed	finale	sujait	e_final
+moelle	NOM	5.19	4	2	moëlle	reel	moele	double_simple	mœlle	reel
+rebelle	ADJ	5.13	4	2	rebel	reel	rebele	double_simple
+atteint	ADJ	5.06	4	2	atteind	reel	attaint	nasale	attein	finale
+nationalité	NOM	5.05	4	2	nationnalité	reel	nationalitée	te_tee	nassionalité	tion
+marronnier	NOM	5.0	4	2	marronier	reel	maronnier	double_simple	marronnié	e_final
+ampleur	NOM	4.97	4	2	ampleure	reel	anpleur	m_bp	empleur	reel
+remplaçant	NOM	4.97	4	2	remplacant	reel	ramplaçant	nasale	remplassant	s
+baïonnette	NOM	4.95	4	2	baïonette	reel	baïonnete	double_simple
+septième	ADJ	4.93	3	2	septiéme	reel	septiaime	e_ouvert	septieme	accent
+côtoyer	VER	4.92	4	2	cotoyer	reel	cautoyer	o
+théâtral	ADJ	4.88	4	2	théatral	reel	téâtral	th	theâtral	accent
+embarrassé	ADJ	4.87	3	2	embarassé	reel	ambarrassé	nasale	enbarrassé	m_bp
+archevêque	NOM	4.85	4	2	archevèque	reel	archeveque	accent
+principalement	ADV	4.84	4	2	principallement	reel	principalemant	nasale	prinsipalement	s
+périmètre	NOM	4.82	4	2	périmêtre	reel	périmaitre	e_ouvert	périmmètre	simple_double
+abattu	ADJ	4.8	4	2	abbatu	reel	abatu	double_simple
+appréhender	VER	4.78	4	2	apréhender	reel	appréhander	nasale	appréender	h
+millimètre	NOM	4.76	4	2	milimètre	reel	millimmètre	simple_double	millimaitre	e_ouvert
+fréquemment	ADV	4.7	4	2	fréquement	reel	fréquamment	emment	fréquemmant	nasale
+hollandais	ADJ	4.67	4	2	holandais	reel	ollandais	h	hollendais	nasale
+ralliement	NOM	4.67	4	2	ralliemment	reel	ralliemant	nasale	ralliemen	finale
+arrondissement	NOM	4.67	4	2	arondissement	reel	arrondissemant	nasale	arrondicement	s
+évocation	NOM	4.64	3	2	évoquation	reel	évocassion	tion	évocattion	simple_double
+orthographe	NOM	4.61	4	2	ortographe	reel	orthografe	ph
+revient	NOM	4.6	3	2	reviend	reel	revien	finale
+embuscade	NOM	4.58	3	2	ambuscade	reel	enbuscade	m_bp
+omettre	VER	4.58	4	2	ommettre	reel	ometre	double_simple
+fièrement	ADV	4.54	3	2	fiérement	reel	fièremant	nasale	fiairement	e_ouvert
+oppression	NOM	4.54	3	2	opression	reel	opprecion	s	oppretion	tion
+occurrence	NOM	4.5	4	2	occurence	reel	occurrance	nasale	occurrense	s
+hormis	PRE	4.49	4	2	hormi	reel	hormit	finale	ormis	reel
+rapprochement	NOM	4.46	4	2	raprochement	reel	rapprochemant	nasale	rapprochemen	finale
+performance	NOM	4.45	4	2	performence	reel	performanse	s
+sultan	NOM	4.42	4	2	sultant	reel	sulten	nasale
+gène	NOM	4.41	4	2	gene	reel	géne	reel
+grêle	ADJ	4.39	4	2	grèle	reel	grele	accent
+consistance	NOM	4.37	3	2	consistence	reel	consistanse	s
+fonctionnement	NOM	4.35	4	2	fonctionement	reel	fonccionnement	tion	fonctionnemant	nasale
+contemporain	ADJ	4.3	4	2	comtemporain	reel	contamporain	nasale	contemporrain	simple_double
+nationale	NOM	4.22	4	2	nationnale	reel	nacionale	tion	nationalle	simple_double
+décollage	NOM	4.19	3	2	décolage	reel	decollage	accent
+juvénile	ADJ	4.18	3	2	juvénil	reel	juvénille	simple_double	juvenile	accent
+inconsciemment	ADV	4.14	4	2	inconciemment	reel	inconsciamment	emment	inconsiemment	sc
+mêlée	NOM	4.14	4	2	mélée	reel	melée	accent	mêlee	accent
+raffinement	NOM	4.12	4	2	rafinement	reel	raffinemant	nasale	raffinnement	simple_double
+désaccord	NOM	4.11	3	2	désacord	reel	desaccord	accent
+siéger	VER	4.11	4	2	sièger	reel	sieger	accent	ciéger	s
+essentiellement	ADV	4.1	4	2	essentielement	reel	essantiellement	nasale	ecentiellement	s
+pittoresque	ADJ	4.1	4	2	pitoresque	reel	pittorresque	simple_double	pitorresque	reel
+caricature	NOM	4.08	4	2	carricature	reel	caricatture	simple_double	caricaturre	simple_double
+brièvement	ADV	4.07	4	2	briévement	reel	brièvemant	nasale	briaivement	e_ouvert
+consommateur	NOM	4.06	4	2	consomateur	reel	consommatteur	simple_double
+coteau	NOM	4.05	4	2	côteau	reel	cotau	o	cotteau	simple_double
+réconciliation	NOM	4.04	4	2	réconsiliation	reel	réconciliassion	tion	réconciliattion	simple_double
+carrosserie	NOM	4.0	4	2	carosserie	reel	carrocerie	s
+crème	ADJ	4.0	4	2	crême	reel	craime	e_ouvert	creme	accent
+blockhaus	NOM	3.96	4	2	blokhaus	reel	blockhos	o
+dépendance	NOM	3.88	4	2	dépendence	reel	dépandance	nasale	dépendanse	s
+maximum	ADJ	3.88	4	2	maximun	reel	maximmum	simple_double
+apaisement	NOM	3.85	3	2	appaisement	reel	apaisemant	nasale	apaisemend	finale
+créateur	ADJ	3.83	4	2	createur	reel	créatteur	simple_double
+conservatoire	NOM	3.83	4	2	concervatoire	reel	conservatoirre	simple_double	conservattoire	simple_double
+acquis	ADJ	3.82	4	2	aquis	reel	accquis	simple_double	acqui	reel
+débâcle	NOM	3.79	4	2	débacle	reel	debâcle	accent
+licencier	VER	3.71	4	2	licensier	reel	licancier	nasale	lissencier	s
+tolérance	NOM	3.71	4	2	tolérence	reel	tollérance	simple_double	toléranse	s
+échafaudage	NOM	3.64	4	2	échaffaudage	reel	échafodage	o	echafaudage	accent
+densité	NOM	3.62	4	2	densitée	reel	dansité	nasale	densitté	simple_double
+dépens	NOM	3.59	4	2	dépents	reel	dépans	nasale	dépent	finale
+fabricant	NOM	3.56	4	2	fabrican	reel	fabricent	nasale	fabricand	finale
+endommager	VER	3.55	4	2	endomager	reel	andommager	nasale
+simultanément	ADV	3.55	4	2	simultannément	reel	simultenément	nasale	simmultanément	simple_double
+appelé	NOM	3.52	4	2	appellé	reel	apelé	double_simple	appele	accent
+conventionnel	ADJ	3.49	4	2	conventionel	reel	convantionnel	nasale	convenssionnel	tion
+concombre	NOM	3.44	4	2	comcombre	reel	conconbre	m_bp
+carrosse	NOM	3.41	4	2	carosse	reel	carroce	s
+mythologie	NOM	3.4	4	2	mytologie	reel	mithologie	y_i	mythollogie	simple_double
+chevalet	NOM	3.38	3	2	chevallet	reel	chevalait	e_final	chevaled	finale
+prospère	ADJ	3.36	4	2	prospére	reel	prospaire	e_ouvert	prospere	accent
+brevet	NOM	3.34	3	2	brevêt	reel	brevait	e_final	breved	finale
+fervent	ADJ	3.33	3	2	fervant	reel	ferven	finale	fervend	finale
+démêler	VER	3.31	4	2	déméler	reel	démèler	accent	démeler	accent
+acacia	NOM	3.3	4	2	accacia	reel	acassia	s
+nomination	NOM	3.3	4	2	nommination	reel	nominacion	tion	nominattion	simple_double
+évènement	NOM	3.29	4	2	évenement	reel	évènemant	nasale	évainement	e_ouvert
+cohérent	ADJ	3.29	4	2	cohéren	reel	coérent	h	cohérant	nasale
+icône	NOM	3.27	4	2	icone	reel	icaune	o
+infantile	ADJ	3.27	4	2	infantil	reel	infentile	nasale	infantille	simple_double
+rationnel	ADJ	3.27	4	2	rationel	reel	racionnel	tion	rattionnel	simple_double
+pâturage	NOM	3.25	4	2	patûrage	reel	pâturrage	simple_double	paturage	accent
+aérodrome	NOM	3.23	4	2	aérodrôme	reel	aérodromme	simple_double	aerodrome	accent
+sonorité	NOM	3.22	4	2	sonnorité	reel	sonoritée	te_tee	sonoritté	simple_double
+christianisme	NOM	3.21	4	2	christiannisme	reel	cristianisme	ch_k	kristianisme	ch_k
+antan	NOM	3.2	4	2	antant	reel	entan	nasale
+syndrome	NOM	3.14	4	2	syndrôme	reel	syndromme	simple_double	cyndrome	s
+collectionneur	NOM	3.07	4	2	collectioneur	reel	colectionneur	double_simple	colleccionneur	tion
+méditerranéen	ADJ	3.04	4	2	méditerrannéen	reel	méditeranéen	double_simple	méditterranéen	simple_double
+caractéristique	ADJ	3.02	4	2	caractèristique	reel	caracteristique	accent	carractéristique	reel
+résonance	NOM	2.99	4	2	résonnance	reel	résonence	nasale	résonanse	s
+restreint	ADJ	2.98	3	2	restrain	reel	restraint	nasale	restreind	finale
+acquisition	NOM	2.96	4	2	aquisition	reel	acquisicion	tion	accquisition	simple_double
+doctorat	NOM	2.95	4	2	doctora	reel	doctorrat	simple_double	doctorad	finale
+inauguration	NOM	2.95	4	2	innauguration	reel	inoguration	o	inauguracion	tion
+trente	NOM	2.93	4	2	trentes	reel	trante	nasale
+enrôler	VER	2.91	4	2	enroler	reel	anrôler	nasale	enrauler	o
+quarante	NOM	2.91	4	2	quarantes	reel	quarente	nasale	quarrante	simple_double
+éloquence	NOM	2.88	3	2	éloquance	reel	éloquense	s	eloquence	accent
+synthétique	ADJ	2.84	4	2	syntétique	reel	sinthétique	y_i	synthetique	accent
+pseudonyme	NOM	2.83	4	2	pseudonime	reel	pseudonymme	simple_double	pseudonnyme	simple_double
+scepticisme	NOM	2.81	4	2	septicisme	reel	cepticisme	sc	sceptissisme	s
+embarcation	NOM	2.8	4	2	embarquation	reel	ambarcation	nasale	embarcacion	tion
+désaffecté	ADJ	2.79	3	2	désafecté	reel	desaffecté	accent
+calife	NOM	2.77	3	2	kalife	reel	califfe	simple_double	callife	simple_double
+minimum	ADJ	2.77	4	2	minimun	reel	minimmum	simple_double	minnimum	simple_double
+emblème	NOM	2.73	4	2	emblême	reel	amblème	nasale	emblaime	e_ouvert
+descendant	ADJ	2.73	4	2	descandant	reel	desendant	sc	descendand	finale
+systématiquement	ADV	2.72	4	2	systèmatiquement	reel	systématiquemant	nasale	sistématiquement	y_i
+venimeux	ADJ	2.72	3	2	vénimeux	reel	venimmeux	simple_double	venimeus	finale
+alcôve	NOM	2.71	3	2	alcove	reel	alcauve	o
+châssis	NOM	2.71	4	2	chassis	reel	châssit	finale	châssi	finale
+opérationnel	ADJ	2.71	4	2	opérationel	reel	opéracionnel	tion	opérattionnel	simple_double
+répandu	ADJ	2.69	4	2	répendu	reel	repandu	accent
+frappant	ADJ	2.67	3	2	frapant	reel	frappan	finale	frappand	finale
+olympique	ADJ	2.66	4	2	olimpique	reel	ollympique	simple_double
+appartenance	NOM	2.64	4	2	apartenance	reel	appartenence	nasale	appartenanse	s
+traité	ADJ	2.62	4	2	traîté	reel	traitté	simple_double	trèté	e_ouvert
+abondamment	ADV	2.61	4	2	abondament	reel	abondammant	nasale	abondammen	finale
+exceptionnellement	ADV	2.61	4	2	exceptionellement	reel	exceptionnelement	double_simple	exceptionnellemant	nasale
+cellulaire	ADJ	2.61	4	2	celulaire	reel	sellulaire	s	cellulère	e_ouvert
+standard	ADJ	2.59	4	2	standart	reel	stendard	nasale
+entité	NOM	2.58	4	2	entitée	reel	entitté	simple_double	entite	accent
+donnant	ADJ	2.58	4	2	donant	reel	donnan	finale	donnand	finale
+développé	ADJ	2.58	4	2	dévellopé	reel	dévelopé	double_simple	developpé	accent
+insurrection	NOM	2.56	4	2	insurection	reel	insurreccion	tion	insurrecssion	tion
+décennie	NOM	2.55	4	2	décénnie	reel	décenie	double_simple	déssennie	s
+allant	ADJ	2.53	4	2	alant	reel	allent	nasale	alland	finale
+parure	NOM	2.52	4	2	parrure	reel	parurre	simple_double
+renommée	NOM	2.5	4	2	renomée	reel	renommee	accent
+étonnamment	ADV	2.5	4	2	étonnament	reel	étonnemment	emment	étonamment	double_simple
+cristallin	ADJ	2.47	4	2	cristalin	reel	cristallain	nasale
+acompte	NOM	2.41	4	2	accompte	reel	aconpte	m_bp
+coalition	NOM	2.4	4	2	coallition	reel	coalicion	tion	coalittion	simple_double
+prenant	ADJ	2.39	4	2	prennant	reel	prenent	nasale	prenan	finale
+mausolée	NOM	2.38	4	2	mausolé	reel	mosolée	o	mausollée	simple_double
+pâtée	NOM	2.38	3	2	patée	reel	pâtee	accent
+hypothèque	NOM	2.37	4	2	hypothéque	reel	ypothèque	h	hypotèque	th
+égoutter	VER	2.36	3	2	égouter	reel	egoutter	accent
+monopole	NOM	2.36	4	2	monopôle	reel	monoppole	simple_double	monopolle	simple_double
+systématique	ADJ	2.35	4	2	systèmatique	reel	sistématique	y_i	systémattique	simple_double
+libanais	ADJ	2.32	3	2	libannais	reel	libanai	finale	libanait	finale
+aperçu	NOM	2.3	4	2	apperçu	reel	aperssu	s	apercu	reel
+treillis	NOM	2.29	4	2	treilli	reel	treilis	double_simple	treillit	finale
+châtelain	NOM	2.28	4	2	chatelain	reel	châtelein	nasale	châtelin	nasale
+mamelle	NOM	2.27	4	2	mammelle	reel	mamele	double_simple
+ruissellement	NOM	2.27	4	2	ruisselement	reel	ruissellemant	nasale	ruicellement	s
+sépulture	NOM	2.24	4	2	scépulture	reel	sépulturre	simple_double	sepulture	accent
+géographique	ADJ	2.24	4	2	geographique	reel	géografique	ph
+incontrôlable	ADJ	2.23	4	2	incontrolable	reel	incontraulable	o
+millionnaire	ADJ	2.23	4	2	millionaire	reel	milionnaire	double_simple	millionnère	e_ouvert
+cône	NOM	2.23	4	2	cone	reel	caune	o
+avènement	NOM	2.23	4	2	avénement	reel	avènemant	nasale	avainement	e_ouvert
+amendement	NOM	2.21	4	2	ammendement	reel	amandement	nasale	amendemen	finale
+immunité	NOM	2.21	4	2	immunitée	reel	imunité	double_simple	immunitté	simple_double
+latitude	NOM	2.18	4	2	lattitude	reel	latittude	simple_double
+grès	NOM	2.18	3	2	grais	reel	gres	accent	grè	finale
+périphérie	NOM	2.17	4	2	périférie	reel	periphérie	accent
+frêne	NOM	2.16	3	2	frène	reel	frene	accent
+sphinx	NOM	2.16	4	2	sphynx	reel	sfinx	ph	sphainx	nasale
+tronçon	NOM	2.15	4	2	trançon	reel	tronsson	s	troncon	reel
+déploiement	NOM	2.15	4	2	déployement	reel	déploiemant	nasale	déploiemen	finale
+psychanalyste	NOM	2.15	4	2	psychanaliste	reel	psichanalyste	y_i	psycanalyste	ch_k
+péninsule	NOM	2.1	4	2	peninsule	reel	pénainsule	nasale	péninsulle	simple_double
+oculaire	ADJ	2.08	4	2	occulaire	reel	oculère	e_ouvert	oculairre	simple_double
+mathématique	ADJ	2.07	4	2	matématique	reel	mathémattique	simple_double	mathematique	accent
+arôme	NOM	2.06	4	2	arome	reel	araume	o
+partisan	ADJ	2.06	4	2	partisant	reel	partisen	nasale
+constitutionnel	ADJ	2.05	4	2	constitutionel	reel	constitussionnel	tion	constituttionnel	simple_double
+décédé	ADJ	2.05	4	2	décèdé	reel	déssédé	s	decédé	accent
+entouré	ADJ	2.04	4	2	entourré	reel	antouré	nasale
+soixante	NOM	2.02	4	2	soixantes	reel	soixente	nasale
+diamètre	NOM	2.02	4	2	diamétre	reel	diammètre	simple_double	diamaitre	e_ouvert
+indépendamment	ADV	2.0	4	2	indépendemment	reel	indépandamment	nasale	indépendammen	finale
+paradoxalement	ADV	2.0	4	2	paradoxallement	reel	paradoxalemant	nasale	parradoxalement	simple_double
+évêché	NOM	2.0	4	2	évéché	reel	évêchée	te_tee	éveché	accent
+auxiliaire	ADJ	1.99	4	2	auxilliaire	reel	oxiliaire	o	auxiliairre	simple_double
+culinaire	ADJ	1.98	4	2	cullinaire	reel	culinère	e_ouvert	culinairre	simple_double
+complexité	NOM	1.96	4	2	complexitée	reel	complexitté	simple_double	complexite	accent
+canaliser	VER	1.92	4	2	canalyser	reel	canalliser	simple_double	cannaliser	simple_double
+puissamment	ADV	1.92	4	2	puissemment	reel	puissammant	nasale	puissammend	finale
+molécule	NOM	1.89	4	2	molècule	reel	moléculle	simple_double	molecule	accent
+tiers	ADJ	1.88	4	2	tier	reel	thier	reel
+acuité	NOM	1.87	4	2	accuité	reel	acuitée	te_tee	acuitté	simple_double
+guérilla	NOM	1.86	4	2	guerrilla	reel	guérila	double_simple	guerilla	accent
+échappement	NOM	1.86	4	2	échapement	reel	échappemant	nasale	echappement	accent
+clone	NOM	1.85	4	2	clône	reel	clonne	simple_double
+appellation	NOM	1.83	4	2	appelation	reel	appellacion	tion	appellattion	simple_double
+pollution	NOM	1.83	4	2	polution	reel	pollussion	tion	polluttion	simple_double
+parallèlement	ADV	1.83	4	2	parallèllement	reel	paralèlement	double_simple	parallèlemant	nasale
+archaïque	ADJ	1.82	4	2	archaique	reel	arcaïque	ch_k	arkaïque	ch_k
+provençal	ADJ	1.81	4	2	provencal	reel	provançal	nasale	provenssal	s
+surréaliste	ADJ	1.81	4	2	surrealiste	reel	suréaliste	double_simple	surréalliste	simple_double
+détriment	NOM	1.8	4	2	détrimant	reel	détrimment	simple_double	détrimen	finale
+approximativement	ADV	1.8	4	2	aproximativement	reel	approximativemant	nasale	approximattivement	simple_double
+synthèse	NOM	1.79	4	2	syntèse	reel	synthaise	e_ouvert	synthese	accent
+traditionnellement	ADV	1.79	4	2	traditionellement	reel	traditionnellemant	nasale	tradicionnellement	tion
+ambiguïté	NOM	1.78	4	2	ambiguité	reel	ambiguïtée	te_tee	embiguïté	nasale
+utérus	NOM	1.78	4	2	utèrus	reel	uttérus	simple_double	uterus	accent
+tchèque	ADJ	1.77	4	2	tchéque	reel	tchaique	e_ouvert	tcheque	accent
+baryton	NOM	1.77	4	2	bariton	reel	barryton	simple_double	barytton	simple_double
+analyste	NOM	1.76	4	2	analiste	reel	annalyste	simple_double	anallyste	simple_double
+indifféremment	ADV	1.76	4	2	indifférement	reel	indifféramment	emment	indifféremmant	nasale
+paroxysme	NOM	1.76	4	2	paroxisme	reel	parroxysme	simple_double
+byzantin	ADJ	1.75	4	2	bizantin	reel	byzentin	nasale	byzantain	nasale
+acolyte	NOM	1.71	4	2	accolyte	reel	acolite	y_i	acolytte	simple_double
+soulèvement	NOM	1.7	4	2	soulévement	reel	soulèvemant	nasale	soulaivement	e_ouvert
+raisonnablement	ADV	1.69	4	2	raisonablement	reel	raisonnablemant	nasale	raisonnablemend	finale
+râteau	NOM	1.67	4	2	rateau	reel	râtau	o	râto	o
+cafetier	NOM	1.66	4	2	caffetier	reel	cafetié	e_final
+concile	NOM	1.64	4	2	concil	reel	consile	s	concille	simple_double
+agrégation	NOM	1.63	4	2	aggrégation	reel	agrégassion	tion	agrégattion	simple_double
+endommagé	ADJ	1.63	4	2	endomagé	reel	andommagé	nasale	endommage	accent
+conçu	ADJ	1.63	4	2	concu	reel	conssu	s
+recenser	VER	1.62	4	2	recencer	reel	recanser	nasale	ressenser	s
+deçà	ADV	1.62	4	2	deça	reel	dessà	s
+vaillamment	ADV	1.62	4	2	vaillament	reel	vaillemment	emment	vailamment	double_simple
+flamand	ADJ	1.61	4	2	flammand	reel	flamend	nasale	flaman	finale
+catholicisme	NOM	1.6	4	2	catholiscisme	reel	catolicisme	th	catholissisme	s
+concrètement	ADV	1.59	4	2	concrétement	reel	concrètemant	nasale	concraitement	e_ouvert
+immiscer	VER	1.59	4	2	imiscer	reel	immicer	sc	immiser	sc
+brillamment	ADV	1.59	4	2	brillament	reel	brillemment	emment	brilamment	double_simple
+paranoïa	NOM	1.59	4	2	paranoia	reel	parannoïa	simple_double	parranoïa	simple_double
+relâchement	NOM	1.58	4	2	relachement	reel	relâchemant	nasale	relâchemen	finale
+apogée	NOM	1.58	4	2	appogée	reel	apogee	accent	apogé	reel
+amphithéâtre	NOM	1.58	4	2	amphithéatre	reel	amfithéâtre	ph	emphithéâtre	nasale
+crottin	NOM	1.57	4	2	crotin	reel	crottain	nasale
+cité	ADJ	1.57	4	2	sité	reel	citté	simple_double
+hémisphère	NOM	1.57	4	2	émisphère	reel	hémisfère	ph	hémisphaire	e_ouvert
+secrète	NOM	1.57	4	2	secrête	reel	secraite	e_ouvert	secrete	accent
+omission	NOM	1.55	4	2	ommission	reel	omicion	s	omition	tion
+innovation	NOM	1.54	4	2	inovation	reel	innovacion	tion	innovattion	simple_double
+tyrannique	ADJ	1.54	4	2	tyranique	reel	tirannique	y_i	tyrrannique	simple_double
+concurrent	ADJ	1.54	4	2	concurent	reel	concurrant	nasale	concurren	finale
+fourgonnette	NOM	1.54	4	2	fourgonette	reel	fourgonnete	double_simple
+intègre	ADJ	1.52	4	2	intégre	reel	intaigre	e_ouvert	integre	accent
+communément	ADV	1.52	4	2	comunément	reel	communnément	simple_double	communement	accent
+côtier	ADJ	1.52	4	2	cotier	reel	cautier	o	côtié	e_final
+déclenchement	NOM	1.52	4	2	déclanchement	reel	declenchement	accent	déclenchemen	finale
+délinquance	NOM	1.48	4	2	délinquence	reel	délainquance	nasale	délinquanse	s
+accompagné	ADJ	1.47	4	2	acompagné	reel	acconpagné	m_bp
+bouillonnant	ADJ	1.46	4	2	bouillonant	reel	bouilonnant	double_simple	bouillonnand	finale
+stèle	NOM	1.46	4	2	stéle	reel	staile	e_ouvert	stele	accent
+manuscrit	ADJ	1.46	4	2	manuscript	reel	mannuscrit	simple_double	manuscrid	finale
+recommandé	ADJ	1.45	4	2	recommendé	reel	recomandé	reel
+suppression	NOM	1.44	4	2	supression	reel	supprecion	s	suppretion	tion
+persévérance	NOM	1.42	4	2	persévérence	reel	persévéranse	s	persevérance	accent
+générer	VER	1.42	4	2	génèrer	reel	genérer	accent
+proéminent	ADJ	1.41	4	2	prohéminent	reel	proéminant	nasale	proéminnent	simple_double
+bêta	ADJ	1.41	4	2	béta	reel	bèta	accent	beta	accent
+alcoolisme	NOM	1.4	4	2	alcolisme	reel	alcoollisme	simple_double
+canular	NOM	1.4	4	2	canulard	reel	cannular	simple_double	canullar	simple_double
+erroné	ADJ	1.4	4	2	érroné	reel	eroné	double_simple	erronné	simple_double
+ferroviaire	ADJ	1.39	4	2	ferrovière	reel	feroviaire	double_simple	ferroviairre	simple_double
+schizophrénie	NOM	1.39	4	2	schyzophrénie	reel	schizofrénie	ph	skizophrénie	ch_k
+irrationnel	ADJ	1.39	4	2	irrationel	reel	irationnel	double_simple	irracionnel	tion
+canonnade	NOM	1.37	4	2	canonade	reel	cannonnade	simple_double
+conique	ADJ	1.35	4	2	cônique	reel	connique	simple_double
+équivalent	ADJ	1.34	4	2	équivallent	reel	équivalen	finale	equivalent	accent
+susceptibilité	NOM	1.33	4	2	suceptibilité	reel	suseptibilité	sc	susceptibilitée	te_tee
+hydrogène	NOM	1.32	4	2	hydrogene	reel	hidrogène	y_i	ydrogène	h
+emprisonnement	NOM	1.31	4	2	emprisonement	reel	emprisonnemant	nasale	emprisonnemend	finale
+problématique	ADJ	1.3	4	2	problèmatique	reel	problémattique	simple_double	problematique	accent
+agrandissement	NOM	1.29	4	2	aggrandissement	reel	agrandissemant	nasale	agrandicement	s
+hydraulique	ADJ	1.28	4	2	hydrolique	reel	hidraulique	y_i	ydraulique	h
+afflux	NOM	1.27	4	2	aflux	reel	afflus	finale	afflu	finale
+toboggan	NOM	1.27	4	2	tobogan	reel	toboggen	nasale
+dévot	ADJ	1.26	4	2	dévôt	reel	dévo	finale	devot	accent
+diplômé	ADJ	1.25	4	2	diplomé	reel	diplaumé	o
+garrigue	NOM	1.25	4	2	guarrigue	reel	garigue	double_simple
+nourrissant	ADJ	1.25	4	2	nourissant	reel	nourrissand	finale	nourrissan	finale
+obédience	NOM	1.25	4	2	obédiance	reel	obédiense	s	obedience	accent
+azimut	NOM	1.23	4	2	azimuth	reel	azimmut	simple_double
+synonyme	ADJ	1.23	4	2	synonime	reel	sinonyme	y_i	synonymme	simple_double
+calligraphie	NOM	1.22	4	2	caligraphie	reel	calligrafie	ph
+hôtellerie	NOM	1.2	4	2	hotellerie	reel	hôtelerie	double_simple	ôtellerie	h
+permanente	NOM	1.18	4	2	permanante	reel	permannente	simple_double
+amalgame	NOM	1.17	4	2	amalgamme	reel	ammalgame	simple_double
+pylône	NOM	1.16	4	2	pylone	reel	pilône	y_i	pylaune	o
+bouddhisme	NOM	1.16	4	2	boudhisme	reel	bouddisme	reel
+agglomération	NOM	1.14	4	2	aglomération	reel	agglomérassion	tion	agglommération	simple_double
+recensement	NOM	1.12	4	2	recenssement	reel	recansement	nasale	ressensement	s
+subsistance	NOM	1.11	4	2	subsistence	reel	subsistanse	s
+coefficient	NOM	1.1	4	2	coeficient	reel	coefficiant	nasale	coeffissient	s
+réalisé	ADJ	1.1	4	2	realisé	reel	réallisé	simple_double
+liturgie	NOM	1.09	4	2	lithurgie	reel	litturgie	simple_double
+filiale	NOM	1.07	4	2	filliale	reel	filialle	simple_double
+ébullition	NOM	1.07	4	2	ébulition	reel	ébullission	tion	ébullittion	simple_double
+couronné	ADJ	1.06	4	2	courronné	reel	couroné	double_simple
+amène	ADJ	1.05	4	2	ammène	reel	amaine	e_ouvert	amene	reel
+cannibalisme	NOM	1.04	4	2	canibalisme	reel	canniballisme	simple_double
+consonance	NOM	1.04	4	2	consonnance	reel	consonence	nasale	consonanse	s
+attendant	ADJ	1.04	4	2	attandant	reel	atendant	double_simple	attendan	finale
+illégalement	ADV	1.04	4	2	illégallement	reel	ilégalement	double_simple	illégalemant	nasale
+dénommé	ADJ	1.03	4	2	dénomé	reel	denommé	accent
+athéisme	NOM	1.02	4	2	atheisme	reel	atéisme	th	atthéisme	simple_double
+périphérique	ADJ	1.02	4	2	périférique	reel	periphérique	accent
+renommé	ADJ	1.02	4	2	renomé	reel	renomme	accent
+flottille	NOM	1.02	4	2	flotille	reel	flottile	double_simple
+fossile	ADJ	1.01	4	2	fossil	reel	focile	s	fossille	simple_double

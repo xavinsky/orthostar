@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OrthoStar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="index.html">OrthoStar</a>
+  <ul>
+    <li><a class="item tab-link" href="#jeu" data-tab="jeu">Jouer</a></li>
+    <li><a class="item tab-link" href="#regles" data-tab="regles">Règles du jeu</a></li>
+    <li><a class="item" href="../prepa-dictee-brevet/index.html">Prépa dictée du brevet</a></li>
+  </ul>
+</nav>
+<main class="solo">
+  <section class="card tab-panel" id="jeu">
+    <div id="app"></div>
+  </section>
+
+  <section class="card tab-panel" id="regles">
+    <h2>Règles du jeu</h2>
+    <h3>Le but</h3>
+    <ul>
+      <li>Chaque partie commence à 0 point. On <strong>gagne à 100 points</strong> et on <strong>perd à −30 points</strong>.</li>
+      <li>Une partie compte 40 questions au maximum, davantage aux niveaux de risque élevés. Si la limite est atteinte avant 100 points, la partie s'arrête sans victoire.</li>
+      <li>On peut arrêter à tout moment avec le bouton « Terminer », puis reprendre.</li>
+    </ul>
+    <h3>Le facteur de risque et les étoiles</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Étoiles</th><th>Facteur</th><th>Bonne réponse</th><th>Mauvaise réponse</th><th>Questions</th></tr></thead>
+      <tbody>
+        <tr><td class="star-glyphs has">★☆☆☆☆</td><td>×10</td><td>+32</td><td>−3</td><td>40</td></tr>
+        <tr><td class="star-glyphs has">★★☆☆☆</td><td>×1</td><td>+10</td><td>−10</td><td>40</td></tr>
+        <tr><td class="star-glyphs has">★★★☆☆</td><td>×0,5</td><td>+7</td><td>−14</td><td>80</td></tr>
+        <tr><td class="star-glyphs has">★★★★☆</td><td>×0,3</td><td>+5</td><td>−18</td><td>160</td></tr>
+        <tr><td class="star-glyphs has">★★★★★</td><td>×0,1</td><td>+3</td><td>−32</td><td>240</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li>Une <strong>victoire</strong> rapporte les étoiles du niveau de risque choisi, pour la <strong>combinaison</strong> jouée (rubriques + niveaux de difficulté). On garde le meilleur résultat de chaque combinaison.</li>
+      <li>Au moment de jouer, le jeu propose le niveau d'étoiles juste au-dessus du meilleur résultat obtenu sur la sélection.</li>
+      <li>Le <strong>classement</strong> range les joueurs de cet ordinateur selon leur total d'étoiles, toutes combinaisons confondues.</li>
+    </ul>
+    <h3>Les catégories de joueurs</h3>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Catégorie</th><th>Niveaux de risque proposés</th><th>Étoiles gagnées par victoire</th></tr></thead>
+      <tbody>
+        <tr><td>Collégien ou étranger</td><td>×10 à ×0,1</td><td>1 à 5 étoiles</td></tr>
+        <tr><td>Lycéen ou adulte</td><td>×1 à ×0,1 (pas de ×10)</td><td>une étoile de moins : 1 à 4 étoiles</td></tr>
+      </tbody>
+    </table></div>
+    <p>La catégorie est choisie à la création du joueur. Les étoiles déjà gagnées gardent le handicap de la catégorie au moment de la partie.</p>
+    <h3>Le choix des questions</h3>
+    <ul>
+      <li>Niveaux de difficulté : on joue sur <strong>un seul niveau</strong>, <strong>deux niveaux consécutifs</strong> (1-2, 2-3 ou 3-4) ou <strong>tous les niveaux</strong>.</li>
+      <li>Sous 21 points, les questions viennent du niveau le plus facile sélectionné ; au-dessus de 79 points, du plus difficile. Entre les deux, les niveaux alternent.</li>
+      <li>Une question ne revient pas dans la même partie.</li>
+      <li>Les questions déjà ratées, et celles qu'on n'a pas vues depuis longtemps, sortent plus souvent. Ces statistiques sont propres à chaque joueur.</li>
+    </ul>
+    <h3>Les rubriques</h3>
+    <ul>
+      <li><strong>Lexique</strong> : on coche <strong>toutes</strong> les bonnes orthographes, car certains mots en acceptent deux (clé et clef, par exemple). Si l'on n'en coche qu'une partie, sans erreur, la réponse ne compte ni comme une réussite ni comme une erreur : le jeu montre les autres orthographes possibles et le score ne change pas.</li>
+      <li><strong>Conjugaison</strong> : 69 verbes de toutes les familles (1er, 2e et 3e groupes) et 13 temps. Les personnes s'enchaînent dans l'ordre (je, tu, il ou elle, nous, vous, ils ou elles), avec un verbe et un temps différents à chaque question : tous les temps des niveaux cochés passent à tour de rôle, quel que soit le score. Les niveaux correspondent aux temps :
+        <ul>
+          <li>niveau 1 : présent, impératif ;</li>
+          <li>niveau 2 : imparfait, futur, passé composé ;</li>
+          <li>niveau 3 : passé simple, conditionnel présent, plus-que-parfait ;</li>
+          <li>niveau 4 : passé antérieur, futur antérieur, conditionnel passé, subjonctif présent et passé.</li>
+        </ul>
+      </li>
+      <li><strong>Grammaire</strong> : 32 règles, 8 par niveau (homophones, accords, participe passé, pluriels, tout, même, nombres…). Chaque phrase est fabriquée au moment du tirage avec un vocabulaire pris au hasard : une règle revient souvent, mais rarement avec la même phrase. Les règles où l'on se trompe le plus reviennent plus souvent.</li>
+      <li><strong>Conjugaison</strong> et <strong>grammaire</strong> : une seule bonne réponse.</li>
+      <li>Au clavier : touches <kbd>1</kbd> à <kbd>4</kbd> pour choisir, <kbd>Entrée</kbd> pour valider ou passer à la suite.</li>
+    </ul>
+    <h3>Les mots du lexique</h3>
+    <p>Le lexique compte environ 2 000 mots fréquents qui contiennent un piège : consonne double, h, lettre finale muette, son à plusieurs écritures, accent. Ils sont tirés de la base <a href="http://www.lexique.org" target="_blank" rel="noopener">Lexique 3.83</a> (New, Pallier et al.), sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" target="_blank" rel="noopener">CC BY-SA 4.0</a> ; la liste du jeu est diffusée sous la même licence. Les fautes réellement commises viennent de <a href="https://aclanthology.org/L10-1571/" target="_blank" rel="noopener">WiCoPaCo</a> (A. Max et G. Wisniewski, LREC 2010, licence GNU FDL), un recueil des corrections faites dans l'historique de Wikipédia en français : quand une faute revient souvent sur un mot, elle sert de piège. Le niveau dépend de la difficulté des pièges : au niveau 1, des fautes faciles à repérer ; au niveau 4, les pièges les plus trompeurs (consonne double oubliée, an / en, -amment / -emment, sc, h au milieu du mot).</p>
+    <p class="muted">Toutes les données (joueurs, statistiques, étoiles) restent dans ce navigateur.</p>
+  </section>
+</main>
+<script src="lexique-data.js"></script>
+<script src="conjugaison.js"></script>
+<script src="grammaire.js"></script>
+<script src="jeux.js"></script>
+<script>
+(function () {
+  function show() {
+    var tab = location.hash === '#regles' ? 'regles' : 'jeu';
+    document.querySelectorAll('.tab-panel').forEach(function (p) { p.hidden = p.id !== tab; });
+    document.querySelectorAll('.tab-link').forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-tab') === tab); });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+})();
+</script>
+</body>
+</html>

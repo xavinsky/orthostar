@@ -1,0 +1,7 @@
+# Sources brutes volumineuses, à retélécharger (doc/orthostar-documentation.md, section 10)
+donnees/lexique383/
+donnees/wicopaco/
+# Généré par outils/lexique_vers_js.py et par le workflow de publication
+lexique-data.js
+_site/
+__pycache__/
