@@ -298,3 +298,23 @@ kbd{font-family:ui-monospace, Menlo, Consolas, monospace; font-size:.85em; paddi
 .fb-neutral{border-color:var(--h5); background:var(--h5-soft);}
 .fb-neutral .fb-title{color:var(--h5);}
 .rule-tag{display:inline-block; padding:1px 10px; border-radius:10px; font-weight:700; margin-left:4px; background:var(--h1-soft); color:var(--h1);}
+
+/* Téléphone : réglages sur deux colonnes, réponses en grille de deux, tableau
+   de conjugaison sur deux colonnes, pas de numéros de touche sur écran tactile. */
+@media (hover:none), (max-width:600px){ .opt kbd{display:none;} }
+@media (max-width:600px){
+  .chips{grid-template-columns:1fr 1fr; gap:6px;}
+  .chip{padding:6px 8px;}
+  .chip span{font-size:.92em;}
+  .stars-picker{grid-template-columns:repeat(3,1fr); gap:4px;}
+  .star-opt{padding:5px 2px; font-size:.9em;}
+  .options{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .opt{min-width:0; padding:11px 6px; overflow-wrap:anywhere;}
+  .conj-grid{grid-template-columns:1fr 1fr; gap:4px;}
+  .conj-card{font-size:.86em;}
+  .conj-card ul{padding:2px 5px;}
+  .profile-row{grid-template-columns:1fr auto; }
+  .profile-row .trash{grid-column:1 / -1; justify-self:start;}
+  .bd-row{grid-template-columns:24px 70px 1fr 42px;}
+  .quiz-top .points{font-size:var(--s-h1);}
+}

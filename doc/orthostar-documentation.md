@@ -267,6 +267,11 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
 ## 9. Habillage
 
 - Style du site Prépa dictée : palette bleue, coins carrés sur les cadres, ombres prononcées, titres en Palatino, texte en Georgia, mise en page compacte, mode sombre.
+- **Téléphone** (largeur de 600 px ou moins) :
+  - les cases de réglage passent sur deux colonnes, les niveaux de risque sur trois ;
+  - les réponses forment une grille de deux, avec de grandes zones à toucher ;
+  - le tableau de conjugaison passe sur deux colonnes ;
+  - les numéros de touche 1 à 4 sont masqués, sur petit écran comme sur écran tactile.
 - Deux onglets : **Jouer** (le jeu seul) et **Règles du jeu** (toutes les explications). Les écrans de jeu ne contiennent que les textes nécessaires à l'action.
 - Codes couleur :
   - **rubriques** : bleu canard ;
