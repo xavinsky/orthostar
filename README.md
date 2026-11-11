@@ -7,7 +7,7 @@ Jeu de révision de l'orthographe française pour préparer la dictée du brevet
 
 Profils de joueurs, facteur de risque à étoiles et classement entre les joueurs d'un même navigateur.
 
-En ligne : https://tekio.org/orthostar/ — cours associé : [Prépa dictée du brevet](https://tekio.org/prepa-dictee-brevet/).
+En ligne : https://tekio.org/orthostar/ — cours associé : [Prépa dictée du brevet](https://tekio.org/prepa-dictee-brevet/). Fait partie d'[EduStar](https://tekio.org/edustar/).
 
 ## En local
 
