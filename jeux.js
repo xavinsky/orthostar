@@ -259,6 +259,7 @@ function renderPlayerSelect() {
     state.records = loadRecords(name);
     saveRecords(name, state.records);
     refreshRanking();
+    refreshProfileLabel();
     next();
   }
   Array.prototype.forEach.call(document.querySelectorAll('.player-btn'), function (b) {
@@ -288,7 +289,6 @@ function renderSetup() {
   state.screen = 'setup';
   var gl = computeGainLoss(state.factor);
   app.innerHTML =
-    '<div class="muted setup-player">Joueur : <b>' + esc(state.player) + '</b> (' + CATEGORIES[state.category].name.toLowerCase() + ')</div>' +
     '<div class="suggest"><button type="button" class="btn primary" id="suggestBtn">★ Prochain exercice aléatoire conseillé</button>' +
     '<div class="muted" id="suggestNote"></div></div>' +
     '<h3>Rubrique <span class="h-note">(une seule, ou toutes)</span></h3><div class="chips" id="kindPicker">' + KIND_ORDER.map(function (k) {
@@ -783,6 +783,11 @@ function goTab(tab) { if (location.hash !== '#' + tab) location.hash = '#' + tab
 // les sous-onglets et les boutons qui y mènent sont masqués.
 function rankingOn() { return loadLeaderboard().length >= 2; }
 function refreshRanking() { document.body.classList.toggle('no-ranking', !rankingOn()); }
+// Le menu affiche le joueur en cours : « Profil Xavier ».
+function refreshProfileLabel() {
+  var a = document.querySelector('.nav [data-tab="profil"]');
+  if (a) a.textContent = hasPlayer() ? 'Profil ' + state.player.trim() : 'Profil';
+}
 function showTab(tab) {
   refreshRanking();
   if (tab === 'classement' && !rankingOn()) { location.replace('#profil'); return; }
@@ -869,4 +874,5 @@ document.addEventListener('keydown', function (e) {
 renderPlayerSelect();
 window.JEUX = { showTab: showTab };
 refreshRanking();
+refreshProfileLabel();
 })();

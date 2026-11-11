@@ -149,7 +149,7 @@ Que la réponse soit juste ou fausse, le jeu affiche :
 
 ## 5. Écran 2 — Réglages de la partie
 
-Une ligne rappelle le joueur et sa catégorie. On ne change pas de joueur depuis l'onglet Jouer : c'est le bouton « Changer de joueur » de l'onglet **Profil**, qui ramène à l'écran 1 (« Qui joue ? ») dans l'onglet Jouer.
+On ne change pas de joueur depuis l'onglet Jouer : c'est le bouton « Changer de joueur » de l'onglet **Profil**, qui ramène à l'écran 1 (« Qui joue ? ») dans l'onglet Jouer.
 
 ### Exercice conseillé
 - Bouton **« Prochain exercice aléatoire conseillé »** en haut de l'écran, au-dessus des rubriques.
@@ -255,7 +255,7 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
 - Étoiles gagnées = étoiles du niveau de risque − handicap de la catégorie.
 
 ### Profil
-- Onglet **Profil** de la barre de navigation, avec le sous-onglet **Classement**. Il s'affiche à côté de l'écran de jeu sans le remplacer : une partie en cours reste intacte et le bouton « Reprendre la partie » y ramène.
+- Onglet **Profil** de la barre de navigation, avec le sous-onglet **Classement**. Une fois le joueur choisi, l'onglet porte son nom : « Profil Xavier ». Il s'affiche à côté de l'écran de jeu sans le remplacer : une partie en cours reste intacte et le bouton « Reprendre la partie » y ramène.
 - Sans joueur choisi, l'onglet propose d'en choisir un.
 - Le nom, la catégorie et le **total d'étoiles**.
 - La liste des lignes de score jouées : étiquettes de rubriques, carrés de niveaux, facteur, étoiles ou meilleur score.
