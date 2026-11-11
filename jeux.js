@@ -722,15 +722,13 @@ function renderResults(mode) {
       var line = (e.x.tense ? CONJ.TENSES[e.x.tense].name + ' · ' : e.x.rule ? e.x.rule.name + ' · ' : '') + q.q.replace('___', '[' + answerTxt + ']');
       return '<li><span>' + esc(line) + '</span> <a href="' + ruleUrl(q, e.x.tense) + '" target="_blank" rel="noopener">règle</a></li>';
     }).join('') + '</ul>' : '') +
-    '<div class="actions"><button class="btn primary" id="continueBtn" type="button">' + (mode === 'stopped' ? 'Reprendre où j\'en étais' : 'Rejouer une partie') + '</button>' +
-    '<button class="btn ghost" id="profileBtn" type="button">Voir mon profil</button>' +
-    '<button class="btn ghost ranking-only" id="leaderboardBtn" type="button">Voir le classement</button>' +
-    '<button class="btn ghost" id="setupBtn" type="button">Changer les réglages</button></div>';
+    // Profil et classement sont dans le menu : ici, seulement reprendre une
+    // partie interrompue, ou en commencer une nouvelle depuis les réglages.
+    '<div class="actions">' + (mode === 'stopped' ? '<button class="btn primary" id="resumeBtn" type="button">Reprendre où j\'en étais</button>' : '') +
+    '<button class="btn ' + (mode === 'stopped' ? 'ghost' : 'primary') + '" id="newGameBtn" type="button">Nouvelle partie</button></div>';
 
-  $('continueBtn').addEventListener('click', function () { if (mode !== 'stopped') resetSession(); nextQuestion(); renderQuiz(); });
-  $('profileBtn').addEventListener('click', function () { goTab('profil'); });
-  $('leaderboardBtn').addEventListener('click', function () { goTab('classement'); });
-  $('setupBtn').addEventListener('click', renderSetup);
+  if ($('resumeBtn')) $('resumeBtn').addEventListener('click', function () { nextQuestion(); renderQuiz(); });
+  $('newGameBtn').addEventListener('click', renderSetup);
 }
 
 /* ================= PROFIL ================= */

@@ -221,7 +221,7 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
   - les étoiles gagnées s'il y en a ;
   - la réussite par niveau ;
   - la liste « À revoir en priorité » : les questions ratées, avec la bonne réponse et le temps pour la conjugaison.
-- **Boutons** : rejouer (ou « Reprendre où j'en étais » après un arrêt), voir le profil et voir le classement (qui ouvrent leurs onglets), changer les réglages.
+- **Boutons** : **Nouvelle partie**, qui ouvre les réglages ; après un arrêt par « Terminer », **Reprendre où j'en étais** en plus. Le profil et le classement s'ouvrent par le menu.
 
 ---
 
