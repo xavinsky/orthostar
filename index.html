@@ -11,6 +11,8 @@
   <a class="brand" href="index.html">OrthoStar</a>
   <ul>
     <li><a class="item tab-link" href="#jeu" data-tab="jeu">Jouer</a></li>
+    <li class="has-sub"><a class="item tab-link" href="#profil" data-tab="profil">Profil</a>
+      <ul class="sub"><li><a class="item tab-link" href="#classement" data-tab="classement">Classement</a></li></ul></li>
     <li><a class="item tab-link" href="#regles" data-tab="regles">Règles du jeu</a></li>
     <li><a class="item" href="../prepa-dictee-brevet/index.html">Prépa dictée du brevet</a></li>
   </ul>
@@ -18,6 +20,16 @@
 <main class="solo">
   <section class="card tab-panel" id="jeu">
     <div id="app"></div>
+  </section>
+
+  <section class="card tab-panel" id="profil">
+    <div class="subtabs"><a class="subtab on" href="#profil">Mon profil</a><a class="subtab" href="#classement">Classement</a></div>
+    <div id="profileApp"></div>
+  </section>
+
+  <section class="card tab-panel" id="classement">
+    <div class="subtabs"><a class="subtab" href="#profil">Mon profil</a><a class="subtab on" href="#classement">Classement</a></div>
+    <div id="leaderboardApp"></div>
   </section>
 
   <section class="card tab-panel" id="regles">
@@ -40,10 +52,19 @@
       </tbody>
     </table></div>
     <ul>
-      <li>Une <strong>victoire</strong> rapporte les étoiles du niveau de risque choisi, pour la <strong>combinaison</strong> jouée (rubriques + niveaux de difficulté). On garde le meilleur résultat de chaque combinaison.</li>
+      <li>Une <strong>victoire</strong> rapporte les étoiles du niveau de risque choisi, sur la <strong>ligne de score</strong> de la sélection jouée (rubrique + niveaux de difficulté). Chaque ligne garde son meilleur résultat.</li>
       <li>Au moment de jouer, le jeu propose le niveau d'étoiles juste au-dessus du meilleur résultat obtenu sur la sélection.</li>
-      <li>Le <strong>classement</strong> range les joueurs de cet ordinateur selon leur total d'étoiles, toutes combinaisons confondues.</li>
+      <li>Le <strong>classement</strong> range les joueurs de cet ordinateur selon leur total d'étoiles, toutes lignes de score confondues.</li>
     </ul>
+    <h3>Comment gagner de nouvelles étoiles</h3>
+    <p>Chaque choix de <strong>rubrique</strong> et de <strong>niveaux de difficulté</strong> ouvre sa propre ligne de score, avec ses propres étoiles :</p>
+    <ul>
+      <li>4 choix de rubrique : lexique, conjugaison, grammaire, ou toutes les rubriques ;</li>
+      <li>8 choix de niveaux : niveau 1, 2, 3 ou 4 seul ; niveaux 1-2, 2-3 ou 3-4 ; tous les niveaux.</li>
+    </ul>
+    <p>Cela fait <strong>32 lignes de score</strong>, chacune pouvant monter jusqu'à 5 étoiles (4 pour la catégorie lycéen ou adulte). Exemples : « Conjugaison · niveau 2 », « Conjugaison · niveaux 2-3 » et « Toutes les rubriques · niveau 2 » sont trois lignes différentes ; gagner sur l'une ne remplit pas les autres.</p>
+    <div class="tip">Le <strong>facteur de risque n'ouvre pas de nouvelle ligne</strong>. Il fixe seulement combien d'étoiles la victoire rapporte sur la ligne jouée, et on ne garde que le meilleur : gagner en ×1 (2 étoiles) puis en ×10 (1 étoile) sur la même sélection laisse 2 étoiles sur cette ligne, pas 3. Pour gagner davantage, il faut soit rejouer la même sélection avec un risque plus élevé (améliorer la ligne), soit changer de rubrique ou de niveaux (ouvrir une nouvelle ligne).</div>
+    <p>L'onglet <strong>Profil</strong> montre toutes les lignes déjà jouées et leurs étoiles.</p>
     <h3>Les catégories de joueurs</h3>
     <div class="tablewrap"><table>
       <thead><tr><th>Catégorie</th><th>Niveaux de risque proposés</th><th>Étoiles gagnées par victoire</th></tr></thead>
@@ -55,6 +76,7 @@
     <p>La catégorie est choisie à la création du joueur. Les étoiles déjà gagnées gardent le handicap de la catégorie au moment de la partie.</p>
     <h3>Le choix des questions</h3>
     <ul>
+      <li>Rubrique : on joue sur <strong>une seule rubrique</strong> ou sur <strong>toutes les rubriques</strong> mélangées.</li>
       <li>Niveaux de difficulté : on joue sur <strong>un seul niveau</strong>, <strong>deux niveaux consécutifs</strong> (1-2, 2-3 ou 3-4) ou <strong>tous les niveaux</strong>.</li>
       <li>Sous 21 points, les questions viennent du niveau le plus facile sélectionné ; au-dessus de 79 points, du plus difficile. Entre les deux, les niveaux alternent.</li>
       <li>Une question ne revient pas dans la même partie.</li>
@@ -70,6 +92,7 @@
           <li>niveau 3 : passé simple, conditionnel présent, plus-que-parfait ;</li>
           <li>niveau 4 : passé antérieur, futur antérieur, conditionnel passé, subjonctif présent et passé.</li>
         </ul>
+        Après chaque réponse, l'explication donne le groupe du verbe, la formation du temps, la terminaison de la personne demandée (pourquoi un s, un t, un x ou rien), les pièges du radical (accent, consonne double, cédille, y ou i…), puis le tableau complet du verbe.
       </li>
       <li><strong>Grammaire</strong> : 32 règles, 8 par niveau (homophones, accords, participe passé, pluriels, tout, même, nombres…). Chaque phrase est fabriquée au moment du tirage avec un vocabulaire pris au hasard : une règle revient souvent, mais rarement avec la même phrase. Les règles où l'on se trompe le plus reviennent plus souvent.</li>
       <li><strong>Conjugaison</strong> et <strong>grammaire</strong> : une seule bonne réponse.</li>
@@ -87,9 +110,14 @@
 <script>
 (function () {
   function show() {
-    var tab = location.hash === '#regles' ? 'regles' : 'jeu';
+    var tab = location.hash.slice(1);
+    if (['jeu', 'profil', 'classement', 'regles'].indexOf(tab) < 0) tab = 'jeu';
     document.querySelectorAll('.tab-panel').forEach(function (p) { p.hidden = p.id !== tab; });
-    document.querySelectorAll('.tab-link').forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-tab') === tab); });
+    document.querySelectorAll('.tab-link').forEach(function (a) {
+      var t = a.getAttribute('data-tab');
+      a.classList.toggle('on', t === tab || (t === 'profil' && tab === 'classement'));
+    });
+    if (window.JEUX) window.JEUX.showTab(tab);
     window.scrollTo(0, 0);
   }
   window.addEventListener('hashchange', show);

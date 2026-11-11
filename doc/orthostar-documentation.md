@@ -1,6 +1,6 @@
 # OrthoStar — Documentation fonctionnelle
 
-Jeu de révision de l'orthographe française (lexique, conjugaison, grammaire) pour préparer la dictée du brevet. C'est une application web autonome : `index.html` et ses fichiers voisins, sans serveur. En ligne : https://tekio.org/orthostar/ (dépôt `xavinsky/orthostar`). Le jeu reprend le système de points, de risque/récompense et de progression par joueur de VerbStar, un jeu de révision des verbes irréguliers anglais. Après chaque réponse, les explications renvoient aux règles du site `../prepa-dictee-brevet/`.
+Jeu de révision de l'orthographe française (lexique, conjugaison, grammaire) pour préparer la dictée du brevet. C'est une application web autonome : `index.html` et ses fichiers voisins, sans serveur. En ligne : https://tekio.org/orthostar/ (dépôt `xavinsky/orthostar`). Le jeu reprend le système de points, de risque/récompense et de progression par joueur de VerbStar, un jeu de révision des verbes irréguliers anglais. Après chaque réponse, les explications renvoient aux règles du site `../prepa-dictee-brevet/` : page Conjugaison (`conjugaison.html`, à l'ancre du temps demandé ; `#temps-composes` pour un temps composé) et page Grammaire pour le reste.
 
 ---
 
@@ -8,7 +8,7 @@ Jeu de révision de l'orthographe française (lexique, conjugaison, grammaire) p
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Page du jeu : barre de navigation, onglet « Jouer », onglet « Règles du jeu ». |
+| `index.html` | Page du jeu : barre de navigation, onglets « Jouer », « Profil » (avec son sous-onglet « Classement ») et « Règles du jeu ». |
 | `jeux.js` | Fonctionnement du jeu : écrans, tirage, points, records, étoiles, profil, classement. |
 | `conjugaison.js` | Moteur de conjugaison : tables des verbes, fabrication des questions et des pièges. |
 | `lexique.tsv` | **Liste de référence du lexique**, à modifier dans un tableur ou un éditeur de texte (section 11). |
@@ -119,10 +119,15 @@ Un piège n'est jamais une orthographe acceptée pour la question posée.
 ### 3g. Après la réponse
 
 Que la réponse soit juste ou fausse, le jeu affiche :
-- **l'explication** :
-  - la règle d'auxiliaire et d'accord pour un temps composé ;
-  - les variantes admises s'il y en a ;
-  - la règle de la famille du verbe ;
+- **l'explication**, une liste de phrases courtes fabriquée par `conjugaison.js` (`explainConj`) à partir de la forme attendue :
+  - le **groupe du verbe** et ce qui le définit (infinitif en -er ; -ir avec -iss- ; tous les autres pour le 3e groupe, aller compris) ;
+  - la **formation du temps** : radical utilisé (radical de « nous » pour l'imparfait, de « ils » pour le subjonctif, radical du futur…) et série des terminaisons ;
+  - la **terminaison de la personne demandée** : pourquoi un s, un t, un x, un d ou rien (je chante sans s mais je finis avec s, il prend avec d, il chantera sans t, je chanterai / je chanterais avec l'astuce de « nous », impératif sans s au 1er groupe, -âmes / -îmes / -ûmes avec accent circonflexe, double i de nous étudiions, exceptions sommes, êtes, dites, faites, ont, sont, font, vont…) ;
+  - pour un temps composé : auxiliaire et son temps, terminaison du participe passé (-é, -i, -u, ou consonne qu'on entend au féminin : pris → prise, écrit → écrite ; dû) et règle d'accord avec être ou avoir ;
+  - les **pièges du radical** présents dans la forme : cédille, e après g, è ou é selon la syllabe muette, consonne doublée ou non (appeler, jeter, acheter), y ou i, deux r du futur, deux n, -gn- et absence de d des verbes en -indre, î de connaître ;
+  - les variantes admises s'il y en a, et les deux accords possibles avec être quand le sujet est je, tu, nous ou vous ;
+  - pour les auxiliaires et le 3e groupe, la règle de la famille du verbe (« À retenir »).
+  - Les exemples reprennent le sujet de la question (elle, elles).
 - **le tableau de conjugaison complet du verbe**, 13 cartes aux couleurs des temps.
   - Chaque temps simple est placé à côté de son temps composé : présent / passé composé, imparfait / plus-que-parfait, passé simple / passé antérieur, futur / futur antérieur, conditionnel présent / passé, subjonctif présent / passé ; l'impératif vient en dernier.
   - La carte du temps demandé a une bordure épaisse de sa couleur, et la ligne de la personne demandée est encadrée.
@@ -140,14 +145,14 @@ Que la réponse soit juste ou fausse, le jeu affiche :
   | Lycéen ou adulte | −1 étoile (voir section 5) |
 
 - Le bouton **Continuer** reste grisé tant qu'aucune catégorie n'est choisie.
-- Accès direct au **profil** et au **classement**.
+- Boutons « Voir mon profil » et « Voir le classement », qui ouvrent les onglets correspondants.
 
 ## 5. Écran 2 — Réglages de la partie
 
 Un lien « ← *Nom* (*catégorie*) · changer de joueur » ramène à l'écran 1.
 
 ### Rubriques
-- Cases à cocher : Lexique, Conjugaison, Grammaire. Aucune n'est cochée à l'ouverture.
+- Choix unique parmi quatre cases : Lexique, Conjugaison, Grammaire, ou **Toutes les rubriques**. On ne peut pas en combiner deux. Aucune n'est choisie à l'ouverture.
 - Chaque case affiche son nombre de questions, ou « 69 verbes · 13 temps » pour la conjugaison.
 
 ### Niveaux de difficulté
@@ -178,7 +183,7 @@ Un lien « ← *Nom* (*catégorie*) · changer de joueur » ramène à l'écran 
 - **Présélection** : le jeu propose le niveau d'étoiles juste au-dessus du meilleur résultat obtenu sur la sélection, ou le premier niveau accessible s'il n'y en a pas. Le joueur peut en choisir un autre.
 - Un aperçu affiche les points d'une bonne et d'une mauvaise réponse.
 
-Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'est coché.
+Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'est choisi.
 
 ---
 
@@ -187,11 +192,10 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
 ### 6a. Déroulement
 - Le score part de 0. **Victoire à 100 points**, **défaite à −30 points**.
 - La partie compte 40 questions, multipliées par le multiplicateur du niveau de risque.
-- **Affichage** :
-  - le score ;
-  - une jauge entre défaite et victoire ;
-  - la raison du tirage et le nombre de questions restantes ;
-  - la carte de la question, avec une bande en haut à la couleur de son niveau.
+- **Affichage**, de haut en bas, pour que la question et les réponses tiennent en haut de l'écran d'un téléphone sans défilement :
+  - la carte de la question, avec une bande en haut à la couleur de son niveau, ses réponses, puis après la réponse l'explication et le bouton **Continuer** ;
+  - sous la carte : le score, le bouton **Terminer**, une jauge entre défaite et victoire, la raison du tirage et le nombre de questions restantes ;
+  - en conjugaison, après la réponse, le tableau complet du verbe en dernier.
 - **Lexique** : on coche une ou plusieurs réponses, puis on valide. **Conjugaison et grammaire** : un clic sur une réponse suffit.
 - **Clavier** : les touches 1 à 4 choisissent une réponse, Entrée valide ou passe à la question suivante.
 - **Après la réponse** : bonnes et mauvaises réponses en couleur, points gagnés ou perdus, explication, lien « Voir la règle ».
@@ -205,7 +209,7 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
   - entre les deux, rotation régulière du plus facile au plus difficile.
   - En conjugaison, ce palier ne s'applique pas : les temps tournent comme décrit en 3d.
 - **Pas de répétition** : une question ne revient pas dans la même partie, sauf si toute la sélection est épuisée. En conjugaison, une question est un couple verbe + temps. En grammaire, une question est une règle : elle peut revenir dans la partie, avec une autre phrase, mais jamais deux fois de suite.
-- **Plusieurs rubriques cochées** : le jeu tire d'abord une rubrique au hasard, à égalité, parmi celles qui ont des questions possibles, puis une question dans cette rubrique. Sans cela, le lexique, beaucoup plus nombreux, éclipserait la grammaire.
+- **Toutes les rubriques** : le jeu tire d'abord une rubrique au hasard, à égalité, parmi celles qui ont des questions possibles, puis une question dans cette rubrique. Sans cela, le lexique, beaucoup plus nombreux, éclipserait la grammaire.
 - **Pondération** : parmi les questions possibles, celles que le joueur a ratées récemment ou n'a pas vues depuis longtemps sortent plus souvent.
   - Poids = `1 + 3 × (erreurs parmi les 10 dernières tentatives) + min(30, jours depuis la dernière tentative)`.
   - Une question jamais tentée a le poids 31, multiplié par sa priorité. En lexique, la priorité vaut 2 pour un mot à fautes réelles, 0,5 pour un mot qui n'a que des pièges faibles, 1 sinon. Dès que le joueur a tenté la question, seul son historique compte.
@@ -217,15 +221,18 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
   - les étoiles gagnées s'il y en a ;
   - la réussite par niveau ;
   - la liste « À revoir en priorité » : les questions ratées, avec la bonne réponse et le temps pour la conjugaison.
-- **Boutons** : rejouer (ou « Reprendre où j'en étais » après un arrêt), voir le profil, voir le classement, changer les réglages.
+- **Boutons** : rejouer (ou « Reprendre où j'en étais » après un arrêt), voir le profil et voir le classement (qui ouvrent leurs onglets), changer les réglages.
 
 ---
 
 ## 7. Records, étoiles, profil, classement
 
-### Records par combinaison
-- Une **combinaison** est un ensemble de rubriques et un ensemble de niveaux.
-- Le jeu garde le meilleur résultat de chaque combinaison :
+### Lignes de score
+- Une **ligne de score** (ou combinaison) correspond à une rubrique (ou toutes) et une sélection de niveaux : 4 × 8 = **32 lignes**. Chacune a ses propres étoiles.
+- Le facteur de risque ne crée pas de ligne : il ne fait que fixer les étoiles d'une victoire sur la ligne jouée. Pour gagner plus d'étoiles, on améliore une ligne avec un risque plus élevé, ou on en ouvre une autre en changeant de rubrique ou de niveaux.
+- Les règles du jeu (onglet « Règles du jeu », « Comment gagner de nouvelles étoiles ») l'expliquent avec des exemples.
+- Les records d'anciennes combinaisons de deux rubriques restent affichés dans le profil et comptent dans le total.
+- Le jeu garde le meilleur résultat de chaque ligne :
   - une victoire bat toujours un résultat sans victoire ;
   - entre deux victoires, le facteur le plus petit l'emporte ;
   - sans victoire, le score le plus élevé l'emporte.
@@ -237,12 +244,15 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
 - Étoiles gagnées = étoiles du niveau de risque − handicap de la catégorie.
 
 ### Profil
+- Onglet **Profil** de la barre de navigation, avec le sous-onglet **Classement**. Il s'affiche à côté de l'écran de jeu sans le remplacer : une partie en cours reste intacte et le bouton « Reprendre la partie » y ramène.
+- Sans joueur choisi, l'onglet propose d'en choisir un.
 - Le nom, la catégorie et le **total d'étoiles**.
-- La liste des combinaisons jouées : étiquettes de rubriques, carrés de niveaux, facteur, étoiles ou meilleur score.
+- La liste des lignes de score jouées : étiquettes de rubriques, carrés de niveaux, facteur, étoiles ou meilleur score.
 - Une ligne **sans étoile** peut être supprimée ; une ligne étoilée est protégée.
 - Un bouton réinitialise les statistiques par question, avec confirmation. Les étoiles et les records sont conservés.
 
 ### Classement
+- Sous-onglet du Profil (lien « Classement » dans la barre de navigation).
 - Tous les joueurs de ce navigateur, rangés par total d'étoiles, avec leur catégorie. Le joueur en cours est mis en évidence.
 - Le classement n'est pas partagé entre ordinateurs ou navigateurs.
 
@@ -257,7 +267,7 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
   | `players_list` | Joueurs connus. |
   | `profile:<nom>` | Catégorie du joueur. |
   | `stats:<nom>` | 10 dernières tentatives par question (juste ou faux, date). |
-  | `records:<nom>` | Meilleur résultat par combinaison. |
+  | `records:<nom>` | Meilleur résultat par ligne de score. |
   | `leaderboard:<nom>` | Nom, catégorie, total d'étoiles. |
 
 - Si `localStorage` n'est pas disponible, un stockage en mémoire prend le relais : le jeu reste jouable, sans conservation après rechargement.
@@ -272,7 +282,7 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
   - les réponses forment une grille de deux, avec de grandes zones à toucher ;
   - le tableau de conjugaison passe sur deux colonnes ;
   - les numéros de touche 1 à 4 sont masqués, sur petit écran comme sur écran tactile.
-- Deux onglets : **Jouer** (le jeu seul) et **Règles du jeu** (toutes les explications). Les écrans de jeu ne contiennent que les textes nécessaires à l'action.
+- Onglets : **Jouer** (le jeu seul), **Profil** et son sous-onglet **Classement**, **Règles du jeu** (toutes les explications). Les écrans de jeu ne contiennent que les textes nécessaires à l'action. Le clavier ne pilote la partie que lorsque l'onglet Jouer est affiché.
 - Codes couleur :
   - **rubriques** : bleu canard ;
   - **niveaux** : vert, bleu, ambre, rouge bordeaux ;

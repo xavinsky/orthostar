@@ -299,6 +299,20 @@ kbd{font-family:ui-monospace, Menlo, Consolas, monospace; font-size:.85em; paddi
 .fb-neutral .fb-title{color:var(--h5);}
 .rule-tag{display:inline-block; padding:1px 10px; border-radius:10px; font-weight:700; margin-left:4px; background:var(--h1-soft); color:var(--h1);}
 
+.nav .has-sub{display:flex; align-items:center; gap:2px;}
+.nav .sub{display:flex; padding-left:0;}
+.nav .sub a.item{font-size:.88em; padding:5px 8px; opacity:.9;}
+.nav .sub a.item::before{content:"› "; opacity:.7;}
+.subtabs{display:flex; gap:4px; margin-bottom:8px; border-bottom:2px solid var(--border);}
+.subtab{padding:5px 12px; text-decoration:none; color:var(--muted); font-weight:700; margin-bottom:-2px; border-bottom:2px solid transparent;}
+.subtab.on{color:var(--h1); border-bottom-color:var(--h1);}
+.quiz-score{margin-top:12px; padding-top:8px; border-top:1px solid var(--border);}
+.quiz-score .quiz-top{align-items:center;}
+.explain-list{margin:4px 0; padding-left:1.2em;}
+.explain-list li{margin:.2em 0;}
+.chip.kind.k-all.on{border-color:var(--h1); background:var(--h1-soft);}
+.chip.kind.k-all.on strong{color:var(--h1);}
+
 /* Téléphone : réglages sur deux colonnes, réponses en grille de deux, tableau
    de conjugaison sur deux colonnes, pas de numéros de touche sur écran tactile. */
 @media (hover:none), (max-width:600px){ .opt kbd{display:none;} }

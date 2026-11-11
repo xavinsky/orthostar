@@ -186,7 +186,7 @@ var state = {
   player: '',
   category: null,
   knownPlayers: loadKnownPlayers(),
-  kinds: { lexique: false, conjugaison: false, grammaire: false },
+  kindSel: null, // une rubrique de KIND_ORDER, ou 'all' pour toutes
   levels: { 1: true, 2: false, 3: false, 4: false },
   factor: 10,
   records: {},
@@ -270,13 +270,14 @@ function renderPlayerSelect() {
   syncCategory();
   input.addEventListener('keydown', function (e) { if (e.key === 'Enter') choose(renderSetup); });
   $('continueBtn').addEventListener('click', function () { choose(renderSetup); });
-  $('profileLink').addEventListener('click', function () { choose(renderProfile); });
-  $('leaderboardLink').addEventListener('click', renderLeaderboard);
+  $('profileLink').addEventListener('click', function () { choose(function () { renderSetup(); goTab('profil'); }); });
+  $('leaderboardLink').addEventListener('click', function () { goTab('classement'); });
   input.focus();
 }
 
 /* ================= ÉCRAN 2 : CONFIGURATION ================= */
-function setupKinds() { return KIND_ORDER.filter(function (x) { return state.kinds[x]; }); }
+// Une seule rubrique, ou toutes : jamais deux.
+function setupKinds() { return state.kindSel === 'all' ? KIND_ORDER.slice() : state.kindSel ? [state.kindSel] : []; }
 function setupLevels() {
   var kinds = setupKinds();
   return LEVEL_ORDER.filter(function (x) { return state.levels[x] && countsFor(kinds, x) > 0; });
@@ -287,10 +288,12 @@ function renderSetup() {
   var gl = computeGainLoss(state.factor);
   app.innerHTML =
     '<button type="button" class="btn ghost back" id="backToPlayer">← ' + esc(state.player) + ' (' + CATEGORIES[state.category].name.toLowerCase() + ') · changer de joueur</button>' +
-    '<h3>Rubriques</h3><div class="chips" id="kindPicker">' + KIND_ORDER.map(function (k) {
-      return '<button type="button" class="chip kind k-' + k + (state.kinds[k] ? ' on' : '') + '" data-k="' + k + '">' +
+    '<h3>Rubrique <span class="h-note">(une seule, ou toutes)</span></h3><div class="chips" id="kindPicker">' + KIND_ORDER.map(function (k) {
+      return '<button type="button" class="chip kind k-' + k + '" data-k="' + k + '">' +
         '<strong>' + KINDS[k].name + '</strong><span>' + KINDS[k].hint + '</span><span class="count" data-count-kind="' + k + '"></span></button>';
-    }).join('') + '</div>' +
+    }).join('') +
+    '<button type="button" class="chip kind k-all" data-k="all"><strong>Toutes les rubriques</strong><span>Lexique, conjugaison et grammaire mélangés</span><span class="count" data-count-kind="all"></span></button>' +
+    '</div>' +
     '<h3>Niveaux de difficulté <span class="h-note">(1 niveau, 2 niveaux consécutifs ou tous les niveaux)</span></h3><div class="chips" id="levelPicker">' + LEVEL_ORDER.map(function (l) {
       return '<button type="button" class="chip level lv-' + l + (state.levels[l] ? ' on' : '') + '" data-l="' + l + '">' +
         '<strong>' + LEVELS[l].name + '</strong><span data-level-desc="' + l + '">' + LEVELS[l].lvl + '</span><span class="count" data-count-level="' + l + '"></span></button>';
@@ -309,7 +312,7 @@ function renderSetup() {
 
   $('backToPlayer').addEventListener('click', renderPlayerSelect);
   Array.prototype.forEach.call(document.querySelectorAll('#kindPicker .chip'), function (b) {
-    b.addEventListener('click', function () { var k = b.getAttribute('data-k'); state.kinds[k] = !state.kinds[k]; b.classList.toggle('on'); refreshSetup(); });
+    b.addEventListener('click', function () { state.kindSel = b.getAttribute('data-k'); refreshSetup(); });
   });
   Array.prototype.forEach.call(document.querySelectorAll('#levelPicker .chip'), function (b) {
     b.addEventListener('click', function () { clickLevel(b.getAttribute('data-l')); refreshSetup(); });
@@ -366,6 +369,10 @@ function refreshSetup() {
     document.querySelector('[data-count-kind="' + k + '"]').textContent = k === 'conjugaison'
       ? CONJ.VERBS.length + ' verbes · ' + CONJ.TENSE_ORDER.length + ' temps' : contentText([k], null);
   });
+  document.querySelector('[data-count-kind="all"]').textContent = contentText(KIND_ORDER, null);
+  Array.prototype.forEach.call(document.querySelectorAll('#kindPicker .chip'), function (b) {
+    b.classList.toggle('on', b.getAttribute('data-k') === state.kindSel);
+  });
   LEVEL_ORDER.forEach(function (l) {
     document.querySelector('[data-count-level="' + l + '"]').textContent = contentText(kinds, l);
     var conjOnly = kinds.length === 1 && kinds[0] === 'conjugaison';
@@ -380,7 +387,7 @@ function refreshSetup() {
   var ready = kinds.length > 0 && levels.length > 0;
   $('startBtn').disabled = !ready;
   if (!ready) {
-    $('comboStatus').innerHTML = '<span class="muted">' + (kinds.length ? 'Choisis au moins un niveau.' : 'Choisis au moins une rubrique.') + '</span>';
+    $('comboStatus').innerHTML = '<span class="muted">' + (kinds.length ? 'Choisis au moins un niveau.' : 'Choisis une rubrique, ou toutes.') + '</span>';
     return;
   }
   var r = state.records[comboKey(kinds, levels)] || null, stars = starsFor(r);
@@ -589,6 +596,15 @@ function conjTableHtml(v, asked, askedPerson) {
   }).join('') + '</div>';
 }
 
+// Page de règle : la conjugaison a sa page, par temps ; le reste renvoie à la
+// page de grammaire.
+var TENSE_ANCHOR = { present: 'present', imperatif: 'imperatif', imparfait: 'imparfait', futur: 'futur',
+  conditionnel: 'conditionnel', passeSimple: 'passe-simple', subjonctif: 'subjonctif' };
+function ruleUrl(q, tense) {
+  if (q.r === 'conjugaison') return '../prepa-dictee-brevet/conjugaison.html#' + (TENSE_ANCHOR[tense] || 'temps-composes');
+  return '../prepa-dictee-brevet/grammaire.html#' + q.r;
+}
+
 function renderQuiz() {
   state.screen = 'quiz';
   var cur = state.current, x = cur.x, q = x.q, multi = x.kind === 'lexique';
@@ -616,17 +632,23 @@ function renderQuiz() {
         : state.lastCorrect ? '✓ Bien joué.' : '✗ Réponse : ' + right) + '</span>' +
       '<span class="fb-pts">' + (state.lastNeutral ? '±0' : state.lastDelta > 0 ? '+' + state.lastDelta : '−' + (-state.lastDelta)) + '</span></div>' +
       (state.lastNeutral ? '<div class="muted">Ni réussite ni erreur : le score ne change pas.</div>' : '') +
-      '<div>' + esc(q.e) + ' <a href="../prepa-dictee-brevet/grammaire.html#' + q.r + '" target="_blank" rel="noopener">Voir la règle</a></div></div>' +
-      '<div class="actions"><button class="btn primary" id="nextBtn" type="button">' + (state.pendingEnd ? 'Voir le résultat' : 'Continuer') + '</button></div>' +
-      (x.tense ? conjTableHtml(x.verb, x.tense, x.person) : '');
+      (Array.isArray(q.e)
+        ? '<ul class="explain-list">' + q.e.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>'
+        : '<div>' + esc(q.e) + '</div>') +
+      '<div><a href="' + ruleUrl(q, x.tense) + '" target="_blank" rel="noopener">Voir la règle</a></div></div>' +
+      '<div class="actions"><button class="btn primary" id="nextBtn" type="button">' + (state.pendingEnd ? 'Voir le résultat' : 'Continuer') + '</button></div>';
   }
 
-  app.innerHTML =
-    '<div class="quiz-top"><div><div class="points ' + (state.points >= 0 ? 'pos' : 'neg') + '">' + (state.points > 0 ? '+' : '') + String(state.points).replace('-', '−') + '</div><div class="muted">points · ' + esc(state.player) + '</div></div>' +
+  // Le score vient sous la question et les réponses : sur téléphone, on répond
+  // sans avoir à faire défiler l'écran.
+  var score =
+    '<div class="quiz-score"><div class="quiz-top"><div><div class="points ' + (state.points >= 0 ? 'pos' : 'neg') + '">' + (state.points > 0 ? '+' : '') + String(state.points).replace('-', '−') + '</div><div class="muted">points · ' + esc(state.player) + '</div></div>' +
     '<button type="button" class="btn ghost" id="stopBtn">Terminer</button></div>' +
     '<div class="gauge"><div class="gauge-marker" style="left:' + ratio + '%"></div></div>' +
     '<div class="gauge-labels"><span>Défaite −' + (-LOSE_THRESHOLD) + '</span><span>Victoire ' + WIN_THRESHOLD + '</span></div>' +
-    '<div class="draw-hint muted">' + drawHint() + ' · ' + plural(remaining, 'question') + ' restante' + (remaining > 1 ? 's' : '') + '</div>' +
+    '<div class="draw-hint muted">' + drawHint() + ' · ' + plural(remaining, 'question') + ' restante' + (remaining > 1 ? 's' : '') + '</div></div>';
+
+  app.innerHTML =
     '<div class="qcard lv-border-' + x.level + '">' +
     '<div class="qtags"><span class="kind-tag k-' + x.kind + '">' + KINDS[x.kind].name + '</span><span class="lvl-cube lv-' + x.level + '">' + x.level + '</span>' +
     (x.tense ? '<span class="tense-tag tt-' + x.tense + '">' + CONJ.TENSES[x.tense].name + '</span>' : '') +
@@ -636,7 +658,8 @@ function renderQuiz() {
     (state.revealed ? '' : '<div class="muted">' + (multi ? 'Une ou plusieurs bonnes réponses.' : 'Une seule bonne réponse.') + '</div>') +
     '<div class="options" id="options">' + opts + '</div>' +
     (multi && !state.revealed ? '<div class="actions"><button class="btn primary" id="validateBtn" type="button"' + (cur.chosen.length ? '' : ' disabled') + '>Valider</button></div>' : '') +
-    feedback + '</div>';
+    feedback + '</div>' + score +
+    (state.revealed && x.tense ? conjTableHtml(x.verb, x.tense, x.person) : '');
 
   $('stopBtn').addEventListener('click', function () { renderResults('stopped'); });
   if ($('nextBtn')) $('nextBtn').addEventListener('click', advance);
@@ -691,7 +714,7 @@ function renderResults(mode) {
     (worst.length ? '<h3>À revoir en priorité</h3><ul class="worst">' + worst.map(function (e) {
       var q = e.x.q, answerTxt = q.ok.map(function (i) { return q.o[i]; }).join(' / ');
       var line = (e.x.tense ? CONJ.TENSES[e.x.tense].name + ' · ' : e.x.rule ? e.x.rule.name + ' · ' : '') + q.q.replace('___', '[' + answerTxt + ']');
-      return '<li><span>' + esc(line) + '</span> <a href="../prepa-dictee-brevet/grammaire.html#' + q.r + '" target="_blank" rel="noopener">règle</a></li>';
+      return '<li><span>' + esc(line) + '</span> <a href="' + ruleUrl(q, e.x.tense) + '" target="_blank" rel="noopener">règle</a></li>';
     }).join('') + '</ul>' : '') +
     '<div class="actions"><button class="btn primary" id="continueBtn" type="button">' + (mode === 'stopped' ? 'Reprendre où j\'en étais' : 'Rejouer une partie') + '</button>' +
     '<button class="btn ghost" id="profileBtn" type="button">Voir mon profil</button>' +
@@ -699,22 +722,37 @@ function renderResults(mode) {
     '<button class="btn ghost" id="setupBtn" type="button">Changer les réglages</button></div>';
 
   $('continueBtn').addEventListener('click', function () { if (mode !== 'stopped') resetSession(); nextQuestion(); renderQuiz(); });
-  $('profileBtn').addEventListener('click', renderProfile);
-  $('leaderboardBtn').addEventListener('click', renderLeaderboard);
+  $('profileBtn').addEventListener('click', function () { goTab('profil'); });
+  $('leaderboardBtn').addEventListener('click', function () { goTab('classement'); });
   $('setupBtn').addEventListener('click', renderSetup);
 }
 
 /* ================= PROFIL ================= */
+// Profil et classement ont leur propre onglet : ils s'affichent à côté de
+// l'écran de jeu sans le remplacer, une partie en cours reste intacte.
+function goTab(tab) { if (location.hash !== '#' + tab) location.hash = '#' + tab; else showTab(tab); }
+function showTab(tab) {
+  if (tab === 'profil') renderProfile();
+  else if (tab === 'classement') renderLeaderboard();
+}
+function hasPlayer() { var n = state.player.trim(); return !!n && state.knownPlayers.indexOf(n) >= 0 && !!state.category; }
+
 function renderProfile() {
-  state.screen = 'profile';
+  var box = $('profileApp');
+  if (!hasPlayer()) {
+    box.innerHTML = '<p class="muted">Aucun joueur choisi pour l\'instant.</p>' +
+      '<div class="actions"><button class="btn primary" id="pickPlayerBtn" type="button">Choisir un joueur</button></div>';
+    $('pickPlayerBtn').addEventListener('click', function () { if (state.screen !== 'quiz') renderPlayerSelect(); goTab('jeu'); });
+    return;
+  }
   var entries = Object.keys(state.records).map(function (k) { return { key: k, r: state.records[k], stars: starsFor(state.records[k]) }; })
     .sort(function (a, b) { return b.stars !== a.stars ? b.stars - a.stars : b.r.points - a.r.points; });
   var total = entries.reduce(function (s, e) { return s + e.stars; }, 0);
 
-  app.innerHTML =
+  box.innerHTML =
     '<div class="result-hero"><div class="status stop">Profil</div><div class="big">' + esc(state.player) + '</div><div class="muted">' + CATEGORIES[state.category].name + '</div>' +
     '<div class="total-stars">★ ' + total + ' <span class="muted">étoile' + (total > 1 ? 's' : '') + ' au total</span></div>' +
-    '<div class="muted">' + plural(entries.length, 'combinaison') + ' jouée' + (entries.length > 1 ? 's' : '') + '</div></div>' +
+    '<div class="muted">' + entries.length + ' ligne' + (entries.length > 1 ? 's' : '') + ' de score jouée' + (entries.length > 1 ? 's' : '') + ' sur 32</div></div>' +
     (entries.length ? '<div class="profile-list">' + entries.map(function (e) {
       return '<div class="profile-row"><div><div class="combo">' + comboHtml(e.r.kinds, e.r.levels) + '</div>' +
         '<div class="muted">facteur ×' + e.r.factor + (e.r.victory ? ' · victoire' : ' · ' + e.r.points + ' pts') + '</div></div>' +
@@ -723,8 +761,7 @@ function renderProfile() {
     }).join('') + '</div>' : '<p class="muted">Aucune partie terminée pour l\'instant. Joue une partie pour remplir ton profil !</p>') +
     '<div class="reset-block">' +
     '<button type="button" class="btn ghost" id="purgeBtn">Réinitialiser mes statistiques de questions</button><div id="purgeZone"></div></div>' +
-    '<div class="actions"><button class="btn primary" id="playBtn" type="button">Jouer</button>' +
-    '<button class="btn ghost" id="leaderboardBtn" type="button">Voir le classement</button>' +
+    '<div class="actions"><button class="btn primary" id="playBtn" type="button">' + (state.screen === 'quiz' ? 'Reprendre la partie' : 'Jouer') + '</button>' +
     '<button class="btn ghost" id="playerBtn" type="button">Changer de joueur</button></div>';
 
   Array.prototype.forEach.call(document.querySelectorAll('.trash'), function (b) {
@@ -739,16 +776,14 @@ function renderProfile() {
     });
     $('purgeNo').addEventListener('click', function () { $('purgeZone').innerHTML = ''; });
   });
-  $('playBtn').addEventListener('click', renderSetup);
-  $('leaderboardBtn').addEventListener('click', renderLeaderboard);
-  $('playerBtn').addEventListener('click', renderPlayerSelect);
+  $('playBtn').addEventListener('click', function () { if (state.screen !== 'quiz') renderSetup(); goTab('jeu'); });
+  $('playerBtn').addEventListener('click', function () { renderPlayerSelect(); goTab('jeu'); });
 }
 
 /* ================= CLASSEMENT ================= */
 function renderLeaderboard() {
-  state.screen = 'leaderboard';
   var list = loadLeaderboard();
-  app.innerHTML =
+  $('leaderboardApp').innerHTML =
     '<div class="result-hero"><div class="status stop">Classement</div><div class="big">★ Étoiles</div>' +
     '<div class="muted">' + plural(list.length, 'joueur') + ' classé' + (list.length > 1 ? 's' : '') + ' sur ce navigateur</div></div>' +
     (list.length ? '<div class="profile-list">' + list.map(function (e, i) {
@@ -757,17 +792,12 @@ function renderLeaderboard() {
         (CATEGORIES[e.category] ? ' <span class="muted">· ' + CATEGORIES[e.category].name + '</span>' : '') + (me ? ' <span class="muted">(toi)</span>' : '') + '</div>' +
         '<div class="star-glyphs has">★ ' + (e.totalStars || 0) + '</div><span></span></div>';
     }).join('') + '</div>' : '<p class="muted">Personne au classement pour l\'instant. Termine une partie pour y apparaître !</p>') +
-    '<div class="actions"><button class="btn ghost" id="backBtn" type="button">Retour</button></div>';
-  $('backBtn').addEventListener('click', function () {
-    var name = state.player.trim();
-    if (name && state.knownPlayers.indexOf(name) >= 0) { state.player = name; state.records = loadRecords(name); renderProfile(); }
-    else renderPlayerSelect();
-  });
+    '';
 }
 
 /* ================= CLAVIER ================= */
 document.addEventListener('keydown', function (e) {
-  if (state.screen !== 'quiz') return;
+  if (state.screen !== 'quiz' || $('jeu').hidden) return;
   if (e.target && e.target.tagName === 'INPUT') return;
   var cur = state.current;
   if (e.key === 'Enter') {
@@ -783,4 +813,5 @@ document.addEventListener('keydown', function (e) {
 });
 
 renderPlayerSelect();
+window.JEUX = { showTab: showTab };
 })();

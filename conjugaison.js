@@ -423,10 +423,226 @@ function regularTraps(v, tense, p) {
   return out;
 }
 
+/* ---------- Explications ---------- */
+// L'explication d'une réponse est une liste de phrases courtes : le groupe du
+// verbe, la formation du temps, la terminaison de la personne demandée (s, t,
+// x, -ai / -ais…), puis les pièges du radical (accent, consonne double,
+// cédille, y / i…) visibles dans la forme attendue.
+function first(v, tense, p) { var f = forms(v, tense, p, 'm'); return f ? f[0] : ''; }
+function psType(v) {
+  var f = v.t.passeSimple[2][0];
+  return /int$/.test(f) ? 'in' : /ut$/.test(f) ? 'u' : /it$/.test(f) ? 'i' : 'a';
+}
+var IRREGULAR_SUBJ = ['être', 'avoir', 'aller', 'faire', 'pouvoir', 'savoir', 'vouloir'];
+function quote(s) { return '« ' + s + ' »'; }
+function je(form) { return startsWithVowel(form) ? "j'" + form : 'je ' + form; }
+
+function groupNote(v) {
+  var nous = first(v, 'present', 3);
+  if (v.group === 0) return quote(v.inf) + ' est un auxiliaire : conjugaison irrégulière, à savoir par cœur. Il sert aussi à former les temps composés.';
+  if (v.group === 1) return quote(v.inf) + ' est du 1er groupe : infinitif en -er (tous les verbes en -er sauf aller). C\'est le groupe le plus régulier.';
+  if (v.group === 2) return quote(v.inf) + ' est du 2e groupe : infinitif en -ir et -iss- au pluriel du présent (nous ' + nous + ').';
+  if (v.inf === 'aller') return quote('aller') + ' est du 3e groupe malgré son infinitif en -er : il est irrégulier (je vais, j\'irai, que j\'aille).';
+  var why = /oir$/.test(v.inf) ? 'infinitif en -oir' : /ir$/.test(v.inf) ? 'infinitif en -ir, mais sans -iss- : nous ' + nous
+    : 'infinitif en -re';
+  return quote(v.inf) + ' est du 3e groupe (' + why + ') : son radical peut changer selon le temps et la personne.';
+}
+
+function futStem(v) { return first(v, 'futur', 0).replace(/ai$/, ''); }
+function tenseNote(v, tense) {
+  var nous = first(v, 'present', 3), ils = first(v, 'present', 5);
+  switch (tense) {
+    case 'present':
+      if (v.group === 0 || v.inf === 'aller') return 'Présent irrégulier, à savoir par cœur : ' + table(v, 'present') + '.';
+      if (v.group === 1) return 'Présent du 1er groupe : radical + -e, -es, -e, -ons, -ez, -ent.';
+      if (v.family === 'ouvrir') return 'Présent : -e, -es, -e, -ons, -ez, -ent, comme les verbes du 1er groupe.';
+      if (v.group === 2) return 'Présent du 2e groupe : -is, -is, -it, -issons, -issez, -issent.';
+      if (v.family === 'prendre') return 'Présent : -ds, -ds, -d au singulier (le d de l\'infinitif reste : ' + first(v, 'present', 2) + '), puis le radical change au pluriel : nous ' + first(v, 'present', 3) + ', vous ' + first(v, 'present', 4) + ', ils ' + first(v, 'present', 5) + '.';
+      if (v.family === 'rendre') return 'Présent des verbes en -dre : -ds, -ds, -d, -dons, -dez, -dent : le d de l\'infinitif reste.';
+      if (/x$/.test(first(v, 'present', 0))) return 'Présent : -x, -x, -t, -ons, -ez, -ent (je peux, je veux).';
+      return 'Présent du 3e groupe : le plus souvent -s, -s, -t, -ons, -ez, -ent.';
+    case 'imperatif':
+      return 'Impératif : seulement tu, nous et vous, sans pronom sujet. Les formes sont en général celles du présent.';
+    case 'imparfait':
+      if (v.inf === 'être') return 'Imparfait : radical ét- (seule exception) + -ais, -ais, -ait, -ions, -iez, -aient.';
+      return 'Imparfait : radical de « nous » au présent (nous ' + nous + ') + -ais, -ais, -ait, -ions, -iez, -aient. C\'est vrai pour tous les verbes, sauf être.';
+    case 'futur':
+    case 'conditionnel':
+      var st = futStem(v), how;
+      if (st === v.inf) how = 'l\'infinitif entier (' + st + '-)';
+      else if (st === v.inf.slice(0, -1)) how = 'l\'infinitif sans son e final (' + st + '-)';
+      else if (v.group === 1) how = 'l\'infinitif avec le radical modifié (' + st + '-)';
+      else how = 'un radical irrégulier (' + st + '-)';
+      if (tense === 'futur') return 'Futur : ' + how + ' + -ai, -as, -a, -ons, -ez, -ont. Le radical du futur se termine toujours par r.';
+      return 'Conditionnel présent : le radical du futur, ' + how + ', + les terminaisons de l\'imparfait : -ais, -ais, -ait, -ions, -iez, -aient.';
+    case 'passeSimple':
+      switch (psType(v)) {
+        case 'a': return 'Passé simple en -a (1er groupe et aller) : -ai, -as, -a, -âmes, -âtes, -èrent.';
+        case 'i': return 'Passé simple en -i' + (v.group === 2 ? ' (tout le 2e groupe)' : '') + ' : -is, -is, -it, -îmes, -îtes, -irent.';
+        case 'u': return 'Passé simple en -u : -us, -us, -ut, -ûmes, -ûtes, -urent.';
+        default: return 'Passé simple en -in (venir, tenir et leurs composés) : -ins, -ins, -int, -înmes, -întes, -inrent.';
+      }
+    case 'subjonctif':
+      if (IRREGULAR_SUBJ.indexOf(v.inf) >= 0) return 'Subjonctif irrégulier, à savoir par cœur : ' + table(v, 'subjonctif') + '.';
+      var a = ils.replace(/ent$/, ''), b = first(v, 'subjonctif', 3).replace(/ions$/, '');
+      return 'Subjonctif présent : que + radical de « ils » au présent (ils ' + ils + ') + -e, -es, -e, -ions, -iez, -ent.' +
+        (a !== b ? ' Avec nous et vous, le radical est celui de l\'imparfait : que nous ' + first(v, 'subjonctif', 3) + '.' : '');
+  }
+  return '';
+}
+
+// Terminaison de la personne demandée : pourquoi un s, un t, un x, ou rien.
+function endingNote(v, tense, p, f, pron) {
+  var f0 = first(v, tense, 0), f1 = first(v, tense, 1), presNous = first(v, 'present', 3);
+  function doubleI() {
+    if (/ii(ons|ez)$/.test(f)) return ' Le radical se termine déjà par i (nous ' + presNous + ') : on écrit donc deux i.';
+    if (/yi(ons|ez)$/.test(f)) return ' Le y du radical est suivi du i de la terminaison : on l\'entend à peine, mais il s\'écrit.';
+    return '';
+  }
+  switch (tense) {
+    case 'present':
+      if (p === 0) {
+        if (/e$/.test(f)) return 'Avec je, terminaison -e, sans s : c\'est le cas de tous les verbes en -er (et de ouvrir, offrir, cueillir). Le s n\'arrive qu\'avec tu : tu ' + f1 + '.';
+        if (/x$/.test(f)) return 'Avec je, terminaison -x, comme avec tu : je peux, je veux.';
+        if (/s$/.test(f)) return 'Avec je, terminaison -s, comme avec tu : aux 2e et 3e groupes, je finis, je prends. Jamais de t avec je.';
+        return 'Forme irrégulière : ' + je(f) + '.';
+      }
+      if (p === 1) return /x$/.test(f) ? 'Avec tu, terminaison -x (tu peux, tu veux) : c\'est le seul cas où tu ne finit pas par -s.'
+        : 'Avec tu, la forme finit toujours par -s (ou -x pour peux, veux), à tous les temps, sauf à l\'impératif.';
+      if (p === 2) {
+        if (/e$/.test(f)) return 'Avec il / elle, terminaison -e, ni t ni s : c\'est la même forme qu\'avec je (je ' + f0 + ', ' + pron + ' ' + f + ').';
+        if (/d$/.test(f)) return 'Avec il / elle, les verbes en -dre gardent le d de l\'infinitif et ne prennent pas de t : ' + pron + ' ' + f + '.';
+        if (/t$/.test(f)) return 'Avec il / elle, terminaison -t (le s est pour je et tu) : ' + pron + ' ' + f + '.';
+        return 'Forme irrégulière, sans t ni s : ' + pron + ' ' + f + '.';
+      }
+      if (p === 3) return /ons$/.test(f) ? 'Avec nous, toujours -ons au présent.' : 'Exception : nous sommes (et non « nous êtons »).';
+      if (p === 4) return /ez$/.test(f) ? 'Avec vous, -ez.' : 'Exception : seuls être, dire et faire ne font pas -ez (vous êtes, vous dites, vous faites).';
+      return /ont$/.test(f) ? 'Exception en -ont, qui se prononce : ils ont, ils sont, ils font, ils vont.'
+        : 'Avec ils / elles, terminaison -ent, qui ne se prononce pas : ' + pron + ' ' + f + '.';
+    case 'imperatif':
+      if (p === 1) return /[sx]$/.test(f)
+        ? 'À l\'impératif, les verbes en -ir, -oir et -re gardent le s du présent : ' + f + ' !'
+        : 'À l\'impératif, pas de s avec tu quand la forme finit par -e ou -a (verbes en -er, ouvrir, cueillir, et va, aie, sache, veuille) : ' + f + ' ! Le s ne revient que devant en et y : vas-y, manges-en.';
+      if (/(yons|yez|ons|ez)$/.test(f) && f === first(v, 'present', p)) return 'Même forme qu\'au présent, sans le pronom : ' + f + ' !';
+      return 'Forme irrégulière, empruntée au subjonctif (sans i) : ' + f + ' !';
+    case 'imparfait':
+    case 'conditionnel':
+      var other = tense === 'imparfait' ? 'le passé simple ou le futur' : 'le futur';
+      if (p === 0) return 'Avec je, -ais, avec un s : ' + je(f) + '. Sans s (-ai), ce serait ' + other + '.' +
+        (tense === 'conditionnel' ? ' Astuce : passer à nous → nous ' + first(v, 'conditionnel', 3) + ' (conditionnel), et non nous ' + first(v, 'futur', 3) + ' (futur).' : '');
+      if (p === 1) return 'Avec tu, -ais : tu ' + f + '.';
+      if (p === 2) return 'Avec il / elle, -ait, avec un t : ' + pron + ' ' + f + '.';
+      if (p === 3) return 'Avec nous, -ions : nous ' + f + '.' + doubleI();
+      if (p === 4) return 'Avec vous, -iez : vous ' + f + '.' + doubleI();
+      return 'Avec ils / elles, -aient : ' + pron + ' ' + f + ' ; rien ne se prononce après « ai ».';
+    case 'futur':
+      if (p === 0) return 'Avec je, -ai, sans s : ' + je(f) + '. Avec un s (-ais), ce serait le conditionnel. Astuce : passer à nous → nous ' + first(v, 'futur', 3) + ' (futur), et non nous ' + first(v, 'conditionnel', 3) + ' (conditionnel).';
+      if (p === 1) return 'Avec tu, -as : tu ' + f + '.';
+      if (p === 2) return 'Avec il / elle, -a, sans t : ' + pron + ' ' + f + '.';
+      if (p === 3) return 'Avec nous, -ons : nous ' + f + '.';
+      if (p === 4) return 'Avec vous, -ez : vous ' + f + '.';
+      return 'Avec ils / elles, -ont, qui se prononce « on » : ' + pron + ' ' + f + '.';
+    case 'passeSimple':
+      var t = psType(v);
+      if (t === 'a') {
+        if (p === 0) return 'Avec je, -ai, sans s : ' + je(f) + '. Avec un s, ' + je(first(v, 'imparfait', 0)) + ', c\'est l\'imparfait.';
+        if (p === 1) return 'Avec tu, -as : tu ' + f + '.';
+        if (p === 2) return 'Avec il / elle, -a, sans t : ' + pron + ' ' + f + '.';
+        if (p === 3) return 'Avec nous, -âmes, avec un accent circonflexe sur le a : nous ' + f + '.';
+        if (p === 4) return 'Avec vous, -âtes, avec un accent circonflexe sur le a : vous ' + f + '.';
+        return 'Avec ils / elles, -èrent, avec un accent grave : ' + pron + ' ' + f + '.';
+      }
+      var vow = t === 'in' ? 'in' : t, hat = { i: 'î', u: 'û', 'in': 'în' }[t];
+      if (p < 2) return 'Avec ' + (p ? 'tu' : 'je') + ', -' + vow + 's, avec un s : ' + (p ? 'tu ' + f : je(f)) + '.';
+      if (p === 2) return 'Avec il / elle, -' + vow + 't, avec un t : ' + pron + ' ' + f + '.';
+      if (p === 3) return 'Avec nous, -' + hat + 'mes, avec un accent circonflexe : nous ' + f + '.';
+      if (p === 4) return 'Avec vous, -' + hat + 'tes, avec un accent circonflexe : vous ' + f + '.';
+      return 'Avec ils / elles, -' + vow + 'rent : ' + pron + ' ' + f + '.';
+    case 'subjonctif':
+      if (p === 0) return /e$/.test(f) ? 'Avec je, -e, sans s : que ' + je(f) + '.' : 'Exception : que je sois, avec un s.';
+      if (p === 1) return 'Avec tu, -s comme toujours : que tu ' + f + '.';
+      if (p === 2) return /e$/.test(f) ? 'Avec il / elle, -e, sans t : qu\'' + pron + ' ' + f + '.' : 'Exceptions : qu\'il ait, qu\'il soit, avec un t.';
+      if (p === 3) return /yons$/.test(f) ? 'Que nous ayons, que nous soyons : pas de i après le y.'
+        : 'Avec nous, -ions, comme à l\'imparfait : que nous ' + f + '.' + doubleI();
+      if (p === 4) return /yez$/.test(f) ? 'Que vous ayez, que vous soyez : pas de i après le y.'
+        : 'Avec vous, -iez, comme à l\'imparfait : que vous ' + f + '.' + doubleI();
+      return 'Avec ils / elles, -ent, muet : qu\'' + pron + ' ' + f + '.';
+  }
+  return '';
+}
+
+// Temps composés : auxiliaire, terminaison et accord du participe passé.
+function compoundNotes(v, tense, p, pron, f) {
+  var pf = ppForms(v), pp = pf[0], aux = f.split(' ')[0], out = [];
+  var auxTense = TENSES[COMPOUND[tense]].name.toLowerCase();
+  out.push('Temps composé : auxiliaire ' + v.aux + (/^[aeiou]/.test(auxTense) ? ' à l\'' : ' au ') + auxTense + ' (' + aux + ') + participe passé de ' + quote(v.inf) + '.');
+  if (v.inf === 'être' || v.inf === 'avoir') out.push('Participe passé irrégulier : ' + pp + '.');
+  else if (pp === 'dû') out.push('Dû prend un accent circonflexe au masculin singulier, pour ne pas le confondre avec l\'article « du » ; mais due, dus, dues.');
+  else if (/é$/.test(pp)) out.push('Participe passé en -é pour tous les verbes en -er : ' + pp + ', jamais -er, -ez ou -ait. Astuce : remplacer par « vendu » ; si ça marche, c\'est -é.');
+  else if (/s$/.test(pp)) out.push('Participe en -s : on l\'entend au féminin (' + pf[1] + '), donc il y a un s au masculin : ' + pp + '.');
+  else if (/t$/.test(pp)) out.push('Participe en -t : on l\'entend au féminin (' + pf[1] + '), donc il y a un t au masculin : ' + pp + '.');
+  else out.push('Participe en -' + pp.slice(-1) + ', sans s ni t : au féminin on dit ' + pf[1] + ', on n\'entend aucune consonne finale.');
+  if (v.aux === 'être') out.push('Avec être, le participe s\'accorde avec le sujet (' + pron + ') : ' + f.split(' ').slice(1).join(' ') + '. Exemple : elles sont ' + pf[3] + '.');
+  else out.push('Avec avoir, le participe ne s\'accorde pas avec le sujet : elles ont ' + pp + '.');
+  return out;
+}
+
+// Pièges du radical visibles dans la forme attendue.
+function stemNotes(v, tense, p, f, correct) {
+  var out = [], nous = first(v, 'present', 3), je0 = first(v, 'present', 0), fam = v.family;
+  if (/ç/.test(f)) out.push('Cédille : ç devant a, o ou u, pour garder le son « s » (' + f + ').');
+  else if ((fam === 'cer' || fam === 'recevoir') && /c[ei]/.test(f)) out.push('Pas de cédille devant e ou i : le c s\'y prononce déjà « s » (' + f + ').');
+  if (fam === 'ger') out.push(/ge[aoâ]/.test(f) ? 'Un e après le g devant a ou o, pour garder le son « j » (' + f + ').'
+    : 'Pas de e ajouté après le g devant e ou i : le g s\'y prononce déjà « j » (' + f + ').');
+  if (fam === 'e' || fam === 'eGrave') {
+    if (/è/.test(f)) out.push('Le e du radical devient è devant une syllabe muette : ' + f + ' (mais nous ' + nous + ', où la syllabe suivante se prononce).' +
+      (fam === 'eGrave' ? ' ' + quote(v.inf) + ' prend l\'accent grave au lieu de doubler la consonne : pas de « ' + f.replace(/è([lt])/, 'e$1$1') + ' ».' : ''));
+    else out.push('Pas d\'accent ici : la syllabe suivante se prononce (' + f + '). L\'accent grave n\'apparaît que devant une syllabe muette (' + je(je0) + ').');
+  }
+  if (fam === 'eacute') {
+    if (/è/.test(f)) out.push('Le é devient è devant une terminaison muette : ' + f + '.');
+    else out.push('Le é reste é quand la terminaison se prononce : ' + f + ' (mais ' + je(je0) + ').');
+    if (correct.length > 1) out.push('Au futur et au conditionnel, les deux accents sont admis : ' + correct.join(' / ') + '.');
+  }
+  if (fam === 'll') {
+    if (/(ll|tt)/.test(f)) out.push(quote(v.inf) + ' double sa consonne devant une syllabe muette : ' + f + ' (mais nous ' + nous + ').');
+    else out.push('Une seule consonne ici : la syllabe suivante se prononce (' + f + '). On ne double que devant un e muet (' + je(je0) + ').');
+  }
+  if (fam === 'oyer' || fam === 'uyer' || fam === 'envoyer' || fam === 'ayer') {
+    if (/[oua]i(e|r)/.test(f)) out.push('Le y devient i devant un e muet : ' + f + ' (mais nous ' + nous + ').');
+    else if (/y/.test(f) && !/yi/.test(f)) out.push('Le y reste : la terminaison se prononce (' + f + ').');
+    if (fam === 'ayer' && correct.length > 1) out.push('Verbes en -ayer : deux orthographes admises devant un e muet : ' + correct.join(' / ') + '.');
+  }
+  if (fam === 'ier' && (tense === 'futur' || tense === 'conditionnel')) out.push('Le e de l\'infinitif reste au futur et au conditionnel, même s\'il ne s\'entend pas : ' + f + '.');
+  if ((tense === 'futur' || tense === 'conditionnel') && /rr/.test(f))
+    out.push('Deux r : ' + (fam === 'courir' || fam === 'mourir' ? 'le r du radical (' + v.inf.slice(0, -2) + '-) + le r du futur' : 'radical irrégulier en -rr-') + ' : ' + f + '.');
+  if (/nn/.test(f) && (fam === 'prendre' || fam === 'venir')) out.push('Deux n devant une terminaison muette : ' + f + ' (mais nous ' + nous + ').');
+  if (fam === 'mettre' && tense !== 'passeSimple') out.push(/tt/.test(f) ? 'Deux t, comme dans l\'infinitif : ' + f + '.' : 'Un seul t au singulier du présent : je mets, il met.');
+  if (fam === 'indre') out.push(/gn/.test(f) ? 'Devant une voyelle, -gn- : ' + f + '.' : /[st]$/.test(f) && tense === 'present' ? 'Pas de d : les verbes en -indre le perdent au présent (je peins, il peint).' : '');
+  if (fam === 'résoudre' && tense === 'present' && p < 3) out.push('Pas de d : je résous, il résout.');
+  if (fam === 'partir' && tense === 'present' && p < 3) out.push('La consonne finale du radical tombe au singulier : ' + je(je0) + ' (mais nous ' + nous + ').');
+  if (/î/.test(f) && fam === 'connaître') out.push('î devant le t (il connaît, je connaîtrai) ; connait, sans accent, est aussi admis (orthographe rectifiée).');
+  return out.filter(Boolean);
+}
+
+function explainConj(v, tense, p, pron, correct, accepted) {
+  var f = correct[0], lines = [groupNote(v)];
+  if (COMPOUND[tense]) lines = lines.concat(compoundNotes(v, tense, p, pron, f));
+  else {
+    lines.push(tenseNote(v, tense));
+    lines.push(endingNote(v, tense, p, f, pron));
+    lines = lines.concat(stemNotes(v, tense, p, f, correct));
+  }
+  if (correct.length > 1 && !/^(eacute|ayer)$/.test(v.family)) lines.push('Les deux orthographes sont acceptées : ' + correct.join(' / ') + '.');
+  if (accepted.length > correct.length) lines.push('Le sujet peut être masculin ou féminin : ' + accepted.join(' ou ') + ' sont justes.');
+  if ((v.group === 3 || v.group === 0) && FAMILY_NOTES[v.family]) lines.push('À retenir : ' + FAMILY_NOTES[v.family]);
+  return lines.filter(Boolean);
+}
+
 function pick(arr, rnd) { return arr[Math.floor(rnd() * arr.length)]; }
 
 // Construit une question : verbe v, temps, personne p (0 à 5).
-// Renvoie { prompt, options, ok, explain }.
+// Renvoie { prompt, options, ok, explain } ; explain est une liste de phrases.
 function makeQuestion(v, tense, p, rnd) {
   rnd = rnd || Math.random;
   var compound = !!COMPOUND[tense];
@@ -498,10 +714,7 @@ function makeQuestion(v, tense, p, rnd) {
     if (pron === 'je' && options.some(startsWithVowel)) subject = "je / j'";
     if (sub) subject = (/^[aeiouy]/.test(pron) ? "qu'" : 'que ') + subject;
   }
-  var explain = '';
-  if (compound) explain += ' Auxiliaire ' + v.aux + (v.aux === 'être' ? ', le participe s\'accorde avec le sujet.' : ', pas d\'accord avec le sujet.');
-  if (correct.length > 1) explain += ' Les deux orthographes sont acceptées : ' + correct.join(' / ') + '.';
-  explain += ' ' + (FAMILY_NOTES[v.family] || '');
+  var explain = explainConj(v, tense, p, pron, correct, accepted);
   return {
     prompt: subject + ' ___ (verbe : ' + v.inf + ')',
     options: options,
@@ -513,6 +726,6 @@ function makeQuestion(v, tense, p, rnd) {
 
 var api = { PERSONS: PERSONS, TENSES: TENSES, TENSE_ORDER: TENSE_ORDER, COMPOUND: COMPOUND, VERBS: VERBS,
   forms: forms, ppForms: ppForms, table: table, withPronoun: withPronoun, END: END, firstGroup: firstGroup,
-  makeQuestion: makeQuestion, soundKey: soundKey, FAMILY_NOTES: FAMILY_NOTES };
+  makeQuestion: makeQuestion, explain: explainConj, soundKey: soundKey, FAMILY_NOTES: FAMILY_NOTES };
 if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.CONJ = api;
 })(this);
