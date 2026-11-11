@@ -627,16 +627,21 @@ function renderQuiz() {
   if (state.revealed) {
     var right = q.ok.map(function (i) { return '<b>' + esc(q.o[i]) + '</b>'; }).join(' et ');
     var missed = q.ok.filter(function (i) { return cur.chosen.indexOf(i) < 0; }).map(function (i) { return '<b>' + esc(q.o[i]) + '</b>'; }).join(' et ');
+    var next = '<div class="actions"><button class="btn primary" id="nextBtn" type="button">' + (state.pendingEnd ? 'Voir le résultat' : 'Continuer') + '</button></div>';
+    // Réponse juste : Continuer vient avant l'explication, pour enchaîner sur
+    // téléphone sans faire défiler ; sinon l'explication passe d'abord.
+    var early = state.lastCorrect === true;
     feedback = '<div class="feedback ' + (state.lastNeutral ? 'fb-neutral' : state.lastCorrect ? 'fb-ok' : 'fb-ko') + '">' +
       '<div class="fb-title"><span>' + (state.lastNeutral ? '≈ Attention : il existait d\'autres orthographes possibles : ' + missed + '.'
         : state.lastCorrect ? '✓ Bien joué.' : '✗ Réponse : ' + right) + '</span>' +
       '<span class="fb-pts">' + (state.lastNeutral ? '±0' : state.lastDelta > 0 ? '+' + state.lastDelta : '−' + (-state.lastDelta)) + '</span></div>' +
       (state.lastNeutral ? '<div class="muted">Ni réussite ni erreur : le score ne change pas.</div>' : '') +
+      (early ? next : '') +
       (Array.isArray(q.e)
         ? '<ul class="explain-list">' + q.e.map(function (l) { return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>'
         : '<div>' + esc(q.e) + '</div>') +
       '<div><a href="' + ruleUrl(q, x.tense) + '" target="_blank" rel="noopener">Voir la règle</a></div></div>' +
-      '<div class="actions"><button class="btn primary" id="nextBtn" type="button">' + (state.pendingEnd ? 'Voir le résultat' : 'Continuer') + '</button></div>';
+      (early ? '' : next);
   }
 
   // Le score vient sous la question et les réponses : sur téléphone, on répond

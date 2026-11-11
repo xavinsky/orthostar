@@ -193,7 +193,7 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
 - Le score part de 0. **Victoire à 100 points**, **défaite à −30 points**.
 - La partie compte 40 questions, multipliées par le multiplicateur du niveau de risque.
 - **Affichage**, de haut en bas, pour que la question et les réponses tiennent en haut de l'écran d'un téléphone sans défilement :
-  - la carte de la question, avec une bande en haut à la couleur de son niveau, ses réponses, puis après la réponse l'explication et le bouton **Continuer** ;
+  - la carte de la question, avec une bande en haut à la couleur de son niveau, ses réponses, puis après la réponse le bouton **Continuer** et l'explication : si la réponse est juste, **Continuer** vient juste sous « Bien joué », avant l'explication, pour enchaîner sans défiler sur téléphone ; sinon il vient après l'explication ;
   - sous la carte : le score, le bouton **Terminer**, une jauge entre défaite et victoire, la raison du tirage et le nombre de questions restantes ;
   - en conjugaison, après la réponse, le tableau complet du verbe en dernier.
 - **Lexique** : on coche une ou plusieurs réponses, puis on valide. **Conjugaison et grammaire** : un clic sur une réponse suffit.
