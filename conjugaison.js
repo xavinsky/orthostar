@@ -665,9 +665,42 @@ function explainConj(v, tense, p, pron, correct, accepted, options) {
   }
   if (correct.length > 1 && !/^(eacute|ayer)$/.test(v.family)) lines.push('Les deux orthographes sont acceptées : ' + correct.join(' / ') + '.');
   if (accepted.length > correct.length) lines.push('Le sujet peut être masculin ou féminin : ' + accepted.join(' ou ') + ' sont justes.');
+  if (CUE_NOTES[tense]) lines.push(CUE_NOTES[tense]);
   if ((v.group === 3 || v.group === 0) && FAMILY_NOTES[v.family]) lines.push('À retenir : ' + FAMILY_NOTES[v.family]);
   return lines.filter(Boolean);
 }
+
+// Débuts de phrase qui mettent sur la voie du temps demandé. Ils vont avec
+// n'importe quel verbe et n'importe quelle personne ; {S} est le sujet.
+var CUES = {
+  present: ['En ce moment, {S} ___', 'Aujourd\'hui, {S} ___', 'Tous les jours, {S} ___'],
+  imparfait: ['Autrefois, {S} ___', 'Chaque été, {S} ___', 'À cette époque, {S} ___'],
+  futur: ['Demain, {S} ___', 'L\'an prochain, {S} ___', 'Bientôt, {S} ___'],
+  conditionnel: ['Si c\'était possible, {S} ___', 'Si tout allait bien, {S} ___', 'Avec un peu de chance, {S} ___'],
+  passeSimple: ['Soudain, {S} ___', 'Ce jour-là, {S} ___', 'Tout à coup, {S} ___'],
+  passeCompose: ['Hier, {S} ___', 'Ce matin, {S} ___', 'La semaine dernière, {S} ___'],
+  plusQueParfait: ['La veille, {S} ___', 'Quelques jours plus tôt, {S} ___'],
+  passeAnterieur: ['Dès que {S} ___, tout changea.', 'Quand {S} ___, on partit.', 'Après que {S} ___, la nuit tomba.'],
+  futurAnterieur: ['D\'ici ce soir, {S} ___', 'Dans une heure, {S} ___', 'Demain à cette heure-ci, {S} ___'],
+  conditionnelPasse: ['Si cela avait été possible, {S} ___', 'Sans cette panne, {S} ___', 'Avec un peu plus de chance, {S} ___'],
+  subjonctif: ['Il faut {S} ___', 'Il est important {S} ___', 'Il vaudrait mieux {S} ___'],
+  subjonctifPasse: ['Il faut {S} ___ avant ce soir.', 'Il est dommage {S} ___']
+};
+// Ce que le début de phrase indique, rappelé dans l'explication.
+var CUE_NOTES = {
+  present: 'Indice : « en ce moment », « tous les jours » → présent.',
+  imparfait: 'Indice : « autrefois », « chaque été » → imparfait, pour une habitude ou une description dans le passé.',
+  futur: 'Indice : « demain », « bientôt » → futur.',
+  conditionnel: 'Indice : « si » + imparfait (« si c\'était possible ») → conditionnel présent dans l\'autre partie de la phrase. Jamais de conditionnel juste après « si ».',
+  passeSimple: 'Indice : « soudain », « ce jour-là » → passé simple, pour une action brève dans un récit.',
+  passeCompose: 'Indice : « hier », « ce matin » → passé composé, pour une action terminée.',
+  plusQueParfait: 'Indice : « la veille », « plus tôt » → plus-que-parfait, pour une action passée avant une autre action passée.',
+  passeAnterieur: 'Indice : « dès que », « quand », « après que » suivis d\'un passé simple (« tout changea ») → passé antérieur, pour l\'action juste avant.',
+  futurAnterieur: 'Indice : « d\'ici ce soir », « dans une heure » → futur antérieur, pour une action qui sera terminée à un moment du futur.',
+  conditionnelPasse: 'Indice : « si » + plus-que-parfait (« si cela avait été possible ») → conditionnel passé, pour ce qui aurait pu arriver.',
+  subjonctif: 'Indice : « il faut que », « il est important que » → subjonctif.',
+  subjonctifPasse: 'Indice : « il faut que… avant ce soir », « il est dommage que » → subjonctif ; passé pour une action terminée.'
+};
 
 function pick(arr, rnd) { return arr[Math.floor(rnd() * arr.length)]; }
 
@@ -744,9 +777,11 @@ function makeQuestion(v, tense, p, rnd) {
     if (pron === 'je' && options.some(startsWithVowel)) subject = "je / j'";
     if (sub) subject = (/^[aeiouy]/.test(pron) ? "qu'" : 'que ') + subject;
   }
+  var cue = CUES[tense] ? pick(CUES[tense], rnd) : '{S} ___';
   var explain = explainConj(v, tense, p, pron, correct, accepted, options);
   return {
-    prompt: subject + ' ___ (verbe : ' + v.inf + ')',
+    prompt: cue.replace(/que \{S\}/, function () { return /^[aeiouy]/.test(subject) ? "qu'{S}" : 'que {S}'; })
+      .replace('{S}', subject) + ' (verbe : ' + v.inf + ')',
     options: options,
     ok: [0],
     explain: explain,

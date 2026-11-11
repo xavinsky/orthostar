@@ -70,9 +70,11 @@ En lexique et en grammaire, le niveau mesure la difficulté de la question. En c
 
 ### 3c. Forme des questions
 
-- **Énoncé** : le sujet, un trou, puis le verbe à l'infinitif, par exemple `il ___ (verbe : prendre)`.
+- **Énoncé** : un début de phrase qui met sur la voie du temps, le sujet, un trou, puis le verbe à l'infinitif, par exemple `Si c'était possible, il ___ (verbe : prendre)`.
+  - Les débuts de phrase (`CUES` dans `conjugaison.js`) sont tirés au hasard parmi deux ou trois par temps et vont avec n'importe quel verbe et n'importe quelle personne : « En ce moment » (présent), « Autrefois » (imparfait), « Demain » (futur), « Si c'était possible » (conditionnel présent), « Soudain » (passé simple), « Hier » (passé composé), « La veille » (plus-que-parfait), « Dès que … ___, tout changea. » (passé antérieur), « D'ici ce soir » (futur antérieur), « Si cela avait été possible » (conditionnel passé), « Il faut que » (subjonctif présent), « Il est dommage que » (subjonctif passé). L'impératif n'en a pas.
+  - L'explication rappelle ce que le début de phrase indique (« Indice : « si » + imparfait → conditionnel présent… »).
   - Le sujet est je, tu, il ou elle, nous, vous, ils ou elles ; le genre de la 3e personne est tiré au hasard.
-  - Au subjonctif, l'énoncé commence par « que » ou « qu' ». À l'impératif, le pronom est entre parenthèses : (tu), (nous), (vous).
+  - Au subjonctif, le sujet est précédé de « que » ou « qu' » (« Il faut qu'il »). À l'impératif, le pronom est entre parenthèses : (tu), (nous), (vous).
   - « je » s'affiche « je / j' » quand une réponse commence par une voyelle.
 - **Réponses** : uniquement la forme verbale, une bonne et trois pièges.
 - **Étiquettes** au-dessus de l'énoncé : rubrique, niveau, puis le **temps**, en petites capitales sur sa couleur (voir 3f).
