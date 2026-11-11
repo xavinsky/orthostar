@@ -135,7 +135,7 @@ rule('nomAdj', 1, 'Accord du nom et de l\'adjectif', 'gn', 'L\'adjectif s\'accor
 });
 rule('eEr', 1, '-é / -er / -ez / -ait', 'e-er', 'On remplace par vendre ou vendu : vendre → -er (infinitif), vendu → -é (participe passé), vendez → -ez, vendait → -ait.', function (rnd) {
   var v = pick(ER, rnd), b = v[0].slice(0, -2), s = subjectSing(rnd);
-  var forms = { er: v[0], e: b + 'é', ez: b + 'ez', ait: b + 'ait' };
+  var forms = { er: v[0], e: b + 'é', ez: b + 'ez', ait: b + (/g$/.test(b) ? 'eait' : 'ait') };
   var t = pick([
     [cap(s.txt) + ' va ___ ' + v[1] + '.', 'er'], [cap(s.txt) + ' veut ___ ' + v[1] + '.', 'er'],
     [cap(s.txt) + ' a ___ ' + v[1] + '.', 'e'], ['Pour ___ ' + v[1] + ', il faut du temps.', 'er'],
@@ -156,7 +156,7 @@ rule('ce', 2, 'ce / se', 'homophones', 'Devant un verbe, si l\'on peut dire « m
 rule('ces', 2, 'ces / ses / c\'est / s\'est', 'homophones', 'ces : ceux-là ; ses : les siens ; c\'est : cela est ; s\'est : devant un participe (il s\'est levé, on peut dire « je me suis levé »).', function (rnd) {
   var s = subjectSing(rnd), n = pick(NOUNS, rnd);
   var t = pick([
-    [cap(s.txt) + ' a rangé ___ ' + pick(['affaires', 'livres', 'jouets', 'vêtements'], rnd) + '.', 'ses'],
+    [cap(s.txt) + ' a rangé ___ propres ' + pick(['affaires', 'livres', 'jouets', 'vêtements'], rnd) + '.', 'ses'],
     ['Regarde ___ ' + n[1] + '-là !', 'ces'],
     ['___ ' + (n[2] === 'f' ? 'une belle ' : 'un beau ') + n[0] + '.', 'C\'est'],
     [cap(s.txt) + ' ___ ' + pick([['levé', 'levée'], ['blessé', 'blessée'], ['caché', 'cachée'], ['trompé', 'trompée']], rnd)[s.g === 'f' ? 1 : 0] + ' ce matin.', 's\'est']
@@ -233,7 +233,7 @@ rule('quel', 3, 'quel / quelle / qu\'elle', 'homophones', 'quel s\'accorde avec 
 rule('peu', 3, 'peu / peut / peux', 'homophones', 'peut / peux : verbe pouvoir (on peut dire « pouvait ») ; il peut, je peux, tu peux. peu : petite quantité (« un peu »).', function (rnd) {
   var s = subjectSing(rnd);
   var t = pick([
-    [cap(s.txt) + ' ___ ' + pick(['venir demain', 'nager seul', 'lire ce livre'], rnd) + '.', 'peut'],
+    [cap(s.txt) + ' ___ ' + pick(['venir demain', 'nager loin', 'lire ce livre'], rnd) + '.', 'peut'],
     ['Je ___ ' + pick(['t\'aider', 'venir', 'le porter'], rnd) + '.', 'peux'], ['Tu ___ ' + pick(['entrer', 'jouer', 'partir'], rnd) + '.', 'peux'],
     [cap(s.txt) + ' mange un ___ .', 'peu'], ['Il reste ' + pick(['un ___ de pain', 'un ___ de lait', 'trop ___ de temps'], rnd) + '.', 'peu']
   ], rnd);
@@ -301,7 +301,7 @@ var COD = [['écrire', 'lettres', 'f', adj('écrit')], ['cueillir', 'fleurs', 'f
 rule('ppCod', 4, 'Participe passé avec avoir : COD placé avant', 'pp', 'Avec avoir, le participe passé s\'accorde avec le complément d\'objet direct quand il est placé avant le verbe (que, les, la…).', function (rnd) {
   var c = pick(COD, rnd), s = subject(rnd), aux = s.p === 5 ? 'ont' : 'a';
   var t = pick([
-    ['Les ' + c[1] + ' que ' + s.txt + ' ' + aux + ' ___ sont ' + (c[2] === 'f' ? 'belles' : 'beaux') + '.', true],
+    ['Les ' + c[1] + ' ' + (/^[aeéèêiouyh]/i.test(s.txt) ? 'qu\'' : 'que ') + s.txt + ' ' + aux + ' ___ sont ' + (c[2] === 'f' ? 'belles' : 'beaux') + '.', true],
     ['Ces ' + c[1] + ', je les ai ___ hier.', true],
     [cap(s.txt) + ' ' + aux + ' ___ des ' + c[1] + '.', false]
   ], rnd);
@@ -329,13 +329,19 @@ rule('nombres', 4, 'vingt / cent / mille', 'gn', 'Vingt et cent prennent un s qu
   var x = pick(NUMBERS, rnd);
   return Q('Il y a ___ ' + pick(['personnes dans la salle', 'pages dans ce livre', 'kilomètres jusqu\'à la mer', 'élèves dans le collège'], rnd) + '.', x[0], x[1]);
 });
-var TOUT_ADJ = [['petits', 'm', true, 'tout'], ['contents', 'm', true, 'tout'], ['petite', 'f', false, 'toute'], ['contente', 'f', false, 'toute'],
+// Avec « ils sont » ou « elles sont » devant une voyelle, le pronom « tous » ou
+// « toutes » (= tous ensemble) serait juste aussi : le masculin pluriel et le
+// féminin pluriel devant une voyelle passent par un groupe nominal (« des
+// chatons tout petits »), où le pronom est impossible.
+var TOUT_ADJ = [['petit', 'm', false, 'tout'], ['content', 'm', false, 'tout'], ['seul', 'm', false, 'tout'],
+  ['petite', 'f', false, 'toute'], ['contente', 'f', false, 'toute'],
   ['seule', 'f', false, 'toute'], ['fière', 'f', false, 'toute'], ['heureuse', 'f', false, 'tout'], ['émue', 'f', false, 'tout'],
   ['étonnée', 'f', false, 'tout'], ['inquiète', 'f', false, 'tout'], ['petites', 'f', true, 'toutes'], ['seules', 'f', true, 'toutes'],
-  ['heureuses', 'f', true, 'tout'], ['émues', 'f', true, 'tout'], ['seuls', 'm', true, 'tout']];
-rule('toutAdj', 4, 'tout devant un adjectif', 'gn', 'Devant un adjectif, tout (= entièrement) est invariable, sauf devant un adjectif féminin qui commence par une consonne ou un h aspiré : ils sont tout petits, elle est toute petite, elle est tout heureuse.', function (rnd) {
+  ['petits', 'm', true, 'tout', 'J\'ai vu des chatons'], ['contents', 'm', true, 'tout', 'J\'ai vu des enfants'],
+  ['émues', 'f', true, 'tout', 'J\'ai vu des spectatrices'], ['heureuses', 'f', true, 'tout', 'J\'ai vu des filles']];
+rule('toutAdj', 4, 'tout devant un adjectif', 'gn', 'Devant un adjectif, tout (= entièrement) est invariable, sauf devant un adjectif féminin qui commence par une consonne ou un h aspiré : des chatons tout petits, elle est toute petite, elle est tout heureuse. Attention : « ils sont tous contents » existe aussi, avec tous = tous ensemble.', function (rnd) {
   var x = pick(TOUT_ADJ, rnd);
-  var subj = x[2] ? (x[1] === 'f' ? 'Elles sont' : 'Ils sont') : (x[1] === 'f' ? 'Elle est' : 'Il est');
+  var subj = x[4] || (x[2] ? (x[1] === 'f' ? 'Elles sont' : 'Ils sont') : (x[1] === 'f' ? 'Elle est' : 'Il est'));
   return Q(subj + ' ___ ' + x[0] + '.', x[3], ['tout', 'toute', 'tous', 'toutes']);
 });
 rule('meme', 4, 'même / mêmes', 'gn', 'même s\'accorde quand il signifie « identique » ou suit un pronom (les mêmes, eux-mêmes) ; il est invariable quand il signifie « aussi » (même les enfants riaient).', function (rnd) {

@@ -71,7 +71,7 @@ En lexique et en grammaire, le niveau mesure la difficulté de la question. En c
 ### 3c. Forme des questions
 
 - **Énoncé** : un début de phrase qui met sur la voie du temps, le sujet, un trou, puis le verbe à l'infinitif, par exemple `Si c'était possible, il ___ (verbe : prendre)`.
-  - Les débuts de phrase (`CUES` dans `conjugaison.js`) sont tirés au hasard parmi deux ou trois par temps et vont avec n'importe quel verbe et n'importe quelle personne : « En ce moment » (présent), « Autrefois » (imparfait), « Demain » (futur), « Si c'était possible » (conditionnel présent), « Soudain » (passé simple), « Hier » (passé composé), « La veille » (plus-que-parfait), « Dès que … ___, tout changea. » (passé antérieur), « D'ici ce soir » (futur antérieur), « Si cela avait été possible » (conditionnel passé), « Il faut que » (subjonctif présent), « Il est dommage que » (subjonctif passé). L'impératif n'en a pas.
+  - Les débuts de phrase (`CUES` dans `conjugaison.js`) sont tirés au hasard parmi deux ou trois par temps et vont avec n'importe quel verbe et n'importe quelle personne. Chacun est choisi pour qu'aucun piège tiré d'un temps voisin ne donne aussi une phrase correcte : « Maintenant » (présent ; pas « tous les jours », qui irait aussi à l'imparfait), « Chaque soir » (imparfait ; pas « autrefois », qui irait aussi au passé simple), « Si c'est possible » ou « Quand ce sera l'heure » (futur ; pas « demain », qui irait aussi au conditionnel), « Si c'était possible » (conditionnel présent), « Soudain » (passé simple), « Hier » (passé composé), « Tout le monde était fatigué : la veille » (plus-que-parfait), « Dès que … ___, tout changea. » (passé antérieur), « D'ici ce soir » (futur antérieur), « Si j'avais su » (conditionnel passé), « Il faut que » (subjonctif présent), « Il est dommage que » (subjonctif passé). L'impératif n'en a pas.
   - L'explication rappelle ce que le début de phrase indique (« Indice : « si » + imparfait → conditionnel présent… »).
   - Le sujet est je, tu, il ou elle, nous, vous, ils ou elles ; le genre de la 3e personne est tiré au hasard.
   - Au subjonctif, le sujet est précédé de « que » ou « qu' » (« Il faut qu'il »). À l'impératif, le pronom est entre parenthèses : (tu), (nous), (vous).
@@ -443,6 +443,7 @@ Les formes verbales viennent du moteur de conjugaison.
 - **Pièges** : pour les homophones, les autres mots du groupe (*a / à*, *ces / ses / c'est / s'est*). Pour les accords, les autres formes de l'adjectif ou du participe. Pour les verbes, les formes du même temps aux autres personnes, en priorité celles qui se prononcent pareil.
 - **Explication** : la règle et son astuce, avec un lien vers la page Grammaire du site Prépa dictée.
 - **Nom de la règle** : affiché dans une étiquette **seulement après la réponse**, pour ne pas mettre sur la voie.
+- **Une seule réponse juste** : les phrases sont construites pour qu'aucun piège ne soit correct aussi. Par exemple « Inès a rangé ___ propres jouets » (sinon « ces jouets » irait aussi), « J'ai vu des chatons ___ petits » plutôt que « Ils sont ___ petits » (où « tous », pronom, irait aussi), et pas d'« elles sont ___ émues » pour la même raison.
 - **Indication** : quand la phrase demande de conjuguer, le verbe et le temps sont indiqués entre parenthèses (*(attendre, imparfait)*).
 
 | Niveau | Règles |
