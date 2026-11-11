@@ -681,11 +681,21 @@ var CUES = {
   passeCompose: ['Hier, {S} ___', 'Ce matin, {S} ___', 'La semaine dernière, {S} ___'],
   plusQueParfait: ['La veille, {S} ___', 'Quelques jours plus tôt, {S} ___'],
   passeAnterieur: ['Dès que {S} ___, tout changea.', 'Quand {S} ___, on partit.', 'Après que {S} ___, la nuit tomba.'],
-  futurAnterieur: ['D\'ici ce soir, {S} ___', 'Dans une heure, {S} ___', 'Demain à cette heure-ci, {S} ___'],
+  futurAnterieur: ['D\'ici ce soir, {S} ___', 'Dans une heure, {S} ___', 'Demain à cette heure-ci, {S} ___', 'D\'ici là, {S} ___'],
   conditionnelPasse: ['Si cela avait été possible, {S} ___', 'Sans cette panne, {S} ___', 'Avec un peu plus de chance, {S} ___'],
   subjonctif: ['Il faut {S} ___', 'Il est important {S} ___', 'Il vaudrait mieux {S} ___'],
-  subjonctifPasse: ['Il faut {S} ___ avant ce soir.', 'Il est dommage {S} ___']
+  subjonctifPasse: ['Il faut {S} ___ avant ce soir.', 'Il est dommage {S} ___', 'Il est possible {S} ___']
 };
+// Débuts de phrase qui supposent une action qu'on termine à une échéance :
+// pas pour les verbes d'état (« il faut que j'aie connu avant ce soir »).
+var ACTION_CUES = ['Il faut {S} ___ avant ce soir.', 'D\'ici ce soir, {S} ___', 'Dans une heure, {S} ___', 'Demain à cette heure-ci, {S} ___'];
+var STATE_VERBS = ['être', 'avoir', 'connaître', 'savoir', 'pouvoir', 'vouloir', 'devoir', 'croire', 'craindre', 'aimer', 'vivre', 'sentir'];
+function cuesFor(v, tense) {
+  var list = CUES[tense];
+  if (!list) return null;
+  if (STATE_VERBS.indexOf(v.inf) >= 0) list = list.filter(function (c) { return ACTION_CUES.indexOf(c) < 0; });
+  return list;
+}
 // Ce que le début de phrase indique, rappelé dans l'explication.
 var CUE_NOTES = {
   present: 'Indice : « en ce moment », « tous les jours » → présent.',
@@ -696,10 +706,10 @@ var CUE_NOTES = {
   passeCompose: 'Indice : « hier », « ce matin » → passé composé, pour une action terminée.',
   plusQueParfait: 'Indice : « la veille », « plus tôt » → plus-que-parfait, pour une action passée avant une autre action passée.',
   passeAnterieur: 'Indice : « dès que », « quand », « après que » suivis d\'un passé simple (« tout changea ») → passé antérieur, pour l\'action juste avant.',
-  futurAnterieur: 'Indice : « d\'ici ce soir », « dans une heure » → futur antérieur, pour une action qui sera terminée à un moment du futur.',
+  futurAnterieur: 'Indice : « d\'ici ce soir », « d\'ici là », « dans une heure » → futur antérieur, pour ce qui sera accompli à un moment du futur.',
   conditionnelPasse: 'Indice : « si » + plus-que-parfait (« si cela avait été possible ») → conditionnel passé, pour ce qui aurait pu arriver.',
   subjonctif: 'Indice : « il faut que », « il est important que » → subjonctif.',
-  subjonctifPasse: 'Indice : « il faut que… avant ce soir », « il est dommage que » → subjonctif ; passé pour une action terminée.'
+  subjonctifPasse: 'Indice : « il faut que… avant ce soir », « il est dommage que », « il est possible que » → subjonctif ; passé pour une action terminée.'
 };
 
 function pick(arr, rnd) { return arr[Math.floor(rnd() * arr.length)]; }
@@ -777,7 +787,7 @@ function makeQuestion(v, tense, p, rnd) {
     if (pron === 'je' && options.some(startsWithVowel)) subject = "je / j'";
     if (sub) subject = (/^[aeiouy]/.test(pron) ? "qu'" : 'que ') + subject;
   }
-  var cue = CUES[tense] ? pick(CUES[tense], rnd) : '{S} ___';
+  var cues = cuesFor(v, tense), cue = cues ? pick(cues, rnd) : '{S} ___';
   var explain = explainConj(v, tense, p, pron, correct, accepted, options);
   return {
     prompt: cue.replace(/que \{S\}/, function () { return /^[aeiouy]/.test(subject) ? "qu'{S}" : 'que {S}'; })

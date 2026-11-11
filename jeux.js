@@ -667,12 +667,17 @@ function ruleUrl(q, tense) {
   return '../prepa-dictee-brevet/grammaire.html#' + q.r;
 }
 
+// Une fois la réponse connue, « je / j' » devient « j' » ou « je ».
+function elide(prompt, answer) {
+  return prompt.replace("je / j' ___", /^[aeéèêiouyh]/i.test(answer) ? "j'___" : 'je ___');
+}
+
 function renderQuiz() {
   state.screen = 'quiz';
   var cur = state.current, x = cur.x, q = x.q, multi = x.kind === 'lexique';
   var ratio = clamp((state.points - LOSE_THRESHOLD) / (WIN_THRESHOLD - LOSE_THRESHOLD), 0, 1) * 100;
   var remaining = Math.max(0, state.limit - state.session.played);
-  var question = multi ? esc(q.q) : esc(q.q).replace('___', state.revealed
+  var question = multi ? esc(q.q) : esc(state.revealed ? elide(q.q, q.o[q.ok[0]]) : q.q).replace('___', state.revealed
     ? '<span class="blank ' + (state.lastCorrect ? 'filled-ok' : 'filled-ko') + '">' + q.ok.map(function (i) { return esc(q.o[i]); }).join(' / ') + '</span>'
     : '<span class="blank">______</span>');
 
@@ -780,7 +785,7 @@ function renderResults(mode) {
     }).join('') + '</div>' +
     (worst.length ? '<h3>À revoir en priorité</h3><ul class="worst">' + worst.map(function (e) {
       var q = e.x.q, answerTxt = q.ok.map(function (i) { return q.o[i]; }).join(' / ');
-      var line = (e.x.tense ? CONJ.TENSES[e.x.tense].name + ' · ' : e.x.rule ? e.x.rule.name + ' · ' : '') + q.q.replace('___', '[' + answerTxt + ']');
+      var line = (e.x.tense ? CONJ.TENSES[e.x.tense].name + ' · ' : e.x.rule ? e.x.rule.name + ' · ' : '') + elide(q.q, q.o[q.ok[0]]).replace('___', '[' + answerTxt + ']');
       return '<li><span>' + esc(line) + '</span> <a href="' + ruleUrl(q, e.x.tense) + '" target="_blank" rel="noopener">règle</a></li>';
     }).join('') + '</ul>' : '') +
     // Profil et classement sont dans le menu : ici, seulement reprendre une

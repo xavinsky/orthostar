@@ -75,7 +75,8 @@ En lexique et en grammaire, le niveau mesure la difficulté de la question. En c
   - L'explication rappelle ce que le début de phrase indique (« Indice : « si » + imparfait → conditionnel présent… »).
   - Le sujet est je, tu, il ou elle, nous, vous, ils ou elles ; le genre de la 3e personne est tiré au hasard.
   - Au subjonctif, le sujet est précédé de « que » ou « qu' » (« Il faut qu'il »). À l'impératif, le pronom est entre parenthèses : (tu), (nous), (vous).
-  - « je » s'affiche « je / j' » quand une réponse commence par une voyelle.
+  - « je » s'affiche « je / j' » quand une réponse commence par une voyelle ; une fois la réponse donnée, l'énoncé affiche la bonne forme (« que j'aie connu »).
+  - Les débuts de phrase qui supposent une action terminée à une échéance (« Il faut que … avant ce soir », « D'ici ce soir », « Dans une heure », « Demain à cette heure-ci ») ne sont pas tirés pour les verbes d'état (être, avoir, connaître, savoir, pouvoir, vouloir, devoir, croire, craindre, aimer, vivre, sentir), qui gardent « Il est dommage que », « Il est possible que », « D'ici là ».
 - **Réponses** : uniquement la forme verbale, une bonne et trois pièges.
 - **Étiquettes** au-dessus de l'énoncé : rubrique, niveau, puis le **temps**, en petites capitales sur sa couleur (voir 3f).
 
