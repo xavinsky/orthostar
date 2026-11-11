@@ -587,6 +587,31 @@ function compoundNotes(v, tense, p, pron, f) {
   return out;
 }
 
+// Piège de l'autre auxiliaire. Avec être, un verbe qui a un complément d'objet
+// direct (tenir, prendre…) forme une vraie phrase, mais à la voix passive :
+// « tu étais tenu » existe, ce n'est pas le plus-que-parfait de tenir. Pour
+// les autres verbes, la forme avec l'autre auxiliaire n'existe pas.
+var NO_PASSIVE = ['être', 'avoir', 'dormir', 'rire', 'nager', 'courir', 'pouvoir', 'devoir', 'vouloir', 'répondre'];
+function sayWith(pron, form, tense) {
+  var t = (pron === 'je' && startsWithVowel(form)) ? "j'" + form : pron + ' ' + form;
+  if (tense === 'subjonctifPasse') t = (/^[aeiouy]/.test(t) ? "qu'" : 'que ') + t;
+  return t;
+}
+function deQuote(inf) { return (/^[aeéèêiouyh]/.test(inf) ? 'd\'' : 'de ') + quote(inf); }
+// Renvoie la forme piège (sans pronom) et la phrase qui l'explique.
+function otherAuxNote(v, tense, p, pron) {
+  var auxTense = COMPOUND[tense], aname = TENSES[auxTense].name.toLowerCase(), pf = ppForms(v);
+  var other = v.aux === 'être' ? 'avoir' : 'être', form = auxVerb(other).t[auxTense][p][0] + ' ' + pf[0];
+  var said = '« ' + sayWith(pron, form, tense) + ' »';
+  if (v.aux === 'être' || NO_PASSIVE.indexOf(v.inf) >= 0)
+    return { form: form, text: 'Piège : ' + said + ' n\'existe pas : ' + quote(v.inf) + ' se conjugue avec ' + v.aux + ' aux temps composés.' };
+  // Voix passive : le participe s'accorde avec le sujet.
+  var agreed = auxVerb('être').t[auxTense][p][0] + ' ' + pf[(p >= 3 ? 2 : 0) + (/elle/.test(pron) ? 1 : 0)];
+  return { form: form, text: 'Piège : ' + said + (agreed === form ? ' existe' : ' ressemble à une vraie phrase') +
+    ', mais c\'est la voix passive, où le sujet subit l\'action (' + sayWith(pron, agreed, tense) + ' par quelqu\'un), avec être ' +
+    (/^[aeiou]/.test(aname) ? 'à l\'' : 'au ') + aname + '. Le ' + TENSES[tense].name.toLowerCase() + ' ' + deQuote(v.inf) + ' se forme avec avoir.' };
+}
+
 // Pièges du radical visibles dans la forme attendue.
 function stemNotes(v, tense, p, f, correct) {
   var out = [], nous = first(v, 'present', 3), je0 = first(v, 'present', 0), fam = v.family;
@@ -625,9 +650,14 @@ function stemNotes(v, tense, p, f, correct) {
   return out.filter(Boolean);
 }
 
-function explainConj(v, tense, p, pron, correct, accepted) {
+function explainConj(v, tense, p, pron, correct, accepted, options) {
   var f = correct[0], lines = [groupNote(v)];
-  if (COMPOUND[tense]) lines = lines.concat(compoundNotes(v, tense, p, pron, f));
+  if (COMPOUND[tense]) {
+    lines = lines.concat(compoundNotes(v, tense, p, pron, f));
+    // Le piège de l'autre auxiliaire n'est expliqué que s'il est proposé.
+    var trap = otherAuxNote(v, tense, p, pron);
+    if (options && options.indexOf(trap.form) >= 0) lines.push(trap.text);
+  }
   else {
     lines.push(tenseNote(v, tense));
     lines.push(endingNote(v, tense, p, f, pron));
@@ -714,7 +744,7 @@ function makeQuestion(v, tense, p, rnd) {
     if (pron === 'je' && options.some(startsWithVowel)) subject = "je / j'";
     if (sub) subject = (/^[aeiouy]/.test(pron) ? "qu'" : 'que ') + subject;
   }
-  var explain = explainConj(v, tense, p, pron, correct, accepted);
+  var explain = explainConj(v, tense, p, pron, correct, accepted, options);
   return {
     prompt: subject + ' ___ (verbe : ' + v.inf + ')',
     options: options,
