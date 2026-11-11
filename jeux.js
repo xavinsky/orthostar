@@ -187,6 +187,7 @@ var state = {
   category: null,
   knownPlayers: loadKnownPlayers(),
   kindSel: null, // une rubrique de KIND_ORDER, ou 'all' pour toutes
+  pickSource: 'suggest', // exercice du haut : 'suggest' (tiré au sort), 'custom' (réglé à la main), 'max' (plus rien à proposer)
   levels: { 1: true, 2: false, 3: false, 4: false },
   factor: 10,
   records: {},
@@ -289,8 +290,12 @@ function renderSetup() {
   state.screen = 'setup';
   var gl = computeGainLoss(state.factor);
   app.innerHTML =
-    '<div class="suggest"><button type="button" class="btn primary" id="suggestBtn">★ Prochain exercice aléatoire conseillé</button>' +
-    '<div class="muted" id="suggestNote"></div></div>' +
+    // En haut : l'exercice à jouer (tiré au sort à l'arrivée) et Commencer ;
+    // dessous, repliés, les réglages personnalisés pour le modifier.
+    '<div class="next-box"><div class="next-label" id="pickLabel"></div><div class="next-pick" id="pickSummary"></div>' +
+    '<div class="actions"><button class="btn primary big-btn" id="startBtn" type="button">Commencer</button>' +
+    '<button class="btn ghost" id="suggestBtn" type="button" title="Tirer un autre exercice conseillé">🎲 Tirer un exo</button></div></div>' +
+    '<details class="custom"><summary>Réglages personnalisés</summary>' +
     '<h3>Rubrique <span class="h-note">(une seule, ou toutes)</span></h3><div class="chips" id="kindPicker">' + KIND_ORDER.map(function (k) {
       return '<button type="button" class="chip kind k-' + k + '" data-k="' + k + '">' +
         '<strong>' + KINDS[k].name + '</strong><span>' + KINDS[k].hint + '</span><span class="count" data-count-kind="' + k + '"></span></button>';
@@ -310,21 +315,20 @@ function renderSetup() {
         '<span class="star-glyphs">' + starGlyphs(s.stars - handicap(), maxStars(handicap())) + '</span><span>×' + s.factor + (s.multiplier > 1 ? ' · ' + s.multiplier + '× questions' : '') + '</span></button>';
     }).join('') + '</div>' +
     '<div class="risk-preview"><span class="gain">Bonne réponse <b id="gainPreview">+' + gl.gain + '</b></span>' +
-    '<span class="loss">Mauvaise réponse <b id="lossPreview">−' + gl.loss + '</b></span></div>' +
-    '<div class="actions"><button class="btn primary big-btn" id="startBtn" type="button">Commencer</button></div>';
+    '<span class="loss">Mauvaise réponse <b id="lossPreview">−' + gl.loss + '</b></span></div></details>';
 
   $('suggestBtn').addEventListener('click', applySuggestion);
   Array.prototype.forEach.call(document.querySelectorAll('#kindPicker .chip'), function (b) {
-    b.addEventListener('click', function () { state.kindSel = b.getAttribute('data-k'); refreshSetup(); });
+    b.addEventListener('click', function () { state.pickSource = 'custom'; state.kindSel = b.getAttribute('data-k'); refreshSetup(); });
   });
   Array.prototype.forEach.call(document.querySelectorAll('#levelPicker .chip'), function (b) {
-    b.addEventListener('click', function () { clickLevel(b.getAttribute('data-l')); refreshSetup(); });
+    b.addEventListener('click', function () { state.pickSource = 'custom'; clickLevel(b.getAttribute('data-l')); refreshSetup(); });
   });
   Array.prototype.forEach.call(document.querySelectorAll('#factorPicker .star-opt'), function (b) {
-    b.addEventListener('click', function () { state.factor = parseFloat(b.getAttribute('data-f')); refreshFactor(); });
+    b.addEventListener('click', function () { state.pickSource = 'custom'; state.factor = parseFloat(b.getAttribute('data-f')); refreshFactor(); });
   });
   $('startBtn').addEventListener('click', startGame);
-  refreshSetup();
+  applySuggestion();
 }
 
 // Sélections de niveaux autorisées : un seul niveau, deux niveaux consécutifs,
@@ -352,6 +356,20 @@ function refreshFactor() {
   var g = computeGainLoss(state.factor);
   $('gainPreview').textContent = '+' + g.gain;
   $('lossPreview').textContent = '−' + g.loss;
+  refreshSummary();
+}
+// Bloc du haut : l'exercice qui sera joué, tiré au sort ou choisi à la main.
+function refreshSummary() {
+  var kinds = setupKinds(), levels = setupLevels();
+  $('pickLabel').textContent = state.pickSource === 'custom' ? 'Ta sélection' : '🎲 Exercice conseillé';
+  if (!kinds.length || !levels.length) {
+    $('pickSummary').innerHTML = '<span class="muted">Choisis une rubrique et un niveau dans les réglages personnalisés.</span>';
+    return;
+  }
+  var opt = STAR_FACTORS.filter(function (x) { return x.factor === state.factor; })[0];
+  $('pickSummary').innerHTML = '<span class="combo">' + comboHtml(kinds, levels) + '</span> ' +
+    '<span class="star-glyphs has">' + starGlyphs(opt.stars - handicap(), maxStars(handicap())) + '</span> <span class="muted">(×' + state.factor + ')</span>' +
+    (state.pickSource === 'max' ? '<div class="muted">Toutes les lignes ont le maximum d\'étoiles. Bravo ! Choisis librement dans les réglages personnalisés.</div>' : '');
 }
 
 // Met à jour les compteurs, affiche le meilleur résultat de la sélection et
@@ -397,18 +415,16 @@ function suggestion() {
 }
 function applySuggestion() {
   var s = suggestion();
-  if (!s) { $('suggestNote').textContent = 'Toutes les lignes ont le maximum d\'étoiles. Bravo !'; return; }
+  if (!s) { state.pickSource = 'max'; refreshSetup(); return; }
+  state.pickSource = 'suggest';
   state.kindSel = s.sel;
   setLevels(s.levels);
   refreshSetup();
   state.factor = factorForStars(s.stars + handicap());
   refreshFactor();
-  $('suggestNote').innerHTML = 'Proposé : <span class="combo">' + comboHtml(kindsOf(s.sel), s.levels) + '</span> pour ' +
-    '<span class="star-glyphs has">' + starGlyphs(s.stars, maxStars(handicap())) + '</span>. Il reste à cliquer sur « Commencer ».';
 }
 
 function refreshSetup() {
-  $('suggestNote').textContent = '';
   var kinds = setupKinds(), levels = setupLevels();
   KIND_ORDER.forEach(function (k) {
     document.querySelector('[data-count-kind="' + k + '"]').textContent = k === 'conjugaison'
@@ -433,6 +449,7 @@ function refreshSetup() {
   $('startBtn').disabled = !ready;
   if (!ready) {
     $('comboStatus').innerHTML = '<span class="muted">' + (kinds.length ? 'Choisis au moins un niveau.' : 'Choisis une rubrique, ou toutes.') + '</span>';
+    refreshSummary();
     return;
   }
   var r = state.records[comboKey(kinds, levels)] || null, stars = starsFor(r);

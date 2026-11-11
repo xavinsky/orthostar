@@ -152,15 +152,19 @@ Que la réponse soit juste ou fausse, le jeu affiche :
 On ne change pas de joueur depuis l'onglet Jouer : c'est le bouton « Changer de joueur » de l'onglet **Profil**, qui ramène à l'écran 1 (« Qui joue ? ») dans l'onglet Jouer.
 
 ### Exercice conseillé
-- Bouton **« Prochain exercice aléatoire conseillé »** en haut de l'écran, au-dessus des rubriques.
-- Il tire une rubrique au hasard parmi Lexique, Conjugaison, Grammaire et Toutes les rubriques, puis une ligne de score au hasard parmi les **prochaines étapes** de cette rubrique :
+- En haut de l'écran, un encadré montre l'exercice qui sera joué (étiquettes de rubrique, carrés de niveaux, étoiles visées et facteur), avec le bouton **Commencer** et le bouton **🎲 Tirer un exo**.
+- À chaque arrivée sur l'écran, un exercice conseillé est **déjà tiré au sort** ; « Tirer un exo » en tire un autre.
+- Le tirage prend une rubrique au hasard parmi Lexique, Conjugaison, Grammaire et Toutes les rubriques, puis une ligne de score au hasard parmi les **prochaines étapes** de cette rubrique :
   - un niveau seul est toujours ouvert ;
   - une paire (1-2, 2-3, 3-4) s'ouvre quand ses deux niveaux ont chacun au moins une étoile ;
   - « Tous les niveaux » s'ouvre quand les quatre niveaux ont chacun au moins une étoile ;
   - chaque ligne ouverte qui n'a pas le maximum d'étoiles est proposée avec une étoile de plus que son meilleur résultat.
-- Si la rubrique tirée n'a plus d'étape, une autre est tirée. Si plus aucune ligne n'en a, un message de félicitations s'affiche.
-- Le bouton remplit la rubrique, les niveaux et le facteur de risque, et affiche la proposition sous le bouton. La partie démarre avec « Commencer » ; toucher une rubrique ou un niveau efface la proposition.
+- Si la rubrique tirée n'a plus d'étape, une autre est tirée. Si plus aucune ligne n'en a, l'encadré félicite le joueur et l'invite à choisir dans les réglages personnalisés.
+- L'encadré s'intitule « 🎲 Exercice conseillé » pour un tirage, « Ta sélection » dès qu'on modifie un réglage à la main.
 - Les règles du jeu en donnent un exemple (« Le prochain exercice conseillé »).
+
+### Réglages personnalisés
+Sous l'encadré, un bloc **Réglages personnalisés**, replié à l'ouverture, regroupe la rubrique, les niveaux et le facteur de risque décrits ci-dessous.
 
 ### Rubriques
 - Choix unique parmi quatre cases : Lexique, Conjugaison, Grammaire, ou **Toutes les rubriques**. On ne peut pas en combiner deux. Aucune n'est choisie à l'ouverture.
@@ -194,7 +198,7 @@ On ne change pas de joueur depuis l'onglet Jouer : c'est le bouton « Changer de
 - **Présélection** : le jeu propose le niveau d'étoiles juste au-dessus du meilleur résultat obtenu sur la sélection, ou le premier niveau accessible s'il n'y en a pas. Le joueur peut en choisir un autre.
 - Un aperçu affiche les points d'une bonne et d'une mauvaise réponse.
 
-Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'est choisi.
+Le bouton **Commencer** (dans l'encadré du haut) reste grisé tant qu'aucune rubrique ou aucun niveau n'est choisi.
 
 ---
 
