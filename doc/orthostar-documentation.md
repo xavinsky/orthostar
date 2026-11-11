@@ -253,6 +253,7 @@ Le bouton **Commencer** reste grisé tant qu'aucune rubrique ou aucun niveau n'e
 
 ### Classement
 - Sous-onglet du Profil (lien « Classement » dans la barre de navigation).
+- Il n'apparaît qu'à partir de **deux joueurs** sur le navigateur : en dessous, le lien du menu, les sous-onglets et les boutons « Voir le classement » sont masqués, et l'adresse `#classement` ramène au profil.
 - Tous les joueurs de ce navigateur, rangés par total d'étoiles, avec leur catégorie. Le joueur en cours est mis en évidence.
 - Le classement n'est pas partagé entre ordinateurs ou navigateurs.
 

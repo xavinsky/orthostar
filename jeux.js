@@ -228,7 +228,7 @@ function renderPlayerSelect() {
     }).join('') + '</div></div>' +
     '<div class="actions"><button class="btn primary" id="continueBtn" type="button">Continuer</button>' +
     '<button class="btn ghost" id="profileLink" type="button">Voir mon profil</button>' +
-    '<button class="btn ghost" id="leaderboardLink" type="button">Voir le classement</button></div>';
+    '<button class="btn ghost ranking-only" id="leaderboardLink" type="button">Voir le classement</button></div>';
 
   var input = $('nameInput');
   function showCategory() {
@@ -258,6 +258,7 @@ function renderPlayerSelect() {
     saveCategory(name, state.category);
     state.records = loadRecords(name);
     saveRecords(name, state.records);
+    refreshRanking();
     next();
   }
   Array.prototype.forEach.call(document.querySelectorAll('.player-btn'), function (b) {
@@ -723,7 +724,7 @@ function renderResults(mode) {
     }).join('') + '</ul>' : '') +
     '<div class="actions"><button class="btn primary" id="continueBtn" type="button">' + (mode === 'stopped' ? 'Reprendre où j\'en étais' : 'Rejouer une partie') + '</button>' +
     '<button class="btn ghost" id="profileBtn" type="button">Voir mon profil</button>' +
-    '<button class="btn ghost" id="leaderboardBtn" type="button">Voir le classement</button>' +
+    '<button class="btn ghost ranking-only" id="leaderboardBtn" type="button">Voir le classement</button>' +
     '<button class="btn ghost" id="setupBtn" type="button">Changer les réglages</button></div>';
 
   $('continueBtn').addEventListener('click', function () { if (mode !== 'stopped') resetSession(); nextQuestion(); renderQuiz(); });
@@ -736,7 +737,13 @@ function renderResults(mode) {
 // Profil et classement ont leur propre onglet : ils s'affichent à côté de
 // l'écran de jeu sans le remplacer, une partie en cours reste intacte.
 function goTab(tab) { if (location.hash !== '#' + tab) location.hash = '#' + tab; else showTab(tab); }
+// Un classement n'a de sens qu'à partir de deux joueurs : en dessous, le menu,
+// les sous-onglets et les boutons qui y mènent sont masqués.
+function rankingOn() { return loadLeaderboard().length >= 2; }
+function refreshRanking() { document.body.classList.toggle('no-ranking', !rankingOn()); }
 function showTab(tab) {
+  refreshRanking();
+  if (tab === 'classement' && !rankingOn()) { location.replace('#profil'); return; }
   if (tab === 'profil') renderProfile();
   else if (tab === 'classement') renderLeaderboard();
 }
@@ -819,4 +826,5 @@ document.addEventListener('keydown', function (e) {
 
 renderPlayerSelect();
 window.JEUX = { showTab: showTab };
+refreshRanking();
 })();

@@ -303,6 +303,8 @@ kbd{font-family:ui-monospace, Menlo, Consolas, monospace; font-size:.85em; paddi
 .nav .sub{display:flex; padding-left:0;}
 .nav .sub a.item{font-size:.88em; padding:5px 8px; opacity:.9;}
 .nav .sub a.item::before{content:"› "; opacity:.7;}
+/* Le classement n'apparaît qu'à partir de deux joueurs. */
+.no-ranking .ranking-only{display:none !important;}
 .subtabs{display:flex; gap:4px; margin-bottom:8px; border-bottom:2px solid var(--border);}
 .subtab{padding:5px 12px; text-decoration:none; color:var(--muted); font-weight:700; margin-bottom:-2px; border-bottom:2px solid transparent;}
 .subtab.on{color:var(--h1); border-bottom-color:var(--h1);}
