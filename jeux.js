@@ -288,7 +288,7 @@ function renderSetup() {
   state.screen = 'setup';
   var gl = computeGainLoss(state.factor);
   app.innerHTML =
-    '<button type="button" class="btn ghost back" id="backToPlayer">← ' + esc(state.player) + ' (' + CATEGORIES[state.category].name.toLowerCase() + ') · changer de joueur</button>' +
+    '<div class="muted setup-player">Joueur : <b>' + esc(state.player) + '</b> (' + CATEGORIES[state.category].name.toLowerCase() + ')</div>' +
     '<div class="suggest"><button type="button" class="btn primary" id="suggestBtn">★ Prochain exercice aléatoire conseillé</button>' +
     '<div class="muted" id="suggestNote"></div></div>' +
     '<h3>Rubrique <span class="h-note">(une seule, ou toutes)</span></h3><div class="chips" id="kindPicker">' + KIND_ORDER.map(function (k) {
@@ -313,7 +313,6 @@ function renderSetup() {
     '<span class="loss">Mauvaise réponse <b id="lossPreview">−' + gl.loss + '</b></span></div>' +
     '<div class="actions"><button class="btn primary big-btn" id="startBtn" type="button">Commencer</button></div>';
 
-  $('backToPlayer').addEventListener('click', renderPlayerSelect);
   $('suggestBtn').addEventListener('click', applySuggestion);
   Array.prototype.forEach.call(document.querySelectorAll('#kindPicker .chip'), function (b) {
     b.addEventListener('click', function () { state.kindSel = b.getAttribute('data-k'); refreshSetup(); });

@@ -149,7 +149,7 @@ Que la réponse soit juste ou fausse, le jeu affiche :
 
 ## 5. Écran 2 — Réglages de la partie
 
-Un lien « ← *Nom* (*catégorie*) · changer de joueur » ramène à l'écran 1.
+Une ligne rappelle le joueur et sa catégorie. On ne change pas de joueur depuis l'onglet Jouer : c'est le bouton « Changer de joueur » de l'onglet **Profil**, qui ramène à l'écran 1 (« Qui joue ? ») dans l'onglet Jouer.
 
 ### Exercice conseillé
 - Bouton **« Prochain exercice aléatoire conseillé »** en haut de l'écran, au-dessus des rubriques.
