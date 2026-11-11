@@ -289,6 +289,8 @@ function renderSetup() {
   var gl = computeGainLoss(state.factor);
   app.innerHTML =
     '<button type="button" class="btn ghost back" id="backToPlayer">← ' + esc(state.player) + ' (' + CATEGORIES[state.category].name.toLowerCase() + ') · changer de joueur</button>' +
+    '<div class="suggest"><button type="button" class="btn primary" id="suggestBtn">★ Prochain exercice aléatoire conseillé</button>' +
+    '<div class="muted" id="suggestNote"></div></div>' +
     '<h3>Rubrique <span class="h-note">(une seule, ou toutes)</span></h3><div class="chips" id="kindPicker">' + KIND_ORDER.map(function (k) {
       return '<button type="button" class="chip kind k-' + k + '" data-k="' + k + '">' +
         '<strong>' + KINDS[k].name + '</strong><span>' + KINDS[k].hint + '</span><span class="count" data-count-kind="' + k + '"></span></button>';
@@ -312,6 +314,7 @@ function renderSetup() {
     '<div class="actions"><button class="btn primary big-btn" id="startBtn" type="button">Commencer</button></div>';
 
   $('backToPlayer').addEventListener('click', renderPlayerSelect);
+  $('suggestBtn').addEventListener('click', applySuggestion);
   Array.prototype.forEach.call(document.querySelectorAll('#kindPicker .chip'), function (b) {
     b.addEventListener('click', function () { state.kindSel = b.getAttribute('data-k'); refreshSetup(); });
   });
@@ -364,7 +367,49 @@ function contentText(kinds, level) {
     : CONJ.TENSE_ORDER.filter(function (t) { return CONJ.TENSES[t].level === level; }).length + ' temps');
   return parts.join(' · ');
 }
+/* Exercice conseillé : une rubrique au hasard, puis une ligne de score au
+   hasard parmi les prochaines marches de cette rubrique. */
+var LEVEL_SETS = [[1], [2], [3], [4], [1, 2], [2, 3], [3, 4], [1, 2, 3, 4]];
+var KIND_SELS = KIND_ORDER.concat(['all']);
+function kindsOf(sel) { return sel === 'all' ? KIND_ORDER.slice() : [sel]; }
+function lineStars(kinds, levels) { return starsFor(state.records[comboKey(kinds, levels)]); }
+// Prochaines marches d'une rubrique : chaque ligne ouverte qui n'a pas encore
+// le maximum d'étoiles, avec une étoile de plus que son meilleur résultat. Un
+// niveau seul est toujours ouvert ; une paire s'ouvre quand ses deux niveaux
+// ont au moins une étoile ; « tous les niveaux » quand les quatre en ont une.
+function nextSteps(sel) {
+  var kinds = kindsOf(sel), max = maxStars(handicap()), single = {}, out = [];
+  LEVEL_ORDER.forEach(function (l) { single[l] = lineStars(kinds, [l]); });
+  LEVEL_SETS.forEach(function (lv) {
+    if (lv.some(function (l) { return countsFor(kinds, l) === 0; })) return;
+    var open = lv.length === 1 || lv.every(function (l) { return single[l] >= 1; });
+    var stars = lineStars(kinds, lv);
+    if (open && stars < max) out.push({ sel: sel, levels: lv, stars: stars + 1 });
+  });
+  return out;
+}
+function suggestion() {
+  var sels = shuffle(KIND_SELS);
+  for (var i = 0; i < sels.length; i++) {
+    var steps = nextSteps(sels[i]);
+    if (steps.length) return steps[Math.floor(Math.random() * steps.length)];
+  }
+  return null;
+}
+function applySuggestion() {
+  var s = suggestion();
+  if (!s) { $('suggestNote').textContent = 'Toutes les lignes ont le maximum d\'étoiles. Bravo !'; return; }
+  state.kindSel = s.sel;
+  setLevels(s.levels);
+  refreshSetup();
+  state.factor = factorForStars(s.stars + handicap());
+  refreshFactor();
+  $('suggestNote').innerHTML = 'Proposé : <span class="combo">' + comboHtml(kindsOf(s.sel), s.levels) + '</span> pour ' +
+    '<span class="star-glyphs has">' + starGlyphs(s.stars, maxStars(handicap())) + '</span>. Il reste à cliquer sur « Commencer ».';
+}
+
 function refreshSetup() {
+  $('suggestNote').textContent = '';
   var kinds = setupKinds(), levels = setupLevels();
   KIND_ORDER.forEach(function (k) {
     document.querySelector('[data-count-kind="' + k + '"]').textContent = k === 'conjugaison'

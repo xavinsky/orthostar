@@ -151,6 +151,17 @@ Que la réponse soit juste ou fausse, le jeu affiche :
 
 Un lien « ← *Nom* (*catégorie*) · changer de joueur » ramène à l'écran 1.
 
+### Exercice conseillé
+- Bouton **« Prochain exercice aléatoire conseillé »** en haut de l'écran, au-dessus des rubriques.
+- Il tire une rubrique au hasard parmi Lexique, Conjugaison, Grammaire et Toutes les rubriques, puis une ligne de score au hasard parmi les **prochaines étapes** de cette rubrique :
+  - un niveau seul est toujours ouvert ;
+  - une paire (1-2, 2-3, 3-4) s'ouvre quand ses deux niveaux ont chacun au moins une étoile ;
+  - « Tous les niveaux » s'ouvre quand les quatre niveaux ont chacun au moins une étoile ;
+  - chaque ligne ouverte qui n'a pas le maximum d'étoiles est proposée avec une étoile de plus que son meilleur résultat.
+- Si la rubrique tirée n'a plus d'étape, une autre est tirée. Si plus aucune ligne n'en a, un message de félicitations s'affiche.
+- Le bouton remplit la rubrique, les niveaux et le facteur de risque, et affiche la proposition sous le bouton. La partie démarre avec « Commencer » ; toucher une rubrique ou un niveau efface la proposition.
+- Les règles du jeu en donnent un exemple (« Le prochain exercice conseillé »).
+
 ### Rubriques
 - Choix unique parmi quatre cases : Lexique, Conjugaison, Grammaire, ou **Toutes les rubriques**. On ne peut pas en combiner deux. Aucune n'est choisie à l'ouverture.
 - Chaque case affiche son nombre de questions, ou « 69 verbes · 13 temps » pour la conjugaison.
